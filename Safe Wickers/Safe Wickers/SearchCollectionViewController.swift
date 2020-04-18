@@ -14,7 +14,7 @@ private var sectionInsets = UIEdgeInsets()
 private let itemsPerRow: CGFloat = 3
 
 
-class SearchCollectionViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout
+class SearchCollectionViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout, CLLocationManagerDelegate
 {
     @IBOutlet weak var logoImageView: UIImageView!
     
@@ -31,16 +31,58 @@ class SearchCollectionViewController: UIViewController,UICollectionViewDataSourc
     var activities = [Activities]()
     var activtyName: String?
     
+    var locationManager: CLLocationManager = CLLocationManager()
+    var searchLocation: CLLocationCoordinate2D?
+    var currentLocation: CLLocationCoordinate2D?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationTextField.placeholder = "Enter or use current location"
+        locationTextField.clearButtonMode = .always
+        
         logoImageView.backgroundColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1)
         createDefaultActivities()
         activityCollectionView.delegate = self
         activityCollectionView.dataSource = self
 
         sectionInsets = UIEdgeInsets(top: 5.0, left: view.bounds.width/20, bottom: 5.0, right: view.bounds.width/20)
-        print(view.bounds.width,sectionInsets)
-       
+
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = kCLLocationAccuracyKilometer
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    //diss miss textView keyboard https://blog.csdn.net/baixiaozhe/article/details/49274701
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+    
+        super.viewWillAppear(animated)
+        locationManager.startUpdatingLocation()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        locationManager.stopUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last!
+        currentLocation = location.coordinate
     }
 
     /*
@@ -158,11 +200,23 @@ class SearchCollectionViewController: UIViewController,UICollectionViewDataSourc
     
     
     @IBAction func currentLocationButton(_ sender: Any) {
+        if let currentLocation = currentLocation{
+            searchLocation = currentLocation
+            reverseGeocode()
+    }
+        else {
+            let alertController = UIAlertController(title: "Location Not Found", message: "The location has not yet been determined.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                present(alertController, animated: true, completion: nil)
+    }
+    
     }
     
     
     @IBAction func searchButton(_ sender: Any) {
     }
+    
+    
     
     func createDefaultActivities(){
         activities.append(Activities(imageName: "icons8-swimmer-96.png", activityName: "Swimming"))
@@ -170,5 +224,46 @@ class SearchCollectionViewController: UIViewController,UICollectionViewDataSourc
         activities.append(Activities(imageName: "icons8-row-boat-96.png", activityName: "Boating"))
     }
     
+    // from Coordinate to location name, ref: https://www.cnblogs.com/Free-Thinker/p/4843578.html
+    func reverseGeocode(){
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(CLLocation(latitude: currentLocation!.latitude, longitude: currentLocation!.longitude),
+                                        completionHandler: { (placemarks, error) in
+                                            if error == nil {
+                                                let firstLocation = placemarks?[0]
+                                                self.locationTextField.text = (firstLocation?.subLocality)! + ", " + (firstLocation?.locality)! + ", " + (firstLocation?.administrativeArea)!
+                                                
+                                                
+                                            }
+                                            else {
+                                                // An error occurred during geocoding.
+                                              self.locationTextField.text = "Cannot show the location name"
+                                              print("error in reverse Decode process")
+                                            }
+        })
+        
+    }
     
+    // from location name to Coordinate , ref: https://www.cnblogs.com/Free-Thinker/p/4843578.html
+    func locationEncode(){
+        let geocoder = CLGeocoder()
+        if self.locationTextField.text != nil {
+            geocoder.geocodeAddressString(self.locationTextField.text!, completionHandler: {
+                (placemarks, error) in
+                if error != nil{
+                    let alertController = UIAlertController(title: "Location Not Found", message: "The location has not yet been determined.", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
+                }
+                
+                let firstplace = placemarks?[0]
+                self.searchLocation = firstplace?.location?.coordinate
+            })
+        }
+        
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 }
