@@ -8,13 +8,16 @@
 
 import UIKit
 import MapKit
+import ACTextField
+
+
 
 private let reuseIdentifier = "activityCell"
 private var sectionInsets = UIEdgeInsets()
 private let itemsPerRow: CGFloat = 3
 
 
-class SearchCollectionViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout, CLLocationManagerDelegate
+class SearchCollectionViewController: UIViewController,ACTextFieldDelegate,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout, CLLocationManagerDelegate
 {
     @IBOutlet weak var logoImageView: UIImageView!
     
@@ -22,11 +25,14 @@ class SearchCollectionViewController: UIViewController,UICollectionViewDataSourc
     
     @IBOutlet weak var locationLabel: UILabel!
     
-    @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var locationTextField: ACTextField!
     
     @IBOutlet weak var activityLabel: UILabel!
     
     @IBOutlet weak var activityCollectionView: UICollectionView!
+    
+    
+    
     
     var activities = [Activities]()
     var activtyName: String?
@@ -34,14 +40,16 @@ class SearchCollectionViewController: UIViewController,UICollectionViewDataSourc
     var locationManager: CLLocationManager = CLLocationManager()
     var searchLocation: CLLocationCoordinate2D?
     var currentLocation: CLLocationCoordinate2D?
-    
+    var currentLocationName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        locationTextField.placeholder = "Enter or use current location"
-        locationTextField.clearButtonMode = .always
         
+//        locationTextField.placeholder = "Enter or use current location"
+//        locationTextField.clearButtonMode = .always
+
+    
         logoImageView.backgroundColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1)
         createDefaultActivities()
         activityCollectionView.delegate = self
@@ -49,24 +57,15 @@ class SearchCollectionViewController: UIViewController,UICollectionViewDataSourc
 
         sectionInsets = UIEdgeInsets(top: 5.0, left: view.bounds.width/20, bottom: 5.0, right: view.bounds.width/20)
 
+        locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = kCLLocationAccuracyKilometer
         locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    //diss miss textView keyboard https://blog.csdn.net/baixiaozhe/article/details/49274701
-    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-        if (text == "\n") {
-            textView.resignFirstResponder()
-            return false
-        }
-        return true
+
+        //TODO deal with error:  Thread 1: EXC_BAD_ACCESS (code=1, address=
+//        let t = vicSuburbs()
+//        locationTextField.setAutoCompleteWith(DataSet: t)
+//        locationTextField.ACDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -231,8 +230,9 @@ class SearchCollectionViewController: UIViewController,UICollectionViewDataSourc
                                         completionHandler: { (placemarks, error) in
                                             if error == nil {
                                                 let firstLocation = placemarks?[0]
-                                                self.locationTextField.text = (firstLocation?.subLocality)! + ", " + (firstLocation?.locality)! + ", " + (firstLocation?.administrativeArea)!
-                                                
+                                                let searchLocationName = (firstLocation?.subLocality)! + ", " + (firstLocation?.locality)! + ", " + (firstLocation?.administrativeArea)!
+                                                self.locationTextField.text = searchLocationName
+                                                self.currentLocationName = searchLocationName
                                                 
                                             }
                                             else {
@@ -263,6 +263,36 @@ class SearchCollectionViewController: UIViewController,UICollectionViewDataSourc
         
     }
 
+    
+    //configure the location auto complete textField ref:
+    
+    func ACTextField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    return true
+}
+    
+    
+    
+    //Data sources for location atuo compele textField
+    fileprivate func vicSuburbs() -> [String] {
+        if let path = Bundle.main.path(forResource: "victoria_suburb_names", ofType: "json")        {
+            do {
+                let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: .dataReadingMapped)
+                let jsonResult = try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) as! [[String:String]]
+                
+                var suburbNames = [String]()
+                for suburb in jsonResult {
+                    suburbNames.append(suburb["name"]!)
+                }
+                
+                return suburbNames
+            } catch {
+                print("Error parsing jSON: \(error)")
+                return []
+            }
+        }
+        return []
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

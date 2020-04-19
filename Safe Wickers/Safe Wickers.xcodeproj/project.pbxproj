@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		707BABF2244C7E3000351335 /* victoria_suburb_names.json in Resources */ = {isa = PBXBuildFile; fileRef = 707BABF1244C7E3000351335 /* victoria_suburb_names.json */; };
 		709D1EAE2446BC2F00F4AB4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1EAD2446BC2F00F4AB4A /* AppDelegate.swift */; };
 		709D1EB52446BC2F00F4AB4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709D1EB32446BC2F00F4AB4A /* Main.storyboard */; };
 		709D1EB72446BC3000F4AB4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 709D1EB62446BC3000F4AB4A /* Assets.xcassets */; };
@@ -14,9 +15,11 @@
 		709D1EC2244972E300F4AB4A /* SearchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1EC1244972E300F4AB4A /* SearchCollectionViewController.swift */; };
 		709D1EC42449D5C500F4AB4A /* ActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1EC32449D5C500F4AB4A /* ActivityCollectionViewCell.swift */; };
 		709D1EC62449DD2100F4AB4A /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1EC52449DD2100F4AB4A /* Activities.swift */; };
+		CB41842CF993B73794769121 /* Pods_Safe_Wickers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9982ACD8B8650BFDB86A7747 /* Pods_Safe_Wickers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		707BABF1244C7E3000351335 /* victoria_suburb_names.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = victoria_suburb_names.json; path = "Safe Wickers/victoria_suburb_names.json"; sourceTree = "<group>"; };
 		709D1EAA2446BC2F00F4AB4A /* Safe Wickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Safe Wickers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709D1EAD2446BC2F00F4AB4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		709D1EB42446BC2F00F4AB4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +29,9 @@
 		709D1EC1244972E300F4AB4A /* SearchCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewController.swift; sourceTree = "<group>"; };
 		709D1EC32449D5C500F4AB4A /* ActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCollectionViewCell.swift; sourceTree = "<group>"; };
 		709D1EC52449DD2100F4AB4A /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
+		9982ACD8B8650BFDB86A7747 /* Pods_Safe_Wickers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Safe_Wickers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB08D21B751E7835FA167C33 /* Pods-Safe Wickers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safe Wickers.debug.xcconfig"; path = "Target Support Files/Pods-Safe Wickers/Pods-Safe Wickers.debug.xcconfig"; sourceTree = "<group>"; };
+		E7D2F70EB70F227933667760 /* Pods-Safe Wickers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safe Wickers.release.xcconfig"; path = "Target Support Files/Pods-Safe Wickers/Pods-Safe Wickers.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB41842CF993B73794769121 /* Pods_Safe_Wickers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +49,11 @@
 		709D1EA12446BC2E00F4AB4A = {
 			isa = PBXGroup;
 			children = (
+				707BABF1244C7E3000351335 /* victoria_suburb_names.json */,
 				709D1EAC2446BC2F00F4AB4A /* Safe Wickers */,
 				709D1EAB2446BC2F00F4AB4A /* Products */,
+				AD6D1C02C08BF222492237F4 /* Pods */,
+				C498C67DD22E0C9F53298C4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +80,23 @@
 			path = "Safe Wickers";
 			sourceTree = "<group>";
 		};
+		AD6D1C02C08BF222492237F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB08D21B751E7835FA167C33 /* Pods-Safe Wickers.debug.xcconfig */,
+				E7D2F70EB70F227933667760 /* Pods-Safe Wickers.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C498C67DD22E0C9F53298C4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9982ACD8B8650BFDB86A7747 /* Pods_Safe_Wickers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 709D1EBE2446BC3000F4AB4A /* Build configuration list for PBXNativeTarget "Safe Wickers" */;
 			buildPhases = (
+				142C47B5C1B04AFEA57C9D74 /* [CP] Check Pods Manifest.lock */,
 				709D1EA62446BC2F00F4AB4A /* Sources */,
 				709D1EA72446BC2F00F4AB4A /* Frameworks */,
 				709D1EA82446BC2F00F4AB4A /* Resources */,
+				5EA104CF8D4CC0CAD75D6F0A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				707BABF2244C7E3000351335 /* victoria_suburb_names.json in Resources */,
 				709D1EBA2446BC3000F4AB4A /* LaunchScreen.storyboard in Resources */,
 				709D1EB72446BC3000F4AB4A /* Assets.xcassets in Resources */,
 				709D1EB52446BC2F00F4AB4A /* Main.storyboard in Resources */,
@@ -135,6 +165,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		142C47B5C1B04AFEA57C9D74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Safe Wickers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EA104CF8D4CC0CAD75D6F0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Safe Wickers/Pods-Safe Wickers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Safe Wickers/Pods-Safe Wickers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Safe Wickers/Pods-Safe Wickers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		709D1EA62446BC2F00F4AB4A /* Sources */ = {
@@ -288,11 +360,13 @@
 		};
 		709D1EBF2446BC3000F4AB4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB08D21B751E7835FA167C33 /* Pods-Safe Wickers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VF8549G3Y;
 				INFOPLIST_FILE = "Safe Wickers/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,11 +380,13 @@
 		};
 		709D1EC02446BC3000F4AB4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7D2F70EB70F227933667760 /* Pods-Safe Wickers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VF8549G3Y;
 				INFOPLIST_FILE = "Safe Wickers/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
