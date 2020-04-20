@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		64057047375706276E20772DC179B52B /* Pods-Safe Wickers-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C3D669B359B41FAE9037226F6D3D4B0 /* Pods-Safe Wickers-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C5D73FD2CC165605283FA5F54488522 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		6ECFD07130677395B5AF6B8BE6B47F5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		84034A8CBCF599405D21F48E7FA5BDB5 /* Pods-Safe Wickers-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CD07F04E3D3B1B581EE585B51E4CFB /* Pods-Safe Wickers-dummy.m */; };
+		8E896F89B3405CE3C8FF4F2FDF928772 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		E99A91C20BE9C1A673C9B02957CE1699 /* ACTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FFA44850F4A84F34B29CD01C2DF721 /* ACTextField-dummy.m */; };
+		EC26810E6E90DD9C6BEE37D57F430DEC /* ACTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55496E41708F76111B396E43CC13C2A6 /* ACTextField.swift */; };
+		F2E29B0ACF6414AC8AE623BC2765B4AA /* ACTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 587FB7062F5EC632448F33EDFC3F30A3 /* ACTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D4B78AB7D624FCA39D8F8ECCDD46E2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63CCC5262CD5BBC4BF060A598D1EFA8A;
+			remoteInfo = ACTextField;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		172D9A2B8F47FCD691AEB330794F8B68 /* ACTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ACTextField-prefix.pch"; sourceTree = "<group>"; };
+		276E52AC19A96F00FC9B68673A32D09A /* Pods-Safe Wickers-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Safe Wickers-Info.plist"; sourceTree = "<group>"; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3EBEFEDAC4178D5F215CB17A54CA902D /* Pods-Safe Wickers-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Safe Wickers-frameworks.sh"; sourceTree = "<group>"; };
+		401EAE85AD22320F225FF620AE1EB22D /* Pods-Safe Wickers-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Safe Wickers-acknowledgements.plist"; sourceTree = "<group>"; };
+		432EAA30C936B0EE193F7EB961DD1E3A /* Pods-Safe Wickers.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Safe Wickers.modulemap"; sourceTree = "<group>"; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		55496E41708F76111B396E43CC13C2A6 /* ACTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ACTextField.swift; path = ACTextField/Classes/ACTextField.swift; sourceTree = "<group>"; };
+		587FB7062F5EC632448F33EDFC3F30A3 /* ACTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ACTextField-umbrella.h"; sourceTree = "<group>"; };
+		61FFA44850F4A84F34B29CD01C2DF721 /* ACTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ACTextField-dummy.m"; sourceTree = "<group>"; };
+		676669A688F2E362286EB75FB8FC3607 /* ACTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ACTextField.framework; path = ACTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C92A070E2FFD80ACDA93BC05A9151EF /* Pods-Safe Wickers-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Safe Wickers-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8B521B0B930496D3648D0EE313E5672E /* ACTextField-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ACTextField-Info.plist"; sourceTree = "<group>"; };
+		8BA9B12B5A5A58B8E7DE18D64A32E274 /* ACTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ACTextField.debug.xcconfig; sourceTree = "<group>"; };
+		9BF40F0E684C02F6178543126E120CBE /* Pods_Safe_Wickers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Safe_Wickers.framework; path = "Pods-Safe Wickers.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C3D669B359B41FAE9037226F6D3D4B0 /* Pods-Safe Wickers-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Safe Wickers-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C3E6CD3079F9C423F12E2662C7488304 /* Pods-Safe Wickers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Safe Wickers.debug.xcconfig"; sourceTree = "<group>"; };
+		D008232063F07B3061A5917D91260970 /* ACTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ACTextField.release.xcconfig; sourceTree = "<group>"; };
+		D133A0983C91D3AE2ECD52A7CEC9D279 /* ACTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ACTextField.modulemap; sourceTree = "<group>"; };
+		D5CD07F04E3D3B1B581EE585B51E4CFB /* Pods-Safe Wickers-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Safe Wickers-dummy.m"; sourceTree = "<group>"; };
+		E61743C432C8C1E1C0CD6F2E1F47412A /* Pods-Safe Wickers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Safe Wickers.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		416AADB2181FAED56214B076B083A2EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C5D73FD2CC165605283FA5F54488522 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6663533FD568CBBBE20CF293626655A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E896F89B3405CE3C8FF4F2FDF928772 /* Foundation.framework in Frameworks */,
+				6ECFD07130677395B5AF6B8BE6B47F5E /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		480B44496CCACB525D936FE15550B4EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				676669A688F2E362286EB75FB8FC3607 /* ACTextField.framework */,
+				9BF40F0E684C02F6178543126E120CBE /* Pods_Safe_Wickers.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DC5D92C3AAFFB141905B48C3A486C73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E134294B27FD45DABD69353F2CA89B22 /* ACTextField */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7D9D987FA644D4FE1B06582F430901FB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D133A0983C91D3AE2ECD52A7CEC9D279 /* ACTextField.modulemap */,
+				61FFA44850F4A84F34B29CD01C2DF721 /* ACTextField-dummy.m */,
+				8B521B0B930496D3648D0EE313E5672E /* ACTextField-Info.plist */,
+				172D9A2B8F47FCD691AEB330794F8B68 /* ACTextField-prefix.pch */,
+				587FB7062F5EC632448F33EDFC3F30A3 /* ACTextField-umbrella.h */,
+				8BA9B12B5A5A58B8E7DE18D64A32E274 /* ACTextField.debug.xcconfig */,
+				D008232063F07B3061A5917D91260970 /* ACTextField.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ACTextField";
+			sourceTree = "<group>";
+		};
+		A5A4167ACD48A6AA872FAD670E0F73A9 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FDAB0494E3F75C11040A3785AE9BF194 /* Pods-Safe Wickers */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				4DC5D92C3AAFFB141905B48C3A486C73 /* Pods */,
+				480B44496CCACB525D936FE15550B4EE /* Products */,
+				A5A4167ACD48A6AA872FAD670E0F73A9 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E134294B27FD45DABD69353F2CA89B22 /* ACTextField */ = {
+			isa = PBXGroup;
+			children = (
+				55496E41708F76111B396E43CC13C2A6 /* ACTextField.swift */,
+				7D9D987FA644D4FE1B06582F430901FB /* Support Files */,
+			);
+			name = ACTextField;
+			path = ACTextField;
+			sourceTree = "<group>";
+		};
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FDAB0494E3F75C11040A3785AE9BF194 /* Pods-Safe Wickers */ = {
+			isa = PBXGroup;
+			children = (
+				432EAA30C936B0EE193F7EB961DD1E3A /* Pods-Safe Wickers.modulemap */,
+				7C92A070E2FFD80ACDA93BC05A9151EF /* Pods-Safe Wickers-acknowledgements.markdown */,
+				401EAE85AD22320F225FF620AE1EB22D /* Pods-Safe Wickers-acknowledgements.plist */,
+				D5CD07F04E3D3B1B581EE585B51E4CFB /* Pods-Safe Wickers-dummy.m */,
+				3EBEFEDAC4178D5F215CB17A54CA902D /* Pods-Safe Wickers-frameworks.sh */,
+				276E52AC19A96F00FC9B68673A32D09A /* Pods-Safe Wickers-Info.plist */,
+				9C3D669B359B41FAE9037226F6D3D4B0 /* Pods-Safe Wickers-umbrella.h */,
+				C3E6CD3079F9C423F12E2662C7488304 /* Pods-Safe Wickers.debug.xcconfig */,
+				E61743C432C8C1E1C0CD6F2E1F47412A /* Pods-Safe Wickers.release.xcconfig */,
+			);
+			name = "Pods-Safe Wickers";
+			path = "Target Support Files/Pods-Safe Wickers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0AD5FC5D76A06791F876C36D11FF884A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2E29B0ACF6414AC8AE623BC2765B4AA /* ACTextField-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B6461895582599ED9F37AA8F66F85F1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64057047375706276E20772DC179B52B /* Pods-Safe Wickers-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		63CCC5262CD5BBC4BF060A598D1EFA8A /* ACTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02463820BC983F312B7A4E18373E041B /* Build configuration list for PBXNativeTarget "ACTextField" */;
+			buildPhases = (
+				0AD5FC5D76A06791F876C36D11FF884A /* Headers */,
+				6298C0A91494F6136C741CFF41A1899E /* Sources */,
+				C6663533FD568CBBBE20CF293626655A /* Frameworks */,
+				1E16C35A0AA930D63DE87B1FAB2C617E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ACTextField;
+			productName = ACTextField;
+			productReference = 676669A688F2E362286EB75FB8FC3607 /* ACTextField.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E010F4E9A615488415EBD4550DD27B6A /* Pods-Safe Wickers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F68574E4FF08C1989E7EB187DD68A16 /* Build configuration list for PBXNativeTarget "Pods-Safe Wickers" */;
+			buildPhases = (
+				9B6461895582599ED9F37AA8F66F85F1 /* Headers */,
+				BC21FC861E26B9F4C695CE6BA7CC1887 /* Sources */,
+				416AADB2181FAED56214B076B083A2EB /* Frameworks */,
+				CCA50DA46157B503454806EA8D7C9638 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3413E86630AD1F862A9227088117271E /* PBXTargetDependency */,
+			);
+			name = "Pods-Safe Wickers";
+			productName = "Pods-Safe Wickers";
+			productReference = 9BF40F0E684C02F6178543126E120CBE /* Pods_Safe_Wickers.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 480B44496CCACB525D936FE15550B4EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63CCC5262CD5BBC4BF060A598D1EFA8A /* ACTextField */,
+				E010F4E9A615488415EBD4550DD27B6A /* Pods-Safe Wickers */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E16C35A0AA930D63DE87B1FAB2C617E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA50DA46157B503454806EA8D7C9638 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6298C0A91494F6136C741CFF41A1899E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E99A91C20BE9C1A673C9B02957CE1699 /* ACTextField-dummy.m in Sources */,
+				EC26810E6E90DD9C6BEE37D57F430DEC /* ACTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC21FC861E26B9F4C695CE6BA7CC1887 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84034A8CBCF599405D21F48E7FA5BDB5 /* Pods-Safe Wickers-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3413E86630AD1F862A9227088117271E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ACTextField;
+			target = 63CCC5262CD5BBC4BF060A598D1EFA8A /* ACTextField */;
+			targetProxy = 3D4B78AB7D624FCA39D8F8ECCDD46E2B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4E2EAB7BCABA7DDF35D5A0BF045AAC2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BA9B12B5A5A58B8E7DE18D64A32E274 /* ACTextField.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ACTextField/ACTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ACTextField/ACTextField-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ACTextField/ACTextField.modulemap";
+				PRODUCT_MODULE_NAME = ACTextField;
+				PRODUCT_NAME = ACTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		567FA4A58F37B52DAC8CE0B1743A0BFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E61743C432C8C1E1C0CD6F2E1F47412A /* Pods-Safe Wickers.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Safe Wickers/Pods-Safe Wickers-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Safe Wickers/Pods-Safe Wickers.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6410F571BA8C1AEC6A19403F1B61B0B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7CE6DA1A1FE2F653B24069F87CE296C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3E6CD3079F9C423F12E2662C7488304 /* Pods-Safe Wickers.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Safe Wickers/Pods-Safe Wickers-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Safe Wickers/Pods-Safe Wickers.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A27713CB74E99AF202AADC23200A32F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F868C55CCD3BA42142EB68C871503DD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D008232063F07B3061A5917D91260970 /* ACTextField.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ACTextField/ACTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ACTextField/ACTextField-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ACTextField/ACTextField.modulemap";
+				PRODUCT_MODULE_NAME = ACTextField;
+				PRODUCT_NAME = ACTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02463820BC983F312B7A4E18373E041B /* Build configuration list for PBXNativeTarget "ACTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E2EAB7BCABA7DDF35D5A0BF045AAC2F /* Debug */,
+				F868C55CCD3BA42142EB68C871503DD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6410F571BA8C1AEC6A19403F1B61B0B5 /* Debug */,
+				A27713CB74E99AF202AADC23200A32F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F68574E4FF08C1989E7EB187DD68A16 /* Build configuration list for PBXNativeTarget "Pods-Safe Wickers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CE6DA1A1FE2F653B24069F87CE296C3 /* Debug */,
+				567FA4A58F37B52DAC8CE0B1743A0BFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
