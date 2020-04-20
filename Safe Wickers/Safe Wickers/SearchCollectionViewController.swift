@@ -284,7 +284,17 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
     
     
     @IBAction func searchButton(_ sender: Any) {
-        
+        if searchLocation == nil {
+            let alertController = UIAlertController(title: "Location Missing", message: "Location missing, try to search a location or use current location.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+        } else if activityName == nil {
+            let alertController = UIAlertController(title: "Actvity Missing", message: "Location missing, try to chose an activity.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+        } else{
+            
+        }
     }
     
     
@@ -363,6 +373,12 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
 //        }
 //        return []
 //    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowBeachList"{
+            let destination = segue.destination as! BeachListTableViewController
+            
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
