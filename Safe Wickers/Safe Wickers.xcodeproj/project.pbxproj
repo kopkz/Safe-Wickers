@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		707BABF2244C7E3000351335 /* victoria_suburb_names.json in Resources */ = {isa = PBXBuildFile; fileRef = 707BABF1244C7E3000351335 /* victoria_suburb_names.json */; };
+		707BAC5E244D9E6F00351335 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707BAC5D244D9E6F00351335 /* LocationSearchTable.swift */; };
 		709D1EAE2446BC2F00F4AB4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1EAD2446BC2F00F4AB4A /* AppDelegate.swift */; };
 		709D1EB52446BC2F00F4AB4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709D1EB32446BC2F00F4AB4A /* Main.storyboard */; };
 		709D1EB72446BC3000F4AB4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 709D1EB62446BC3000F4AB4A /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		707BABF1244C7E3000351335 /* victoria_suburb_names.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = victoria_suburb_names.json; path = "Safe Wickers/victoria_suburb_names.json"; sourceTree = "<group>"; };
+		707BAC5D244D9E6F00351335 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		709D1EAA2446BC2F00F4AB4A /* Safe Wickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Safe Wickers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709D1EAD2446BC2F00F4AB4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		709D1EB42446BC2F00F4AB4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				709D1EB32446BC2F00F4AB4A /* Main.storyboard */,
 				709D1EB62446BC3000F4AB4A /* Assets.xcassets */,
 				709D1EC32449D5C500F4AB4A /* ActivityCollectionViewCell.swift */,
+				707BAC5D244D9E6F00351335 /* LocationSearchTable.swift */,
 				709D1EC52449DD2100F4AB4A /* Activities.swift */,
 				709D1EB82446BC3000F4AB4A /* LaunchScreen.storyboard */,
 				709D1EBB2446BC3000F4AB4A /* Info.plist */,
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				709D1EC62449DD2100F4AB4A /* Activities.swift in Sources */,
+				707BAC5E244D9E6F00351335 /* LocationSearchTable.swift in Sources */,
 				709D1EC2244972E300F4AB4A /* SearchCollectionViewController.swift in Sources */,
 				709D1EAE2446BC2F00F4AB4A /* AppDelegate.swift in Sources */,
 				709D1EC42449D5C500F4AB4A /* ActivityCollectionViewCell.swift in Sources */,

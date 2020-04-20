@@ -8,16 +8,17 @@
 
 import UIKit
 import MapKit
-import ACTextField
 
-
+protocol HandleMapSearch {
+    func createSearchLocation(placemark:MKPlacemark)
+}
 
 private let reuseIdentifier = "activityCell"
 private var sectionInsets = UIEdgeInsets()
 private let itemsPerRow: CGFloat = 3
 
 
-class SearchCollectionViewController: UIViewController,ACTextFieldDelegate,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout, CLLocationManagerDelegate
+class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout, CLLocationManagerDelegate
 {
     @IBOutlet weak var logoImageView: UIImageView!
     
@@ -25,31 +26,102 @@ class SearchCollectionViewController: UIViewController,ACTextFieldDelegate,UICol
     
     @IBOutlet weak var locationLabel: UILabel!
     
-    @IBOutlet weak var locationTextField: ACTextField!
+   
+    @IBOutlet weak var locationTextField: UITextField!
+    
+   
     
     @IBOutlet weak var activityLabel: UILabel!
     
     @IBOutlet weak var activityCollectionView: UICollectionView!
     
     
+    @IBAction func showSearchBar(_ sender: Any) {
+        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
+        
+        let searchController = UISearchController(searchResultsController: locationSearchTable)
+        searchController.searchResultsUpdater = locationSearchTable
+        
+        searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = "Search for location or beach"
+       
+        present(searchController,animated: true,completion: nil)
+        
+//        searchController.hidesNavigationBarDuringPresentation = false
+//        searchController.dimsBackgroundDuringPresentation = true
+//        definesPresentationContext = true
+        
+        locationSearchTable.handleMapSearchDelegate = self
+        
+    }
     
+    var selectedLocation: MKPlacemark?
     
     var activities = [Activities]()
-    var activtyName: String?
+    var activityName: String?
     
     var locationManager: CLLocationManager = CLLocationManager()
     var searchLocation: CLLocationCoordinate2D?
     var currentLocation: CLLocationCoordinate2D?
     var currentLocationName: String?
     
+//
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//        //ignoring user
+//        UIApplication.shared.beginIgnoringInteractionEvents()
+//
+////        //Activity Indicator
+////        let activityIndicator = UIActivityIndicatorView()
+////        activityIndicator.style = UIActivityIndicatorView.Style.gray
+////        activityIndicator.center = self.view.center
+////        activityIndicator.hidesWhenStopped = true
+////        activityIndicator.startAnimating()
+////
+////        self.view.addSubview(activityIndicator)
+//
+//        //Hide search bar
+//        searchBar.resignFirstResponder()
+//        dismiss(animated: true, completion: nil)
+//
+//
+//        //Create the search request
+//        let searchRequest = MKLocalSearch.Request()
+//        searchRequest.naturalLanguageQuery = searchBar.text
+//
+//        let activeSearch = MKLocalSearch(request: searchRequest)
+//
+//        activeSearch.start { (response, error) in
+//
+////            activityIndicator.stopAnimating()
+//            UIApplication.shared.endIgnoringInteractionEvents()
+//
+//            if response == nil
+//            {
+//                print("ERROR")
+//            }
+//            else
+//            {
+//
+//                //Getting data
+//                let latitude = response?.boundingRegion.center.latitude
+//                let longitude = response?.boundingRegion.center.longitude
+//
+//                //Create location
+//                self.searchLocation = CLLocationCoordinate2DMake(latitude!, longitude!)
+//                self.locationTextField.text = searchBar.text
+//
+//
+//            }
+//
+//        }
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-//        locationTextField.placeholder = "Enter or use current location"
-//        locationTextField.clearButtonMode = .always
-
     
+        locationTextField.placeholder = "Search or Use current location"
+       
+        
         logoImageView.backgroundColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1)
         createDefaultActivities()
         activityCollectionView.delegate = self
@@ -62,10 +134,8 @@ class SearchCollectionViewController: UIViewController,ACTextFieldDelegate,UICol
         locationManager.distanceFilter = kCLLocationAccuracyKilometer
         locationManager.delegate = self
 
-        //TODO deal with error:  Thread 1: EXC_BAD_ACCESS (code=1, address=
-//        let t = vicSuburbs()
-//        locationTextField.setAutoCompleteWith(DataSet: t)
-//        locationTextField.ACDelegate = self
+
+      
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -141,14 +211,14 @@ class SearchCollectionViewController: UIViewController,ACTextFieldDelegate,UICol
         let activityCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ActivityCollectionViewCell
         activityCell.isSelected = true
         
-        activtyName = activities[indexPath.row].activityName
+        activityName = activities[indexPath.row].activityName
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let activityCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ActivityCollectionViewCell
         activityCell.isSelected = false
         
-        activtyName = nil
+        activityName = nil
     }
 //    func collectionView(_ collectionView: UICollectionView, layout
 //        collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath:
@@ -202,17 +272,19 @@ class SearchCollectionViewController: UIViewController,ACTextFieldDelegate,UICol
         if let currentLocation = currentLocation{
             searchLocation = currentLocation
             reverseGeocode()
+            
     }
         else {
             let alertController = UIAlertController(title: "Location Not Found", message: "The location has not yet been determined.", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
                 present(alertController, animated: true, completion: nil)
     }
-    
+
     }
     
     
     @IBAction func searchButton(_ sender: Any) {
+        
     }
     
     
@@ -230,10 +302,9 @@ class SearchCollectionViewController: UIViewController,ACTextFieldDelegate,UICol
                                         completionHandler: { (placemarks, error) in
                                             if error == nil {
                                                 let firstLocation = placemarks?[0]
-                                                let searchLocationName = (firstLocation?.subLocality)! + ", " + (firstLocation?.locality)! + ", " + (firstLocation?.administrativeArea)!
-                                                self.locationTextField.text = searchLocationName
+                                                let searchLocationName = (firstLocation?.subLocality)! + ", " + (firstLocation?.locality)!
                                                 self.currentLocationName = searchLocationName
-                                                
+                                                self.locationTextField.text = searchLocationName
                                             }
                                             else {
                                                 // An error occurred during geocoding.
@@ -241,59 +312,81 @@ class SearchCollectionViewController: UIViewController,ACTextFieldDelegate,UICol
                                               print("error in reverse Decode process")
                                             }
         })
-        
+
     }
     
-    // from location name to Coordinate , ref: https://www.cnblogs.com/Free-Thinker/p/4843578.html
-    func locationEncode(){
-        let geocoder = CLGeocoder()
-        if self.locationTextField.text != nil {
-            geocoder.geocodeAddressString(self.locationTextField.text!, completionHandler: {
-                (placemarks, error) in
-                if error != nil{
-                    let alertController = UIAlertController(title: "Location Not Found", message: "The location has not yet been determined.", preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
-                    self.present(alertController, animated: true, completion: nil)
-                }
-                
-                let firstplace = placemarks?[0]
-                self.searchLocation = firstplace?.location?.coordinate
-            })
-        }
-        
-    }
+//    // from location name to Coordinate , ref: https://www.cnblogs.com/Free-Thinker/p/4843578.html
+//    func locationEncode(){
+//        let geocoder = CLGeocoder()
+//        if self.locationTextField.text != nil {
+//            geocoder.geocodeAddressString(self.locationTextField.text!, completionHandler: {
+//                (placemarks, error) in
+//                if error != nil{
+//                    let alertController = UIAlertController(title: "Location Not Found", message: "The location has not yet been determined.", preferredStyle: .alert)
+//                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+//                    self.present(alertController, animated: true, completion: nil)
+//                }
+//
+//                let firstplace = placemarks?[0]
+//                self.searchLocation = firstplace?.location?.coordinate
+//            })
+//        }
+//
+//    }
 
     
     //configure the location auto complete textField ref:
     
-    func ACTextField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-    return true
-}
+//    func ACTextField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//    return true
+//}
     
     
     
-    //Data sources for location atuo compele textField
-    fileprivate func vicSuburbs() -> [String] {
-        if let path = Bundle.main.path(forResource: "victoria_suburb_names", ofType: "json")        {
-            do {
-                let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: .dataReadingMapped)
-                let jsonResult = try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) as! [[String:String]]
-                
-                var suburbNames = [String]()
-                for suburb in jsonResult {
-                    suburbNames.append(suburb["name"]!)
-                }
-                
-                return suburbNames
-            } catch {
-                print("Error parsing jSON: \(error)")
-                return []
-            }
-        }
-        return []
-    }
+//    //Data sources for location atuo compele textField
+//    fileprivate func vicSuburbs() -> [String] {
+//        if let path = Bundle.main.path(forResource: "victoria_suburb_names", ofType: "json")        {
+//            do {
+//                let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: .dataReadingMapped)
+//                let jsonResult = try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) as! [[String:String]]
+//
+//                var suburbNames = [String]()
+//                for suburb in jsonResult {
+//                    suburbNames.append(suburb["name"]!)
+//                }
+//
+//                return suburbNames
+//            } catch {
+//                print("Error parsing jSON: \(error)")
+//                return []
+//            }
+//        }
+//        return []
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
+
+extension SearchCollectionViewController: HandleMapSearch {
+    func createSearchLocation(placemark:MKPlacemark){
+        // cache the pin
+        
+        selectedLocation = placemark
+        
+        
+        if placemark.locality != nil && placemark.administrativeArea != nil {
+            self.searchLocation = placemark.coordinate
+            self.locationTextField.text = placemark.locality! + ", " + placemark.administrativeArea!
+        } else {
+            self.locationTextField.text = ""
+            self.searchLocation = nil
+            let alertController = UIAlertController(title: "Wrong Location", message: "The location has not yet been determined, try again.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+        }
+        
+    }
+}
+
