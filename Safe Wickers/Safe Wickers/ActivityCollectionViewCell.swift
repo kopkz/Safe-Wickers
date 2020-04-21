@@ -13,10 +13,16 @@ class ActivityCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var activityNameLabel: UILabel!
     @IBOutlet weak var activityImageView: UIImageView!
     
-    /// selected activity will have gray background, otherwise is white background
-    override var isSelected: Bool{
-        didSet(newValue){
-            contentView.backgroundColor = newValue ? UIColor.gray : UIColor.white
-        }
+    /// selected activity will have diffent colour
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        let nilView = UIView(frame: bounds)
+        nilView.backgroundColor = nil
+        self.backgroundView = nilView
+        
+        let blueView = UIView(frame: bounds)
+        blueView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 1, alpha: 1)
+        self.selectedBackgroundView = blueView
     }
 }

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--FIND SAFE BEACH-->
+        <!--Search Collection View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="SearchCollectionViewController" customModule="Safe_Wickers" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,37 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Safe wickers_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ZK7-lB-qZo">
-                                <rect key="frame" x="0.0" y="83" width="414" height="16"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location or beach name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdJ-EC-4HQ">
-                                <rect key="frame" x="16" y="115" width="189" height="21"/>
+                                <rect key="frame" x="16" y="141" width="189" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aVF-Ue-zRA" userLabel="Activity Collection View">
-                                <rect key="frame" x="16" y="281" width="382" height="458"/>
+                                <rect key="frame" x="16" y="307" width="382" height="432"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="kx7-2c-hsa">
-                                    <size key="itemSize" width="60" height="84"/>
+                                    <size key="itemSize" width="85" height="84"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="activityCell" id="eCb-W9-aCB" userLabel="Activity Collection View Cell" customClass="ActivityCollectionViewCell" customModule="Safe_Wickers" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="84"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="84"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="60" height="84"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="85" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vFp-cJ-xuK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="64"/>
+                                                    <rect key="frame" x="5" y="5" width="75" height="49"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swimming" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOB-Cr-Ymq">
-                                                    <rect key="frame" x="0.0" y="64" width="80" height="20"/>
+                                                    <rect key="frame" x="3" y="59" width="79.5" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -56,12 +53,12 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="IOB-Cr-Ymq" firstAttribute="top" secondItem="vFp-cJ-xuK" secondAttribute="bottom" id="ALi-tE-4qC"/>
-                                            <constraint firstAttribute="bottom" secondItem="IOB-Cr-Ymq" secondAttribute="bottom" id="BsE-xE-Zpe"/>
-                                            <constraint firstItem="vFp-cJ-xuK" firstAttribute="top" secondItem="eCb-W9-aCB" secondAttribute="top" id="KYV-t4-sZa"/>
-                                            <constraint firstItem="IOB-Cr-Ymq" firstAttribute="leading" secondItem="vFp-cJ-xuK" secondAttribute="leading" id="M93-iv-wkO"/>
-                                            <constraint firstItem="vFp-cJ-xuK" firstAttribute="leading" secondItem="eCb-W9-aCB" secondAttribute="leading" id="UeY-6J-1Jg"/>
-                                            <constraint firstItem="IOB-Cr-Ymq" firstAttribute="trailing" secondItem="vFp-cJ-xuK" secondAttribute="trailing" id="i8X-NL-Mtq"/>
+                                            <constraint firstAttribute="trailing" secondItem="vFp-cJ-xuK" secondAttribute="trailing" constant="5" id="Fxg-am-Whg"/>
+                                            <constraint firstItem="IOB-Cr-Ymq" firstAttribute="top" secondItem="vFp-cJ-xuK" secondAttribute="bottom" constant="5" id="KqU-6N-KLM"/>
+                                            <constraint firstItem="vFp-cJ-xuK" firstAttribute="top" secondItem="eCb-W9-aCB" secondAttribute="top" constant="5" id="VOv-cY-qem"/>
+                                            <constraint firstItem="vFp-cJ-xuK" firstAttribute="leading" secondItem="eCb-W9-aCB" secondAttribute="leading" constant="5" id="sBR-rg-jSB"/>
+                                            <constraint firstAttribute="bottom" secondItem="IOB-Cr-Ymq" secondAttribute="bottom" constant="5" id="trm-Sl-uss"/>
+                                            <constraint firstItem="IOB-Cr-Ymq" firstAttribute="centerX" secondItem="eCb-W9-aCB" secondAttribute="centerX" id="uoE-Ev-h9p"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="activityImageView" destination="vFp-cJ-xuK" id="f8N-Cg-ksM"/>
@@ -76,32 +73,37 @@
                                 <state key="normal" title="SEARCH"/>
                                 <connections>
                                     <action selector="searchButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="OjU-Ts-CSw"/>
-                                    <segue destination="vw7-Wu-Tso" kind="show" identifier="ShowBeachList" id="nnr-Ik-Kgy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWf-ND-GPK" userLabel="Current Location Button">
-                                <rect key="frame" x="143" y="198" width="146" height="30"/>
+                                <rect key="frame" x="143" y="224" width="146" height="30"/>
                                 <state key="normal" title="Use Current Location"/>
                                 <connections>
                                     <action selector="currentLocationButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="E4P-4F-WuR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7d-ro-Ijr">
-                                <rect key="frame" x="16" y="198" width="111" height="30"/>
+                                <rect key="frame" x="16" y="224" width="111" height="30"/>
                                 <state key="normal" title="Search Loaction"/>
                                 <connections>
                                     <action selector="showSearchBar:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ldQ-tt-kzI"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Hc-FS-ECP">
-                                <rect key="frame" x="16" y="152" width="382" height="30"/>
+                                <rect key="frame" x="16" y="178" width="382" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the beach activity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvQ-LU-gbx">
-                                <rect key="frame" x="16" y="244" width="194" height="21"/>
+                                <rect key="frame" x="16" y="270" width="194" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIND SAFE BEACH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Caw-qJ-wla">
+                                <rect key="frame" x="16" y="104" width="149.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -114,39 +116,39 @@
                             <constraint firstItem="aVF-Ue-zRA" firstAttribute="leading" secondItem="IvQ-LU-gbx" secondAttribute="leading" id="Ktv-6M-S9f"/>
                             <constraint firstItem="IvQ-LU-gbx" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="KwS-B2-Q85"/>
                             <constraint firstItem="1Hc-FS-ECP" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="LEJ-11-bHS"/>
-                            <constraint firstItem="ZK7-lB-qZo" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="-5" id="McW-FY-cri"/>
                             <constraint firstItem="Y7d-ro-Ijr" firstAttribute="top" secondItem="1Hc-FS-ECP" secondAttribute="bottom" constant="16" id="RMo-2i-czf"/>
                             <constraint firstItem="fWf-ND-GPK" firstAttribute="leading" secondItem="Y7d-ro-Ijr" secondAttribute="trailing" constant="16" id="Y6B-9Q-Kla"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="B70-ou-sBB" secondAttribute="bottom" constant="16" id="ZrG-Mf-O9M"/>
-                            <constraint firstItem="mdJ-EC-4HQ" firstAttribute="top" secondItem="ZK7-lB-qZo" secondAttribute="bottom" constant="16" id="dyE-b7-RKe"/>
                             <constraint firstItem="Y7d-ro-Ijr" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="fL0-1w-Ow7"/>
+                            <constraint firstItem="Caw-qJ-wla" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="fiY-S4-vG6"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="B70-ou-sBB" secondAttribute="trailing" constant="16" id="i2x-bn-Kkt"/>
+                            <constraint firstItem="Caw-qJ-wla" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="16" id="jgL-f3-WKf"/>
+                            <constraint firstItem="mdJ-EC-4HQ" firstAttribute="top" secondItem="Caw-qJ-wla" secondAttribute="bottom" constant="16" id="l21-Je-E1S"/>
                             <constraint firstItem="fWf-ND-GPK" firstAttribute="top" secondItem="1Hc-FS-ECP" secondAttribute="bottom" constant="16" id="pKk-ai-3fk"/>
                             <constraint firstItem="aVF-Ue-zRA" firstAttribute="trailing" secondItem="1Hc-FS-ECP" secondAttribute="trailing" id="qrY-rA-saQ"/>
                             <constraint firstItem="mdJ-EC-4HQ" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="raw-9U-mGx"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="1Hc-FS-ECP" secondAttribute="trailing" constant="16" id="so5-ES-YIS"/>
                             <constraint firstItem="aVF-Ue-zRA" firstAttribute="top" secondItem="IvQ-LU-gbx" secondAttribute="bottom" constant="16" id="tRO-ty-89x"/>
-                            <constraint firstItem="ZK7-lB-qZo" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="v6G-F7-A01"/>
                             <constraint firstItem="B70-ou-sBB" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="w7c-QM-4nM"/>
-                            <constraint firstItem="ZK7-lB-qZo" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="zjL-qF-DEu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <navigationItem key="navigationItem" title="FIND SAFE BEACH" id="5jA-s1-tSt"/>
+                    <navigationItem key="navigationItem" id="5jA-s1-tSt"/>
                     <connections>
                         <outlet property="activityCollectionView" destination="aVF-Ue-zRA" id="uiY-fi-3dw"/>
                         <outlet property="activityLabel" destination="IvQ-LU-gbx" id="lWF-2d-JXS"/>
                         <outlet property="locationLabel" destination="mdJ-EC-4HQ" id="rsb-HP-UeN"/>
                         <outlet property="locationTextField" destination="1Hc-FS-ECP" id="HT6-V5-Nny"/>
-                        <outlet property="logoImageView" destination="ZK7-lB-qZo" id="bVT-hM-5cg"/>
                         <outlet property="searchNavigationItem" destination="5jA-s1-tSt" id="CzH-nm-xCb"/>
+                        <outlet property="titleLabel" destination="Caw-qJ-wla" id="fhG-Xk-cH4"/>
+                        <segue destination="vw7-Wu-Tso" kind="show" identifier="ShowBeachList" id="bwc-aS-A0H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2750.7246376811595" y="-901.33928571428567"/>
         </scene>
-        <!--Beach List-->
+        <!--Beach List Table View Controller-->
         <scene sceneID="T6V-LP-lzy">
             <objects>
                 <tableViewController id="vw7-Wu-Tso" customClass="BeachListTableViewController" customModule="Safe_Wickers" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,46 +165,71 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="beachCell" rowHeight="213" id="3Y7-Sq-KA0" customClass="BeachListTableViewCell" customModule="Safe_Wickers" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="99.5" width="414" height="213"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="beachCell" rowHeight="277" id="3Y7-Sq-KA0" customClass="BeachListTableViewCell" customModule="Safe_Wickers" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="99.5" width="414" height="277"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Y7-Sq-KA0" id="cIv-LY-aKo">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="212.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="276.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mEg-DI-cAM">
-                                            <rect key="frame" x="10" y="10" width="394" height="161.5"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mEg-DI-cAM">
+                                            <rect key="frame" x="10" y="10" width="394" height="226"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="226" id="BBj-Cn-34F"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beach Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNk-aE-k3v">
-                                            <rect key="frame" x="10" y="181.5" width="98" height="21"/>
+                                            <rect key="frame" x="10" y="246" width="98" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dY-VQ-xXW">
-                                            <rect key="frame" x="124" y="181.5" width="67" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dY-VQ-xXW">
+                                            <rect key="frame" x="124" y="246" width="67" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CF7-Fa-Pb4">
-                                            <rect key="frame" x="211" y="181.5" width="193" height="21"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="safe" translatesAutoresizingMaskIntoConstraints="NO" id="CF7-Fa-Pb4">
+                                            <rect key="frame" x="372" y="241" width="32" height="31"/>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzb-dF-rc5">
+                                            <rect key="frame" x="372" y="11" width="32" height="32"/>
+                                            <state key="normal" image="icons8-unlike-96"/>
+                                            <connections>
+                                                <action selector="likeBeach:" destination="3Y7-Sq-KA0" eventType="touchUpInside" id="Wwc-mc-dBq"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="CF7-Fa-Pb4" firstAttribute="top" secondItem="mEg-DI-cAM" secondAttribute="bottom" constant="10" id="1cF-6U-QBz"/>
-                                        <constraint firstItem="9dY-VQ-xXW" firstAttribute="leading" secondItem="cNk-aE-k3v" secondAttribute="trailing" constant="16" id="GST-Ur-C1w"/>
-                                        <constraint firstItem="cNk-aE-k3v" firstAttribute="leading" secondItem="cIv-LY-aKo" secondAttribute="leading" constant="10" id="HSd-0h-UYO"/>
-                                        <constraint firstItem="mEg-DI-cAM" firstAttribute="top" secondItem="cIv-LY-aKo" secondAttribute="top" constant="10" id="KmD-lZ-AYe"/>
-                                        <constraint firstAttribute="bottom" secondItem="CF7-Fa-Pb4" secondAttribute="bottom" constant="10" id="Ork-C0-CmM"/>
-                                        <constraint firstItem="cNk-aE-k3v" firstAttribute="top" secondItem="mEg-DI-cAM" secondAttribute="bottom" constant="10" id="XdS-ai-70N"/>
-                                        <constraint firstAttribute="trailing" secondItem="mEg-DI-cAM" secondAttribute="trailing" constant="10" id="eFd-xd-enf"/>
-                                        <constraint firstItem="CF7-Fa-Pb4" firstAttribute="leading" secondItem="9dY-VQ-xXW" secondAttribute="trailing" constant="20" id="frc-IW-dCy"/>
-                                        <constraint firstAttribute="trailing" secondItem="CF7-Fa-Pb4" secondAttribute="trailing" constant="10" id="gyg-qB-Nj3"/>
-                                        <constraint firstAttribute="bottom" secondItem="cNk-aE-k3v" secondAttribute="bottom" constant="10" id="tf7-Xj-KtQ"/>
-                                        <constraint firstItem="9dY-VQ-xXW" firstAttribute="top" secondItem="mEg-DI-cAM" secondAttribute="bottom" constant="10" id="yPj-Nh-VgX"/>
-                                        <constraint firstItem="mEg-DI-cAM" firstAttribute="leading" secondItem="cIv-LY-aKo" secondAttribute="leading" constant="10" id="z3r-r6-46z"/>
+                                        <constraint firstItem="cNk-aE-k3v" firstAttribute="top" secondItem="mEg-DI-cAM" secondAttribute="bottom" constant="10" id="0g3-ls-n64"/>
+                                        <constraint firstItem="mEg-DI-cAM" firstAttribute="top" secondItem="cIv-LY-aKo" secondAttribute="topMargin" constant="-1" id="1hL-Hd-vPO"/>
+                                        <constraint firstItem="mEg-DI-cAM" firstAttribute="trailing" secondItem="pzb-dF-rc5" secondAttribute="trailing" id="75T-RT-86D"/>
+                                        <constraint firstItem="mEg-DI-cAM" firstAttribute="leading" secondItem="cNk-aE-k3v" secondAttribute="leading" id="E0M-mf-OIY"/>
+                                        <constraint firstItem="pzb-dF-rc5" firstAttribute="top" secondItem="cIv-LY-aKo" secondAttribute="topMargin" id="Hqo-Mn-6sh"/>
+                                        <constraint firstItem="mEg-DI-cAM" firstAttribute="leading" secondItem="cIv-LY-aKo" secondAttribute="leadingMargin" constant="-10" id="PH6-TH-rFR"/>
+                                        <constraint firstItem="pzb-dF-rc5" firstAttribute="trailing" secondItem="CF7-Fa-Pb4" secondAttribute="trailing" id="QG0-d6-Sff"/>
+                                        <constraint firstItem="9dY-VQ-xXW" firstAttribute="centerY" secondItem="CF7-Fa-Pb4" secondAttribute="centerY" id="bB0-Iu-hvY"/>
+                                        <constraint firstItem="cNk-aE-k3v" firstAttribute="baseline" secondItem="9dY-VQ-xXW" secondAttribute="baseline" id="cLF-7w-Rkn"/>
+                                        <constraint firstItem="mEg-DI-cAM" firstAttribute="centerX" secondItem="cIv-LY-aKo" secondAttribute="centerX" id="ehV-7O-JHT"/>
+                                        <constraint firstItem="CF7-Fa-Pb4" firstAttribute="top" secondItem="mEg-DI-cAM" secondAttribute="bottom" constant="5" id="ill-Ec-DSP"/>
+                                        <constraint firstItem="9dY-VQ-xXW" firstAttribute="leading" secondItem="cNk-aE-k3v" secondAttribute="trailing" constant="16" id="kFc-sD-zUu"/>
+                                        <constraint firstItem="pzb-dF-rc5" firstAttribute="leading" secondItem="CF7-Fa-Pb4" secondAttribute="leading" id="l6a-F8-3J5"/>
                                     </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="beachImage" destination="mEg-DI-cAM" id="JEt-rh-eTe"/>
+                                    <outlet property="beachNameLabel" destination="cNk-aE-k3v" id="n0L-En-uUa"/>
+                                    <outlet property="distanceLabel" destination="9dY-VQ-xXW" id="SXJ-zi-ivl"/>
+                                    <outlet property="riskImageView" destination="CF7-Fa-Pb4" id="Hjc-xv-H4F"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="countCell" id="UPb-Ny-4kb">
+                                <rect key="frame" x="0.0" y="376.5" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UPb-Ny-4kb" id="UHn-rK-yyN">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -211,7 +238,7 @@
                             <outlet property="delegate" destination="vw7-Wu-Tso" id="CNJ-US-V5b"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Beach List" id="eTM-ab-5nB">
+                    <navigationItem key="navigationItem" id="eTM-ab-5nB">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-map-marker-90" id="65R-tj-cgS">
                             <connections>
                                 <segue destination="hrO-az-q6V" kind="show" identifier="ShowMap" id="hoc-Jh-n7d"/>
@@ -461,11 +488,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Safe wickers_Logo" width="77" height="77"/>
         <image name="icons8-dashboard-90" width="30" height="30"/>
         <image name="icons8-love-90" width="30" height="30"/>
         <image name="icons8-map-marker-90" width="30" height="30"/>
         <image name="icons8-search-90" width="30" height="30"/>
         <image name="icons8-settings-90" width="30" height="30"/>
+        <image name="icons8-unlike-96" width="32" height="32"/>
+        <image name="safe" width="30" height="30"/>
     </resources>
 </document>

@@ -18,6 +18,7 @@
 		709D1EC2244972E300F4AB4A /* SearchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1EC1244972E300F4AB4A /* SearchCollectionViewController.swift */; };
 		709D1EC42449D5C500F4AB4A /* ActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1EC32449D5C500F4AB4A /* ActivityCollectionViewCell.swift */; };
 		709D1EC62449DD2100F4AB4A /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1EC52449DD2100F4AB4A /* Activities.swift */; };
+		70A49DF0244E8A880042CD98 /* Beach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A49DEF244E8A870042CD98 /* Beach.swift */; };
 		CB41842CF993B73794769121 /* Pods_Safe_Wickers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9982ACD8B8650BFDB86A7747 /* Pods_Safe_Wickers.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		709D1EC1244972E300F4AB4A /* SearchCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewController.swift; sourceTree = "<group>"; };
 		709D1EC32449D5C500F4AB4A /* ActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCollectionViewCell.swift; sourceTree = "<group>"; };
 		709D1EC52449DD2100F4AB4A /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
+		70A49DEF244E8A870042CD98 /* Beach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beach.swift; sourceTree = "<group>"; };
 		9982ACD8B8650BFDB86A7747 /* Pods_Safe_Wickers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Safe_Wickers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB08D21B751E7835FA167C33 /* Pods-Safe Wickers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safe Wickers.debug.xcconfig"; path = "Target Support Files/Pods-Safe Wickers/Pods-Safe Wickers.debug.xcconfig"; sourceTree = "<group>"; };
 		E7D2F70EB70F227933667760 /* Pods-Safe Wickers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safe Wickers.release.xcconfig"; path = "Target Support Files/Pods-Safe Wickers/Pods-Safe Wickers.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				707BAC5D244D9E6F00351335 /* LocationSearchTable.swift */,
 				709D1EC52449DD2100F4AB4A /* Activities.swift */,
 				7086B1A9244DBA0A005269B2 /* BeachListTableViewController.swift */,
+				70A49DEF244E8A870042CD98 /* Beach.swift */,
 				7086B1AB244DC102005269B2 /* BeachListTableViewCell.swift */,
 				709D1EB82446BC3000F4AB4A /* LaunchScreen.storyboard */,
 				709D1EBB2446BC3000F4AB4A /* Info.plist */,
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				709D1EC62449DD2100F4AB4A /* Activities.swift in Sources */,
+				70A49DF0244E8A880042CD98 /* Beach.swift in Sources */,
 				7086B1AC244DC102005269B2 /* BeachListTableViewCell.swift in Sources */,
 				7086B1AA244DBA0A005269B2 /* BeachListTableViewController.swift in Sources */,
 				707BAC5E244D9E6F00351335 /* LocationSearchTable.swift in Sources */,

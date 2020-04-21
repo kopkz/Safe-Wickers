@@ -10,6 +10,13 @@ import UIKit
 
 class BeachListTableViewCell: UITableViewCell {
 
+    @IBAction func likeBeach(_ sender: Any) {
+    }
+
+    @IBOutlet weak var riskImageView: UIImageView!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var beachNameLabel: UILabel!
+    @IBOutlet weak var beachImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

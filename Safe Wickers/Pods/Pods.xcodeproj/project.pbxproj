@@ -7,110 +7,127 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		64057047375706276E20772DC179B52B /* Pods-Safe Wickers-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C3D669B359B41FAE9037226F6D3D4B0 /* Pods-Safe Wickers-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6C5D73FD2CC165605283FA5F54488522 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		6ECFD07130677395B5AF6B8BE6B47F5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
-		84034A8CBCF599405D21F48E7FA5BDB5 /* Pods-Safe Wickers-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CD07F04E3D3B1B581EE585B51E4CFB /* Pods-Safe Wickers-dummy.m */; };
-		8E896F89B3405CE3C8FF4F2FDF928772 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		E99A91C20BE9C1A673C9B02957CE1699 /* ACTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FFA44850F4A84F34B29CD01C2DF721 /* ACTextField-dummy.m */; };
-		EC26810E6E90DD9C6BEE37D57F430DEC /* ACTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55496E41708F76111B396E43CC13C2A6 /* ACTextField.swift */; };
-		F2E29B0ACF6414AC8AE623BC2765B4AA /* ACTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 587FB7062F5EC632448F33EDFC3F30A3 /* ACTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		049FC8D781A7ECAED15F25718502D54E /* CosmosAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95F69EA32AB0728A2CCCF5ECBA773C /* CosmosAccessibility.swift */; };
+		05DFD786F217BD0DFBFB5F57D80236A5 /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA06310EBE16A09D01FECACF9824A3 /* CosmosTouch.swift */; };
+		10A44B18B300E2B0BF5BF88F6F2E585F /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35696210957ADE15680CA907CD0C77 /* CosmosRating.swift */; };
+		2FADA7115AEFDCC59593DD4201572539 /* CosmosLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EFD3F770945B6DE9CEB6DFFBAC2C00 /* CosmosLayers.swift */; };
+		41E5B21F4758B2411A95A7C72523536D /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F75C17AB2E3DBBADD82C283A9920F8 /* CosmosView.swift */; };
+		4221AB8F56B1444AE176F2B13F81C557 /* StarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F11A167F3AA6F45EEA463328BB8EE25 /* StarLayer.swift */; };
+		4404A9C8152865C62A5B59B88640811C /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E3874A468C60BEB281D0A1E213B262 /* CosmosSize.swift */; };
+		5C6DA2A3191A2B28BEB8B66B4BF28A13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		5C7B76FBAD8574062F60041B012FE052 /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACFFC8A6CF484661158E175E3BA996B /* CosmosTouchTarget.swift */; };
+		61857850A19756A357AD6696D42E69A4 /* RightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5897E31E1EC97ED9A077A7DE06FFED3 /* RightToLeft.swift */; };
+		66C55F598883BB9E871ECFEFF5B3D11E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		6B5B895530DD528837232C9F86517418 /* Pods-Safe Wickers-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CD07F04E3D3B1B581EE585B51E4CFB /* Pods-Safe Wickers-dummy.m */; };
+		9D0FBDD68E4C34C1FA4603BA1016FFEF /* Pods-Safe Wickers-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C3D669B359B41FAE9037226F6D3D4B0 /* Pods-Safe Wickers-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D60235277EEB2A0A45939E8F09A7D71 /* Cosmos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE73B1AFBB1A8CB564DB09EA1BE2942E /* Cosmos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC7DAE5B261F8CDE268794A1B7B06F56 /* CosmosText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DF35E0E63321E5F772424D9EE48B1 /* CosmosText.swift */; };
+		B594E04185C4C7522C612C631B8AD97A /* Cosmos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C6787280DFA6AA5C600055EE6EA4D /* Cosmos-dummy.m */; };
+		C0D5F472F17B5A0F9824C362F35A7132 /* CosmosLocalizedRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6E7DAF60D8E62DA62B2CB23D43E16B /* CosmosLocalizedRating.swift */; };
+		E0FD27E2F7F5C05D3390126C7DF35EA6 /* CosmosSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B148CC2C6AA832097607C6D9E1130A /* CosmosSettings.swift */; };
+		E189E12EEDDD9A1484602416282A19F9 /* CosmosLayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7148BEACE4E8E4A331749E74D5874D52 /* CosmosLayerHelper.swift */; };
+		E776F53E707AD1ACF7223305E9EEDBFC /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174979D91E7D6F800B205ABDD3EB318F /* CosmosDefaultSettings.swift */; };
+		E9A920FE6E5FC6F5F58B6F3AA9B3FDAF /* StarFillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A70406522118CCB5BDCB099CDB2C36 /* StarFillMode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3D4B78AB7D624FCA39D8F8ECCDD46E2B /* PBXContainerItemProxy */ = {
+		476942FCA41B463D658FE1B7DD42EC05 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 63CCC5262CD5BBC4BF060A598D1EFA8A;
-			remoteInfo = ACTextField;
+			remoteGlobalIDString = 00F31BD5217A20974B5E9AAC6256D98E;
+			remoteInfo = Cosmos;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		172D9A2B8F47FCD691AEB330794F8B68 /* ACTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ACTextField-prefix.pch"; sourceTree = "<group>"; };
+		05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cosmos.framework; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E29BC44317FF962374F2AB1B47271F3 /* Cosmos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.debug.xcconfig; sourceTree = "<group>"; };
+		174979D91E7D6F800B205ABDD3EB318F /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosDefaultSettings.swift; path = Cosmos/CosmosDefaultSettings.swift; sourceTree = "<group>"; };
+		1ACFFC8A6CF484661158E175E3BA996B /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouchTarget.swift; path = Cosmos/Helpers/CosmosTouchTarget.swift; sourceTree = "<group>"; };
 		276E52AC19A96F00FC9B68673A32D09A /* Pods-Safe Wickers-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Safe Wickers-Info.plist"; sourceTree = "<group>"; };
-		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		2E9C6787280DFA6AA5C600055EE6EA4D /* Cosmos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cosmos-dummy.m"; sourceTree = "<group>"; };
+		2F95F69EA32AB0728A2CCCF5ECBA773C /* CosmosAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosAccessibility.swift; path = Cosmos/CosmosAccessibility.swift; sourceTree = "<group>"; };
+		31F75C17AB2E3DBBADD82C283A9920F8 /* CosmosView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosView.swift; path = Cosmos/CosmosView.swift; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		32E3874A468C60BEB281D0A1E213B262 /* CosmosSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSize.swift; path = Cosmos/CosmosSize.swift; sourceTree = "<group>"; };
 		3EBEFEDAC4178D5F215CB17A54CA902D /* Pods-Safe Wickers-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Safe Wickers-frameworks.sh"; sourceTree = "<group>"; };
 		401EAE85AD22320F225FF620AE1EB22D /* Pods-Safe Wickers-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Safe Wickers-acknowledgements.plist"; sourceTree = "<group>"; };
 		432EAA30C936B0EE193F7EB961DD1E3A /* Pods-Safe Wickers.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Safe Wickers.modulemap"; sourceTree = "<group>"; };
-		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		55496E41708F76111B396E43CC13C2A6 /* ACTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ACTextField.swift; path = ACTextField/Classes/ACTextField.swift; sourceTree = "<group>"; };
-		587FB7062F5EC632448F33EDFC3F30A3 /* ACTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ACTextField-umbrella.h"; sourceTree = "<group>"; };
-		61FFA44850F4A84F34B29CD01C2DF721 /* ACTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ACTextField-dummy.m"; sourceTree = "<group>"; };
-		676669A688F2E362286EB75FB8FC3607 /* ACTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ACTextField.framework; path = ACTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F11A167F3AA6F45EEA463328BB8EE25 /* StarLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarLayer.swift; path = Cosmos/StarLayer.swift; sourceTree = "<group>"; };
+		569F011501DB1409E3120F376B6B7D0C /* Cosmos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-prefix.pch"; sourceTree = "<group>"; };
+		7148BEACE4E8E4A331749E74D5874D52 /* CosmosLayerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayerHelper.swift; path = Cosmos/CosmosLayerHelper.swift; sourceTree = "<group>"; };
 		7C92A070E2FFD80ACDA93BC05A9151EF /* Pods-Safe Wickers-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Safe Wickers-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8B521B0B930496D3648D0EE313E5672E /* ACTextField-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ACTextField-Info.plist"; sourceTree = "<group>"; };
-		8BA9B12B5A5A58B8E7DE18D64A32E274 /* ACTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ACTextField.debug.xcconfig; sourceTree = "<group>"; };
+		95B148CC2C6AA832097607C6D9E1130A /* CosmosSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
+		97A70406522118CCB5BDCB099CDB2C36 /* StarFillMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarFillMode.swift; path = Cosmos/StarFillMode.swift; sourceTree = "<group>"; };
+		9B35696210957ADE15680CA907CD0C77 /* CosmosRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosRating.swift; path = Cosmos/CosmosRating.swift; sourceTree = "<group>"; };
 		9BF40F0E684C02F6178543126E120CBE /* Pods_Safe_Wickers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Safe_Wickers.framework; path = "Pods-Safe Wickers.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3D669B359B41FAE9037226F6D3D4B0 /* Pods-Safe Wickers-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Safe Wickers-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AF1DF35E0E63321E5F772424D9EE48B1 /* CosmosText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosText.swift; path = Cosmos/CosmosText.swift; sourceTree = "<group>"; };
+		BCCA06310EBE16A09D01FECACF9824A3 /* CosmosTouch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouch.swift; path = Cosmos/CosmosTouch.swift; sourceTree = "<group>"; };
 		C3E6CD3079F9C423F12E2662C7488304 /* Pods-Safe Wickers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Safe Wickers.debug.xcconfig"; sourceTree = "<group>"; };
-		D008232063F07B3061A5917D91260970 /* ACTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ACTextField.release.xcconfig; sourceTree = "<group>"; };
-		D133A0983C91D3AE2ECD52A7CEC9D279 /* ACTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ACTextField.modulemap; sourceTree = "<group>"; };
 		D5CD07F04E3D3B1B581EE585B51E4CFB /* Pods-Safe Wickers-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Safe Wickers-dummy.m"; sourceTree = "<group>"; };
+		E3EFD3F770945B6DE9CEB6DFFBAC2C00 /* CosmosLayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayers.swift; path = Cosmos/CosmosLayers.swift; sourceTree = "<group>"; };
+		E5B6A643470459BDAF78465CA50A84F4 /* Cosmos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cosmos.modulemap; sourceTree = "<group>"; };
 		E61743C432C8C1E1C0CD6F2E1F47412A /* Pods-Safe Wickers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Safe Wickers.release.xcconfig"; sourceTree = "<group>"; };
+		EA6E7DAF60D8E62DA62B2CB23D43E16B /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLocalizedRating.swift; path = Cosmos/CosmosLocalizedRating.swift; sourceTree = "<group>"; };
+		F39EEA0C4D40303552A248CC69340F49 /* Cosmos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.release.xcconfig; sourceTree = "<group>"; };
+		F5897E31E1EC97ED9A077A7DE06FFED3 /* RightToLeft.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RightToLeft.swift; path = Cosmos/Helpers/RightToLeft.swift; sourceTree = "<group>"; };
+		FE73B1AFBB1A8CB564DB09EA1BE2942E /* Cosmos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-umbrella.h"; sourceTree = "<group>"; };
+		FEA6041AC6BE050FAEDA843AE108C4CD /* Cosmos-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Cosmos-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		416AADB2181FAED56214B076B083A2EB /* Frameworks */ = {
+		1DA70A24CC515DC2D9B4C5FF5A052A99 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C5D73FD2CC165605283FA5F54488522 /* Foundation.framework in Frameworks */,
+				5C6DA2A3191A2B28BEB8B66B4BF28A13 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6663533FD568CBBBE20CF293626655A /* Frameworks */ = {
+		FE1AF85FC1246D05E670ED0CE453B016 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E896F89B3405CE3C8FF4F2FDF928772 /* Foundation.framework in Frameworks */,
-				6ECFD07130677395B5AF6B8BE6B47F5E /* UIKit.framework in Frameworks */,
+				66C55F598883BB9E871ECFEFF5B3D11E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+		1EEF3410A7BAA1DA5F110A17B8CD6B19 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+				E8B1D41F350B4C0A5CC6FD8E8873DED5 /* Cosmos */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		480B44496CCACB525D936FE15550B4EE /* Products */ = {
+		2B2FE04329EDBCF4F76ECF7862989595 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				676669A688F2E362286EB75FB8FC3607 /* ACTextField.framework */,
+				05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos.framework */,
 				9BF40F0E684C02F6178543126E120CBE /* Pods_Safe_Wickers.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4DC5D92C3AAFFB141905B48C3A486C73 /* Pods */ = {
+		79099C1358341EBF13DD1A16CD6E0AFF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E134294B27FD45DABD69353F2CA89B22 /* ACTextField */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		7D9D987FA644D4FE1B06582F430901FB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D133A0983C91D3AE2ECD52A7CEC9D279 /* ACTextField.modulemap */,
-				61FFA44850F4A84F34B29CD01C2DF721 /* ACTextField-dummy.m */,
-				8B521B0B930496D3648D0EE313E5672E /* ACTextField-Info.plist */,
-				172D9A2B8F47FCD691AEB330794F8B68 /* ACTextField-prefix.pch */,
-				587FB7062F5EC632448F33EDFC3F30A3 /* ACTextField-umbrella.h */,
-				8BA9B12B5A5A58B8E7DE18D64A32E274 /* ACTextField.debug.xcconfig */,
-				D008232063F07B3061A5917D91260970 /* ACTextField.release.xcconfig */,
+				E5B6A643470459BDAF78465CA50A84F4 /* Cosmos.modulemap */,
+				2E9C6787280DFA6AA5C600055EE6EA4D /* Cosmos-dummy.m */,
+				FEA6041AC6BE050FAEDA843AE108C4CD /* Cosmos-Info.plist */,
+				569F011501DB1409E3120F376B6B7D0C /* Cosmos-prefix.pch */,
+				FE73B1AFBB1A8CB564DB09EA1BE2942E /* Cosmos-umbrella.h */,
+				0E29BC44317FF962374F2AB1B47271F3 /* Cosmos.debug.xcconfig */,
+				F39EEA0C4D40303552A248CC69340F49 /* Cosmos.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/ACTextField";
+			path = "../Target Support Files/Cosmos";
 			sourceTree = "<group>";
 		};
 		A5A4167ACD48A6AA872FAD670E0F73A9 /* Targets Support Files */ = {
@@ -121,34 +138,55 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				4DC5D92C3AAFFB141905B48C3A486C73 /* Pods */,
-				480B44496CCACB525D936FE15550B4EE /* Products */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				1EEF3410A7BAA1DA5F110A17B8CD6B19 /* Pods */,
+				2B2FE04329EDBCF4F76ECF7862989595 /* Products */,
 				A5A4167ACD48A6AA872FAD670E0F73A9 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		E134294B27FD45DABD69353F2CA89B22 /* ACTextField */ = {
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				55496E41708F76111B396E43CC13C2A6 /* ACTextField.swift */,
-				7D9D987FA644D4FE1B06582F430901FB /* Support Files */,
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
-			name = ACTextField;
-			path = ACTextField;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+		E8B1D41F350B4C0A5CC6FD8E8873DED5 /* Cosmos */ = {
 			isa = PBXGroup;
 			children = (
-				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
-				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+				2F95F69EA32AB0728A2CCCF5ECBA773C /* CosmosAccessibility.swift */,
+				174979D91E7D6F800B205ABDD3EB318F /* CosmosDefaultSettings.swift */,
+				7148BEACE4E8E4A331749E74D5874D52 /* CosmosLayerHelper.swift */,
+				E3EFD3F770945B6DE9CEB6DFFBAC2C00 /* CosmosLayers.swift */,
+				EA6E7DAF60D8E62DA62B2CB23D43E16B /* CosmosLocalizedRating.swift */,
+				9B35696210957ADE15680CA907CD0C77 /* CosmosRating.swift */,
+				95B148CC2C6AA832097607C6D9E1130A /* CosmosSettings.swift */,
+				32E3874A468C60BEB281D0A1E213B262 /* CosmosSize.swift */,
+				AF1DF35E0E63321E5F772424D9EE48B1 /* CosmosText.swift */,
+				BCCA06310EBE16A09D01FECACF9824A3 /* CosmosTouch.swift */,
+				1ACFFC8A6CF484661158E175E3BA996B /* CosmosTouchTarget.swift */,
+				31F75C17AB2E3DBBADD82C283A9920F8 /* CosmosView.swift */,
+				F5897E31E1EC97ED9A077A7DE06FFED3 /* RightToLeft.swift */,
+				97A70406522118CCB5BDCB099CDB2C36 /* StarFillMode.swift */,
+				4F11A167F3AA6F45EEA463328BB8EE25 /* StarLayer.swift */,
+				79099C1358341EBF13DD1A16CD6E0AFF /* Support Files */,
 			);
-			name = iOS;
+			name = Cosmos;
+			path = Cosmos;
 			sourceTree = "<group>";
 		};
 		FDAB0494E3F75C11040A3785AE9BF194 /* Pods-Safe Wickers */ = {
@@ -171,56 +209,56 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0AD5FC5D76A06791F876C36D11FF884A /* Headers */ = {
+		B322FEDA9FF4BA8B0BEC872F3EE3F648 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2E29B0ACF6414AC8AE623BC2765B4AA /* ACTextField-umbrella.h in Headers */,
+				9D60235277EEB2A0A45939E8F09A7D71 /* Cosmos-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B6461895582599ED9F37AA8F66F85F1 /* Headers */ = {
+		F445D99673828B77AA4D7DCE3D941C5F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64057047375706276E20772DC179B52B /* Pods-Safe Wickers-umbrella.h in Headers */,
+				9D0FBDD68E4C34C1FA4603BA1016FFEF /* Pods-Safe Wickers-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		63CCC5262CD5BBC4BF060A598D1EFA8A /* ACTextField */ = {
+		00F31BD5217A20974B5E9AAC6256D98E /* Cosmos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02463820BC983F312B7A4E18373E041B /* Build configuration list for PBXNativeTarget "ACTextField" */;
+			buildConfigurationList = 9C4761D1E5276039F76D9BA8BF0272D7 /* Build configuration list for PBXNativeTarget "Cosmos" */;
 			buildPhases = (
-				0AD5FC5D76A06791F876C36D11FF884A /* Headers */,
-				6298C0A91494F6136C741CFF41A1899E /* Sources */,
-				C6663533FD568CBBBE20CF293626655A /* Frameworks */,
-				1E16C35A0AA930D63DE87B1FAB2C617E /* Resources */,
+				B322FEDA9FF4BA8B0BEC872F3EE3F648 /* Headers */,
+				53D2AD99A3C2BFB2E1448B62E35F78AB /* Sources */,
+				FE1AF85FC1246D05E670ED0CE453B016 /* Frameworks */,
+				6571FF59854C9ED976246EA41FEA37C1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ACTextField;
-			productName = ACTextField;
-			productReference = 676669A688F2E362286EB75FB8FC3607 /* ACTextField.framework */;
+			name = Cosmos;
+			productName = Cosmos;
+			productReference = 05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E010F4E9A615488415EBD4550DD27B6A /* Pods-Safe Wickers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F68574E4FF08C1989E7EB187DD68A16 /* Build configuration list for PBXNativeTarget "Pods-Safe Wickers" */;
+			buildConfigurationList = 35DD1E9620C514CB060F7D0B03974BF3 /* Build configuration list for PBXNativeTarget "Pods-Safe Wickers" */;
 			buildPhases = (
-				9B6461895582599ED9F37AA8F66F85F1 /* Headers */,
-				BC21FC861E26B9F4C695CE6BA7CC1887 /* Sources */,
-				416AADB2181FAED56214B076B083A2EB /* Frameworks */,
-				CCA50DA46157B503454806EA8D7C9638 /* Resources */,
+				F445D99673828B77AA4D7DCE3D941C5F /* Headers */,
+				B6EA0FC09B85CFB8F128FCCB6BE67841 /* Sources */,
+				1DA70A24CC515DC2D9B4C5FF5A052A99 /* Frameworks */,
+				FDA726FC2107A9E81937B2CFF792FE16 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3413E86630AD1F862A9227088117271E /* PBXTargetDependency */,
+				49F84FE4C9AD7604D3A07EA74E1C411C /* PBXTargetDependency */,
 			);
 			name = "Pods-Safe Wickers";
 			productName = "Pods-Safe Wickers";
@@ -245,25 +283,25 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 480B44496CCACB525D936FE15550B4EE /* Products */;
+			productRefGroup = 2B2FE04329EDBCF4F76ECF7862989595 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				63CCC5262CD5BBC4BF060A598D1EFA8A /* ACTextField */,
+				00F31BD5217A20974B5E9AAC6256D98E /* Cosmos */,
 				E010F4E9A615488415EBD4550DD27B6A /* Pods-Safe Wickers */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1E16C35A0AA930D63DE87B1FAB2C617E /* Resources */ = {
+		6571FF59854C9ED976246EA41FEA37C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CCA50DA46157B503454806EA8D7C9638 /* Resources */ = {
+		FDA726FC2107A9E81937B2CFF792FE16 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -273,72 +311,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6298C0A91494F6136C741CFF41A1899E /* Sources */ = {
+		53D2AD99A3C2BFB2E1448B62E35F78AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E99A91C20BE9C1A673C9B02957CE1699 /* ACTextField-dummy.m in Sources */,
-				EC26810E6E90DD9C6BEE37D57F430DEC /* ACTextField.swift in Sources */,
+				B594E04185C4C7522C612C631B8AD97A /* Cosmos-dummy.m in Sources */,
+				049FC8D781A7ECAED15F25718502D54E /* CosmosAccessibility.swift in Sources */,
+				E776F53E707AD1ACF7223305E9EEDBFC /* CosmosDefaultSettings.swift in Sources */,
+				E189E12EEDDD9A1484602416282A19F9 /* CosmosLayerHelper.swift in Sources */,
+				2FADA7115AEFDCC59593DD4201572539 /* CosmosLayers.swift in Sources */,
+				C0D5F472F17B5A0F9824C362F35A7132 /* CosmosLocalizedRating.swift in Sources */,
+				10A44B18B300E2B0BF5BF88F6F2E585F /* CosmosRating.swift in Sources */,
+				E0FD27E2F7F5C05D3390126C7DF35EA6 /* CosmosSettings.swift in Sources */,
+				4404A9C8152865C62A5B59B88640811C /* CosmosSize.swift in Sources */,
+				AC7DAE5B261F8CDE268794A1B7B06F56 /* CosmosText.swift in Sources */,
+				05DFD786F217BD0DFBFB5F57D80236A5 /* CosmosTouch.swift in Sources */,
+				5C7B76FBAD8574062F60041B012FE052 /* CosmosTouchTarget.swift in Sources */,
+				41E5B21F4758B2411A95A7C72523536D /* CosmosView.swift in Sources */,
+				61857850A19756A357AD6696D42E69A4 /* RightToLeft.swift in Sources */,
+				E9A920FE6E5FC6F5F58B6F3AA9B3FDAF /* StarFillMode.swift in Sources */,
+				4221AB8F56B1444AE176F2B13F81C557 /* StarLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BC21FC861E26B9F4C695CE6BA7CC1887 /* Sources */ = {
+		B6EA0FC09B85CFB8F128FCCB6BE67841 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84034A8CBCF599405D21F48E7FA5BDB5 /* Pods-Safe Wickers-dummy.m in Sources */,
+				6B5B895530DD528837232C9F86517418 /* Pods-Safe Wickers-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3413E86630AD1F862A9227088117271E /* PBXTargetDependency */ = {
+		49F84FE4C9AD7604D3A07EA74E1C411C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = ACTextField;
-			target = 63CCC5262CD5BBC4BF060A598D1EFA8A /* ACTextField */;
-			targetProxy = 3D4B78AB7D624FCA39D8F8ECCDD46E2B /* PBXContainerItemProxy */;
+			name = Cosmos;
+			target = 00F31BD5217A20974B5E9AAC6256D98E /* Cosmos */;
+			targetProxy = 476942FCA41B463D658FE1B7DD42EC05 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4E2EAB7BCABA7DDF35D5A0BF045AAC2F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BA9B12B5A5A58B8E7DE18D64A32E274 /* ACTextField.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ACTextField/ACTextField-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ACTextField/ACTextField-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/ACTextField/ACTextField.modulemap";
-				PRODUCT_MODULE_NAME = ACTextField;
-				PRODUCT_NAME = ACTextField;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		567FA4A58F37B52DAC8CE0B1743A0BFD /* Release */ = {
+		4A221ADB122A8A54FE488046FD0736AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E61743C432C8C1E1C0CD6F2E1F47412A /* Pods-Safe Wickers.release.xcconfig */;
 			buildSettings = {
@@ -441,7 +457,7 @@
 			};
 			name = Debug;
 		};
-		7CE6DA1A1FE2F653B24069F87CE296C3 /* Debug */ = {
+		69E723E7CBA86BCA10769B4112F1B53F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C3E6CD3079F9C423F12E2662C7488304 /* Pods-Safe Wickers.debug.xcconfig */;
 			buildSettings = {
@@ -478,6 +494,77 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		8569A3F6F2E6B237BA24B3428876309F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E29BC44317FF962374F2AB1B47271F3 /* Cosmos.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Cosmos/Cosmos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cosmos/Cosmos-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Cosmos/Cosmos.modulemap";
+				PRODUCT_MODULE_NAME = Cosmos;
+				PRODUCT_NAME = Cosmos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		857693DE07A2146044110C5DDE0BAA0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F39EEA0C4D40303552A248CC69340F49 /* Cosmos.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Cosmos/Cosmos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cosmos/Cosmos-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Cosmos/Cosmos.modulemap";
+				PRODUCT_MODULE_NAME = Cosmos;
+				PRODUCT_NAME = Cosmos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		A27713CB74E99AF202AADC23200A32F4 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -539,51 +626,14 @@
 			};
 			name = Release;
 		};
-		F868C55CCD3BA42142EB68C871503DD3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D008232063F07B3061A5917D91260970 /* ACTextField.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ACTextField/ACTextField-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ACTextField/ACTextField-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/ACTextField/ACTextField.modulemap";
-				PRODUCT_MODULE_NAME = ACTextField;
-				PRODUCT_NAME = ACTextField;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02463820BC983F312B7A4E18373E041B /* Build configuration list for PBXNativeTarget "ACTextField" */ = {
+		35DD1E9620C514CB060F7D0B03974BF3 /* Build configuration list for PBXNativeTarget "Pods-Safe Wickers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E2EAB7BCABA7DDF35D5A0BF045AAC2F /* Debug */,
-				F868C55CCD3BA42142EB68C871503DD3 /* Release */,
+				69E723E7CBA86BCA10769B4112F1B53F /* Debug */,
+				4A221ADB122A8A54FE488046FD0736AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -597,11 +647,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8F68574E4FF08C1989E7EB187DD68A16 /* Build configuration list for PBXNativeTarget "Pods-Safe Wickers" */ = {
+		9C4761D1E5276039F76D9BA8BF0272D7 /* Build configuration list for PBXNativeTarget "Cosmos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7CE6DA1A1FE2F653B24069F87CE296C3 /* Debug */,
-				567FA4A58F37B52DAC8CE0B1743A0BFD /* Release */,
+				8569A3F6F2E6B237BA24B3428876309F /* Debug */,
+				857693DE07A2146044110C5DDE0BAA0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

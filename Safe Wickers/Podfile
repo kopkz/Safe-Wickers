@@ -6,6 +6,6 @@ target 'Safe Wickers' do
   use_frameworks!
 
   # Pods for Safe Wickers
-  pod 'ACTextField'
+  pod 'Cosmos', '~> 21.0'
   
 end

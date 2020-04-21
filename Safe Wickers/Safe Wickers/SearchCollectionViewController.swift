@@ -20,7 +20,6 @@ private let itemsPerRow: CGFloat = 3
 
 class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout, CLLocationManagerDelegate
 {
-    @IBOutlet weak var logoImageView: UIImageView!
     
     @IBOutlet weak var searchNavigationItem: UINavigationItem!
     
@@ -30,6 +29,7 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
     @IBOutlet weak var locationTextField: UITextField!
     
    
+    @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var activityLabel: UILabel!
     
@@ -47,10 +47,6 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
        
         present(searchController,animated: true,completion: nil)
         
-//        searchController.hidesNavigationBarDuringPresentation = false
-//        searchController.dimsBackgroundDuringPresentation = true
-//        definesPresentationContext = true
-        
         locationSearchTable.handleMapSearchDelegate = self
         
     }
@@ -65,69 +61,32 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
     var currentLocation: CLLocationCoordinate2D?
     var currentLocationName: String?
     
-//
-//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        //ignoring user
-//        UIApplication.shared.beginIgnoringInteractionEvents()
-//
-////        //Activity Indicator
-////        let activityIndicator = UIActivityIndicatorView()
-////        activityIndicator.style = UIActivityIndicatorView.Style.gray
-////        activityIndicator.center = self.view.center
-////        activityIndicator.hidesWhenStopped = true
-////        activityIndicator.startAnimating()
-////
-////        self.view.addSubview(activityIndicator)
-//
-//        //Hide search bar
-//        searchBar.resignFirstResponder()
-//        dismiss(animated: true, completion: nil)
-//
-//
-//        //Create the search request
-//        let searchRequest = MKLocalSearch.Request()
-//        searchRequest.naturalLanguageQuery = searchBar.text
-//
-//        let activeSearch = MKLocalSearch(request: searchRequest)
-//
-//        activeSearch.start { (response, error) in
-//
-////            activityIndicator.stopAnimating()
-//            UIApplication.shared.endIgnoringInteractionEvents()
-//
-//            if response == nil
-//            {
-//                print("ERROR")
-//            }
-//            else
-//            {
-//
-//                //Getting data
-//                let latitude = response?.boundingRegion.center.latitude
-//                let longitude = response?.boundingRegion.center.longitude
-//
-//                //Create location
-//                self.searchLocation = CLLocationCoordinate2DMake(latitude!, longitude!)
-//                self.locationTextField.text = searchBar.text
-//
-//
-//            }
-//
-//        }
-//    }
+// add logo image to navigationbar
+    func addNavBarImage() {
+        let navController = navigationController!
+        navigationController?.navigationBar.barTintColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1)
+        let image = UIImage(named: "titleLogo.png")
+        let imageView = UIImageView(image: image)
+        let bannerWidth = navController.navigationBar.frame.size.width
+        let bannerHeight = navController.navigationBar.frame.size.height
+        let bannerX = bannerWidth / 2 - (image?.size.width)! / 2
+        let bannerY = bannerHeight / 2 - (image?.size.height)! / 2
+        imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight)
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = imageView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         locationTextField.placeholder = "Search or Use current location"
-       
-        
-        logoImageView.backgroundColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1)
+        addNavBarImage()
+     
         createDefaultActivities()
         activityCollectionView.delegate = self
         activityCollectionView.dataSource = self
 
-        sectionInsets = UIEdgeInsets(top: 5.0, left: view.bounds.width/20, bottom: 5.0, right: view.bounds.width/20)
+        sectionInsets = UIEdgeInsets(top: 5.0, left: 6.0, bottom: 5.0, right: view.bounds.width/30)
 
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -166,10 +125,10 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
 
     // MARK: UICollectionViewDataSource
 
-     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+//     func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
 
 
      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -181,7 +140,7 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
         let activityCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ActivityCollectionViewCell
         let activty = activities[indexPath.row]
         
-            activityCell.activityImageView.image = UIImage(named: activty.imageName)
+        activityCell.activityImageView.image = UIImage(named: activty.imageName!)
                 //?.resizableImage(withCapInsets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
             activityCell.activityNameLabel.text = activty.activityName
     
@@ -190,47 +149,36 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
         return activityCell
     }
 
-//     MARK: UICollectionViewDelegate
-//Uncomment this method to specify if the specified item should be highlighted during tracking
-    
-     func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool{
-//        let activityCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ActivityCollectionViewCell
-//        activityCell.isHighlighted = true
-        
-        return true
-    }
-    
 
-    
-     //Uncomment this method to specify if the specified item should be selected
-     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
+    // highlight or not when tap
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        if let activityCell = collectionView.cellForItem(at: indexPath){
+            activityCell.contentView.backgroundColor = #colorLiteral(red: 0.073441759, green: 0.7529120877, blue: 1, alpha: 0.7747217466)
+        }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            cell.contentView.backgroundColor = nil
+        }
+    }
+
+    /// - Tag: selection
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let activityCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ActivityCollectionViewCell
-        activityCell.isSelected = true
-        
-        activityName = activities[indexPath.row].activityName
+        if let cell = collectionView.cellForItem(at: indexPath) as? ActivityCollectionViewCell {
+            cell.contentView.backgroundColor = UIColor.gray
+            activityName = activities[indexPath.row].activityName
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let activityCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ActivityCollectionViewCell
-        activityCell.isSelected = false
-        
-        activityName = nil
+        if let cell = collectionView.cellForItem(at: indexPath) as? ActivityCollectionViewCell {
+            cell.contentView.backgroundColor = nil
+        }
     }
-//    func collectionView(_ collectionView: UICollectionView, layout
-//        collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath:
-//        IndexPath) -> CGSize {
-//        return CGSize(width: 80, height: 115)
-//    }
-//    func collectionView(_ collectionView: UICollectionView, layout
-//        collectionViewLayout: UICollectionViewLayout, insetForSectionAt
-//        section: Int) -> UIEdgeInsets {
-//
-//        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-//    }
+    
+    
+// custom the layout of the cell
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         //return activityCollectionView.frame.width/20
         return sectionInsets.left
@@ -241,7 +189,7 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
         let availableWidth = view.bounds.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
-        return CGSize(width: widthPerItem, height: widthPerItem * 1.4)
+        return CGSize(width: widthPerItem, height: widthPerItem * 1)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout
@@ -283,6 +231,7 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
     }
     
     
+    
     @IBAction func searchButton(_ sender: Any) {
         if searchLocation == nil {
             let alertController = UIAlertController(title: "Location Missing", message: "Location missing, try to search a location or use current location.", preferredStyle: .alert)
@@ -293,7 +242,7 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alertController, animated: true, completion: nil)
         } else{
-            
+            performSegue(withIdentifier: "ShowBeachList", sender: self)
         }
     }
     
@@ -376,7 +325,8 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowBeachList"{
             let destination = segue.destination as! BeachListTableViewController
-            
+            destination.regionLocation = searchLocation
+            destination.activityName = self.activityName
         }
     }
     

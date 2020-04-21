@@ -47,7 +47,7 @@ extension LocationSearchTable : UISearchResultsUpdating {
         //create request
         let searchRequest = MKLocalSearch.Request()
         searchRequest.naturalLanguageQuery = searchController.searchBar.text
-        searchRequest.region = MKCoordinateRegion.init(center: CLLocationCoordinate2D.init(latitude: -38.0, longitude: 145.0), latitudinalMeters: 3000000, longitudinalMeters: 300000)
+        searchRequest.region = MKCoordinateRegion.init(center: CLLocationCoordinate2D.init(latitude: -38.0, longitude: 145.0), latitudinalMeters: 200000, longitudinalMeters: 400000)
         
         let activeSearch = MKLocalSearch(request: searchRequest)
         

@@ -9,8 +9,8 @@
 import UIKit
 
 class Activities: NSObject {
-    var imageName: String
-    var activityName : String
+    var imageName: String?
+    var activityName : String?
     
     init(imageName: String, activityName: String) {
         self.imageName = imageName
