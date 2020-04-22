@@ -1,16 +1,16 @@
 PODS:
-  - ACTextField (1.0.2)
+  - Cosmos (21.0.0)
 
 DEPENDENCIES:
-  - ACTextField
+  - Cosmos (~> 21.0)
 
 SPEC REPOS:
   trunk:
-    - ACTextField
+    - Cosmos
 
 SPEC CHECKSUMS:
-  ACTextField: 87ee4c2eb08fd78e96ccf6e138e7cb57d3d3ada1
+  Cosmos: 3dfb6e4ba48bd48b8c9aa2a77048ae11ed114f96
 
-PODFILE CHECKSUM: b2969750d87a901d8e49f07781aa030714b9e99c
+PODFILE CHECKSUM: 060482557d18bda392862e17487d8d7547220e70
 
 COCOAPODS: 1.9.1

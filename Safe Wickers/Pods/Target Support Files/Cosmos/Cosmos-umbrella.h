@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double ACTextFieldVersionNumber;
-FOUNDATION_EXPORT const unsigned char ACTextFieldVersionString[];
+FOUNDATION_EXPORT double CosmosVersionNumber;
+FOUNDATION_EXPORT const unsigned char CosmosVersionString[];
 

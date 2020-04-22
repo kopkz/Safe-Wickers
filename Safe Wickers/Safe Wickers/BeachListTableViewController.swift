@@ -36,6 +36,7 @@ class BeachListTableViewController: UITableViewController {
         imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight)
         imageView.contentMode = .scaleAspectFit
         navigationItem.titleView = imageView
+        navController.navigationBar.backItem?.title = "Back"
     }
 
     override func viewDidLoad() {
@@ -63,10 +64,10 @@ class BeachListTableViewController: UITableViewController {
             let ifGuard = checkIfGuard(beach: item)
             let ifPort = checkIfPort(beach: item)
             
-            //TODO load internet iamge
+            //TODO load internet iamge, risk(wind), descip
             let imageName = "defaultBeachImage.jpg"
             
-            let beach = Beach(beachName: beachName!, latitude: latitude, longitude: longitude, imageName: imageName, distance: distance!, risk: "", ifGuard: ifGuard, ifPort: ifPort)
+            let beach = Beach(beachName: beachName!, latitude: latitude, longitude: longitude, imageName: imageName, distance: distance!, risk: "s", ifGuard: ifGuard, ifPort: ifPort, descrip: "")
             
             beachList.append(beach)
             
@@ -181,6 +182,13 @@ class BeachListTableViewController: UITableViewController {
         return 45
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == SECTION_BEACH{
+//            tableView.deselectRow(at: indexPath, animated: true)
+            performSegue(withIdentifier: "listToBeachDetail", sender: self)
+        }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -217,14 +225,24 @@ class BeachListTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
+    
+     //MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+     //In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowMapSegue" {
+           let destination = segue.destination as! MapViewController
+            destination.focusLocation = CLLocation(latitude: regionLocation!.latitude, longitude: regionLocation!.longitude)
+            destination.beachList = fliteredList
+        }
+        if segue.identifier == "listToBeachDetail" {
+            let destination = segue.destination as! BeachDetailViewController
+            let index = tableView.indexPathForSelectedRow?.row
+            destination.beach = fliteredList[index!]
+        }
     }
-    */
-
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 }
