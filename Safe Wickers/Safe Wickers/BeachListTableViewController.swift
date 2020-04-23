@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import SDWebImage
 
 class BeachListTableViewController: UITableViewController {
     
@@ -16,6 +17,8 @@ class BeachListTableViewController: UITableViewController {
     var beachList:[Beach] = []
     var fliteredList:[Beach] = []
     var activityName: String?
+    var indicator = UIActivityIndicatorView()
+    var imageURLs:[String] = []
     
     let SECTION_SETTING = 0
     let SECTION_BEACH = 1
@@ -42,9 +45,11 @@ class BeachListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //edit navi bar
         addNavBarImage()
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
+        //get beach info
         getBeachLocationList()
         
         // Uncomment the following line to preserve selection between presentations
@@ -53,6 +58,20 @@ class BeachListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //create a loading animation
+        indicator.style = UIActivityIndicatorView.Style.gray
+        indicator.center = self.tableView.center
+        self.view.addSubview(indicator)
+        
+        loadImage()
+    }
+    
+    
+    
     // load other beach info, such as image,distance,etc
     func loadBeachInfo(){
         for item in matchingItems{
@@ -65,14 +84,78 @@ class BeachListTableViewController: UITableViewController {
             let ifPort = checkIfPort(beach: item)
             
             //TODO load internet iamge, risk(wind), descip
-            let imageName = "defaultBeachImage.jpg"
             
-            let beach = Beach(beachName: beachName!, latitude: latitude, longitude: longitude, imageName: imageName, distance: distance!, risk: "s", ifGuard: ifGuard, ifPort: ifPort, descrip: "")
+            //searchIamgeOnline(beach: "st kilda beach")
+            
+            let beach = Beach(beachName: beachName!, latitude: latitude, longitude: longitude, imageName: "defaultBeachImage.jpg", distance: distance!, risk: "s", ifGuard: ifGuard, ifPort: ifPort, descrip: "")
             
             beachList.append(beach)
-            
         }
+        
     }
+    
+    
+    func loadImage(){
+    // start anminating the loading as the URL request is made
+    indicator.startAnimating()
+    indicator.backgroundColor = UIColor.white
+    
+        for beach in beachList{
+            searchIamgeOnline(beach: beach.beachName!)
+        }
+        if beachList.count == imageURLs.count {
+            var index = 0
+            while index < beachList.count{
+                beachList[index].imageName = imageURLs[index]
+                index = index + 1
+            }
+        }
+        
+        // Regardless of response end the loading icon from the main thread
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.indicator.stopAnimating()
+            self.indicator.hidesWhenStopped = true
+        }
+    
+    }
+
+  
+    
+    func searchIamgeOnline(beach: String) {
+        
+        let searchString = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBcZK2M_pWExrukRTeeMBJ_LgFv13lIVQI&cx=002407881098821145824:29fpb6s3hfq&q=\(beach)&searchType=image&num=1"
+        let jsonURL = URL(string: searchString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+        let task = URLSession.shared.dataTask(with: jsonURL!){
+            (data, response, error) in
+            
+            
+            // if error, show error message
+            if let error = error {
+                self.displayMessage(title: "Error", message: error.localizedDescription)
+                return
+            }
+            
+            do{
+                let decoder = JSONDecoder()
+                let imageDate = try decoder.decode(OnlineImageData.self, from: data!)
+                
+                guard let imageURL = imageDate.onlineImages?[0].imageURL else {
+                    return
+                }
+               self.imageURLs.append(imageURL)
+                
+            } catch let err{
+                DispatchQueue.main.async {
+                   self.displayMessage(title: "Error", message: err.localizedDescription)
+                }
+            }
+        }
+        //start the data task
+        task.resume()
+    }
+    
+    
     
     //TODO check the beach if have lifeguard
     func checkIfGuard(beach: MKMapItem) -> Bool{
@@ -169,7 +252,13 @@ class BeachListTableViewController: UITableViewController {
             
             beachCell.beachNameLabel.text = beach.beachName
             beachCell.distanceLabel.text = "\(beach.distance!/1000) km"
-            beachCell.beachImage.image = UIImage(named: beach.imageName!)
+        
+        
+        // load image online
+            //beachCell.beachImage.image = UIImage(named: beach.imageName!)
+        let url = URL(string: beach.beachName!)
+       
+        beachCell.beachImage!.sd_setImage(with: url, placeholderImage: UIImage(named: "defaultBeachImage.jpg"), completed: nil)
             
             return beachCell
         
@@ -240,6 +329,15 @@ class BeachListTableViewController: UITableViewController {
             let index = tableView.indexPathForSelectedRow?.row
             destination.beach = fliteredList[index!]
         }
+    }
+    
+    func displayMessage(title: String, message: String) {
+        // Setup an alert to show user details about the Person
+        // UIAlertController manages an alert instance
+        let alertController = UIAlertController(title: title, message: message,
+                                                preferredStyle: UIAlertController.Style.alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style:UIAlertAction.Style.default,handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

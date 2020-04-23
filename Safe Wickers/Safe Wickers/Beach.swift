@@ -31,4 +31,5 @@ class Beach: NSObject {
         self.descrip = descrip
     }
     
+    
 }
