@@ -101,11 +101,15 @@ class BeachListTableViewController: UITableViewController{
             let imageNmae = searchIamgeOnline(beach: "\(beachName!) Victoria")
             
 //            let des = item.placemark.locality ?? ""
-            let windSpeed = getCurrentWeatherDate(beach: item)
+            let windSpeed = getCurrentWeatherDate(beach: item)[0]
+            let temp = getCurrentWeatherDate(beach: item)[1]
+            let hum = getCurrentWeatherDate(beach: item)[2]
+            let pre = getCurrentWeatherDate(beach: item)[3]
+            
             
             let risk = chechRisk(ifPort: ifPort, ifGuard: ifGuard, windSpeed: windSpeed)
            
-            let beach = Beach(beachName: beachName!, latitude: latitude, longitude: longitude, imageName: imageNmae, distance: distance!, risk: risk, ifGuard: ifGuard, ifPort: ifPort, descrip: "", windSpeed: windSpeed)
+            let beach = Beach(beachName: beachName!, latitude: latitude, longitude: longitude, imageName: imageNmae, distance: distance!, risk: risk, ifGuard: ifGuard, ifPort: ifPort, descrip: "", windSpeed: windSpeed, temp: temp, hum: hum, pre: pre)
             
             beachList.append(beach)
         }
@@ -228,8 +232,8 @@ class BeachListTableViewController: UITableViewController{
     
     //get weather info of beach
     
-    func getCurrentWeatherDate(beach: MKMapItem) -> Double{
-        var windSpeed: Double?
+    func getCurrentWeatherDate(beach: MKMapItem) -> [Double]{
+        var weatherData: [Double] = []
         let lat = beach.placemark.location?.coordinate.latitude
         let long = beach.placemark.location?.coordinate.longitude
         
@@ -237,14 +241,17 @@ class BeachListTableViewController: UITableViewController{
         let url = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
         
         guard let weatheData = NSData(contentsOf: url!) else {
-            return 0.0
+            return []
         }
         
         
                                     do{
                                         let decoder = JSONDecoder()
                                         let weather = try decoder.decode(WeatherURLData.self, from: weatheData as Data)
-                                        windSpeed = weather.windSpeed
+                                        weatherData.append(weather.windSpeed)
+                                         weatherData.append(weather.temp)
+                                         weatherData.append(weather.humidity)
+                                         weatherData.append(weather.pressure)
                                     } catch let err{
                                         DispatchQueue.main.async {
                                            self.displayMessage(title: "Error", message: err.localizedDescription)
@@ -271,7 +278,7 @@ class BeachListTableViewController: UITableViewController{
 //                    }
 //                }
 //        task.resume()
-        return windSpeed ?? 0.0
+        return weatherData
     }
     
     

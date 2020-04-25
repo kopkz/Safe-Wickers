@@ -19,8 +19,11 @@ class Beach: NSObject {
     var ifPort: Bool?
     var descrip: String?
     var windSpeed: Double?
+    var temp: Double?
+    var hum: Double?
+    var pre: Double?
     
-    init(beachName: String, latitude: Double, longitude: Double, imageName: String, distance: Double, risk: String, ifGuard: Bool, ifPort: Bool, descrip: String, windSpeed: Double) {
+    init(beachName: String, latitude: Double, longitude: Double, imageName: String, distance: Double, risk: String, ifGuard: Bool, ifPort: Bool, descrip: String, windSpeed: Double, temp: Double, hum: Double, pre: Double) {
         self.beachName = beachName
         self.latitude = latitude
         self.longitude = longitude
@@ -31,6 +34,9 @@ class Beach: NSObject {
         self.ifPort = ifPort
         self.descrip = descrip
         self.windSpeed = windSpeed
+        self.temp = temp
+        self.hum = hum
+        self.pre = pre
     }
     
     

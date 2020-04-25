@@ -2249,13 +2249,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachListTableViewController.swift"
-            timestampString = "609486608.002133"
+            timestampString = "609499040.387132"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
             endingLineNumber = "64"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2265,13 +2265,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachListTableViewController.swift"
-            timestampString = "609486608.0026799"
+            timestampString = "609499040.387311"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
             endingLineNumber = "66"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2281,13 +2281,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachListTableViewController.swift"
-            timestampString = "609486608.003056"
+            timestampString = "609499040.387444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
             endingLineNumber = "96"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "loadBeachInfo()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2297,13 +2297,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachListTableViewController.swift"
-            timestampString = "609486608.003406"
+            timestampString = "609499040.387562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
             endingLineNumber = "65"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2313,13 +2313,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachListTableViewController.swift"
-            timestampString = "609486608.003715"
+            timestampString = "609499040.387669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
             endingLineNumber = "67"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2329,13 +2329,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachListTableViewController.swift"
-            timestampString = "609486608.004021"
+            timestampString = "609499040.387769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
             endingLineNumber = "89"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "loadBeachInfo()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2345,13 +2345,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachListTableViewController.swift"
-            timestampString = "609486608.004333"
+            timestampString = "609499040.387866"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
             endingLineNumber = "88"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "BeachListTableViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2377,13 +2377,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachListTableViewController.swift"
-            timestampString = "609486608.004693"
+            timestampString = "609499040.387988"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "416"
-            endingLineNumber = "416"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "423"
+            endingLineNumber = "423"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2393,13 +2393,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachListTableViewController.swift"
-            timestampString = "609486608.005012"
+            timestampString = "609499040.388086"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
             endingLineNumber = "104"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "loadBeachInfo()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2409,13 +2409,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachListTableViewController.swift"
-            timestampString = "609486608.0053101"
+            timestampString = "609499040.388172"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "236"
-            endingLineNumber = "236"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "240"
+            endingLineNumber = "240"
+            landmarkName = "getCurrentWeatherDate(beach:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2425,13 +2425,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachListTableViewController.swift"
-            timestampString = "609486608.005622"
+            timestampString = "609499040.388263"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "237"
-            endingLineNumber = "237"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "getCurrentWeatherDate(beach:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2441,13 +2441,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachListTableViewController.swift"
-            timestampString = "609486608.005926"
+            timestampString = "609499040.388347"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "276"
-            endingLineNumber = "276"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "283"
+            endingLineNumber = "283"
+            landmarkName = "BeachListTableViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2457,77 +2457,77 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachListTableViewController.swift"
-            timestampString = "609486608.006238"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Safe Wickers/BeachListTableViewController.swift"
-            timestampString = "609486608.006588"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Safe Wickers/BeachListTableViewController.swift"
-            timestampString = "609486608.006912"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Safe Wickers/BeachListTableViewController.swift"
-            timestampString = "609486608.0072351"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Safe Wickers/BeachListTableViewController.swift"
-            timestampString = "609486608.007535"
+            timestampString = "609499040.388428"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "121"
             endingLineNumber = "121"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "chechRisk(ifPort:ifGuard:windSpeed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.388495"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "chechRisk(ifPort:ifGuard:windSpeed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.388562"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "chechRisk(ifPort:ifGuard:windSpeed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.3886271"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "chechRisk(ifPort:ifGuard:windSpeed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.3886909"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "chechRisk(ifPort:ifGuard:windSpeed:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

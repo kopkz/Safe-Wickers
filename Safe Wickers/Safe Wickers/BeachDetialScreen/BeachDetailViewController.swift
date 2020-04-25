@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SDWebImage
+
 
 class BeachDetailViewController: UIViewController {
     @IBOutlet weak var beachImageView: UIImageView!
@@ -17,7 +19,17 @@ class BeachDetailViewController: UIViewController {
     @IBOutlet weak var ifGuardImageView: UIImageView!
     @IBOutlet weak var windSpeedValue: UILabel!
     
+    @IBOutlet weak var tempLabel: UILabel!
+    
+    @IBOutlet weak var tempValue: UILabel!
+    
+    @IBOutlet weak var humLabel: UILabel!
+    
+    @IBOutlet weak var humValue: UILabel!
+    
+    @IBOutlet weak var preLabel: UILabel!
     var beach: Beach?
+    @IBOutlet weak var preValue: UILabel!
     
     
     override func viewDidLoad() {
@@ -38,7 +50,14 @@ class BeachDetailViewController: UIViewController {
         }
         
         //TODO load real image
-        beachImageView.image = UIImage(named: beach!.imageName!)
+        //beachImageView.image = UIImage(named: beach!.imageName!)
+        let url = URL(string: (beach?.imageName!)!)
+        
+       beachImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "defaultBeachImage.jpg"), completed: nil)
+        let tempC = beach!.temp! - 273.15
+        tempValue.text = "\(tempC.rounded()) ℃"
+        humValue.text = "\(beach!.hum!) %"
+        preValue.text = "\(beach!.pre!) hpa"
         // Do any additional setup after loading the view.
     }
     
