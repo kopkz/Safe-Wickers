@@ -98,14 +98,14 @@ class BeachListTableViewController: UITableViewController{
             
             //TODO load internet iamge, risk(wind), descip
             
-            //searchIamgeOnline(beach: "st kilda beach")
+            let imageNmae = searchIamgeOnline(beach: "\(beachName!) Victoria")
             
 //            let des = item.placemark.locality ?? ""
             let windSpeed = getCurrentWeatherDate(beach: item)
             
             let risk = chechRisk(ifPort: ifPort, ifGuard: ifGuard, windSpeed: windSpeed)
            
-            let beach = Beach(beachName: beachName!, latitude: latitude, longitude: longitude, imageName: "defaultBeachImage.jpg", distance: distance!, risk: risk, ifGuard: ifGuard, ifPort: ifPort, descrip: "", windSpeed: windSpeed)
+            let beach = Beach(beachName: beachName!, latitude: latitude, longitude: longitude, imageName: imageNmae, distance: distance!, risk: risk, ifGuard: ifGuard, ifPort: ifPort, descrip: "", windSpeed: windSpeed)
             
             beachList.append(beach)
         }
@@ -118,10 +118,8 @@ class BeachListTableViewController: UITableViewController{
         var risk = "u"
         if activityName == "Boating" {
             if ifPort{
-                if ifGuard{
                     if (windSpeed*2.237).isLess(than: 39) && windSpeed != 0.0 {
                         risk = "s"
-                    }
                 }
             }
         }
@@ -173,13 +171,13 @@ class BeachListTableViewController: UITableViewController{
 
   
     
-//    func searchIamgeOnline(beach: String) {
-//
-//
-//        //key:   AIzaSyBDczIvDMC85RvOC1lKpxUGB50GH4mD6yc    AIzaSyBcZK2M_pWExrukRTeeMBJ_LgFv13lIVQI
-//
-//        let searchString = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBDczIvDMC85RvOC1lKpxUGB50GH4mD6yc&cx=002407881098821145824:29fpb6s3hfq&q=\(beach)&searchType=image&num=1"
-//        let jsonURL = URL(string: searchString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+    func searchIamgeOnline(beach: String) -> String {
+        var beachImageURL: String?
+
+        //key:   AIzaSyBDczIvDMC85RvOC1lKpxUGB50GH4mD6yc    AIzaSyBcZK2M_pWExrukRTeeMBJ_LgFv13lIVQI
+
+        let searchString = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBDczIvDMC85RvOC1lKpxUGB50GH4mD6yc&cx=002407881098821145824:29fpb6s3hfq&q=\(beach)&searchType=image&num=1"
+        let jsonURL = URL(string: searchString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
 //        let task = URLSession.shared.dataTask(with: jsonURL!){
 //            (data, response, error) in
 //
@@ -208,8 +206,25 @@ class BeachListTableViewController: UITableViewController{
 //        }
 //        //start the data task
 //        task.resume()
-//    }
-//
+        
+        guard let urlData = NSData(contentsOf: jsonURL!) else{ return ""}
+        
+        do{
+            let decoder = JSONDecoder()
+            let imageDate = try decoder.decode(OnlineImageData.self, from: urlData as Data)
+            
+            guard let imageURL = imageDate.onlineImages?[0].imageURL else {return ""}
+            beachImageURL = imageURL
+            
+            
+        } catch let err{
+                            DispatchQueue.main.async {
+                               self.displayMessage(title: "Error", message: err.localizedDescription)
+                            }
+                        }
+        return beachImageURL ?? ""
+    }
+
     
     //get weather info of beach
     
@@ -300,20 +315,30 @@ class BeachListTableViewController: UITableViewController{
     }
     
     //sort the list
-    func sortList(){
+    func sortListByLetter(){
         // sort according to alphabetical order
-        fliteredList = beachList.sorted(){ $0.beachName!.lowercased() > $1.beachName!.lowercased()}
-        
-        // sort by distance
-        fliteredList = beachList.sorted(){ $0.distance!.isLess(than:$1.distance!)}
+        fliteredList = beachList.sorted(){ $0.beachName!.lowercased() < $1.beachName!.lowercased()}
+        self.tableView.reloadData()
     }
+    
+    
+    
+    // sort by distance
+    func sortListByDistance(){
+        // sort according to alphabetical order
+        fliteredList = beachList.sorted(by: {$0.distance! < $1.distance!})
+        
+//       fliteredList = beachList.sorted(){ String(format: "%f",$0.distance!) < String(format: "%f",$1.distance!) }
+         self.tableView.reloadData()
+    }
+   
     
     func fliterList(){
         // safe or unsafe
         fliteredList = beachList.filter({(beach: Beach) -> Bool in
             return beach.risk?.contains("s") ?? false
         })
-        
+         self.tableView.reloadData()
     }
     
     // serch neaby beach
@@ -370,8 +395,9 @@ class BeachListTableViewController: UITableViewController{
         // Configure the cell...
 
         if indexPath.section == SECTION_SETTING{
-            let settingCell = tableView.dequeueReusableCell(withIdentifier: CELL_SETTING, for: indexPath)
-            settingCell.textLabel?.text = " \(String(describing: activityName))TODO: filter button"
+            let settingCell = tableView.dequeueReusableCell(withIdentifier: CELL_SETTING, for: indexPath) as! FilterButtonTableViewCell
+            //settingCell.textLabel?.text = " \(String(describing: activityName))TODO: filter button"
+            settingCell.delegate = self
             return settingCell
         }
         if indexPath.section == SECTION_COUNT{
@@ -390,7 +416,7 @@ class BeachListTableViewController: UITableViewController{
         //
         // load image online
             //beachCell.beachImage.image = UIImage(named: beach.imageName!)
-        let url = URL(string: beach.beachName!)
+        let url = URL(string: beach.imageName!)
        
         beachCell.beachImage!.sd_setImage(with: url, placeholderImage: UIImage(named: "defaultBeachImage.jpg"), completed: nil)
         if beach.risk == "s" {
@@ -500,6 +526,27 @@ class BeachListTableViewController: UITableViewController{
             }
         }
         return []
+    }
+    
+    
+}
+
+extension BeachListTableViewController: FilterCellDelegate {
+    func onlyShowSafeBeach() {
+        self.fliterList()
+    }
+    
+    func showAllBeach() {
+        self.fliteredList = beachList
+        self.tableView.reloadData()
+    }
+    
+    func sortingByInitials() {
+        self.sortListByLetter()
+    }
+    
+    func sortingByDistance() {
+        self.sortListByDistance()
     }
     
     

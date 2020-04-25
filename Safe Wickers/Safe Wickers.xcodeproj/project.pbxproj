@@ -15,6 +15,7 @@
 		707BAC5E244D9E6F00351335 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707BAC5D244D9E6F00351335 /* LocationSearchTable.swift */; };
 		7086B1AA244DBA0A005269B2 /* BeachListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7086B1A9244DBA0A005269B2 /* BeachListTableViewController.swift */; };
 		7086B1AC244DC102005269B2 /* BeachListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7086B1AB244DC102005269B2 /* BeachListTableViewCell.swift */; };
+		709C426D2453F09A003C3193 /* FilterButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C426C2453F09A003C3193 /* FilterButtonTableViewCell.swift */; };
 		709D1EAE2446BC2F00F4AB4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1EAD2446BC2F00F4AB4A /* AppDelegate.swift */; };
 		709D1EB52446BC2F00F4AB4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709D1EB32446BC2F00F4AB4A /* Main.storyboard */; };
 		709D1EB72446BC3000F4AB4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 709D1EB62446BC3000F4AB4A /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		707BAC5D244D9E6F00351335 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		7086B1A9244DBA0A005269B2 /* BeachListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachListTableViewController.swift; sourceTree = "<group>"; };
 		7086B1AB244DC102005269B2 /* BeachListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachListTableViewCell.swift; sourceTree = "<group>"; };
+		709C426C2453F09A003C3193 /* FilterButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonTableViewCell.swift; sourceTree = "<group>"; };
 		709D1EAA2446BC2F00F4AB4A /* Safe Wickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Safe Wickers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709D1EAD2446BC2F00F4AB4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		709D1EB42446BC2F00F4AB4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				709D1EB32446BC2F00F4AB4A /* Main.storyboard */,
 				703FC1D72450514100DF7BFA /* myAnnotation.swift */,
 				709D1EB62446BC3000F4AB4A /* Assets.xcassets */,
+				709C426C2453F09A003C3193 /* FilterButtonTableViewCell.swift */,
 				703FC1DB2450527B00DF7BFA /* MapViewController.swift */,
 				709D1EC32449D5C500F4AB4A /* ActivityCollectionViewCell.swift */,
 				707BAC5D244D9E6F00351335 /* LocationSearchTable.swift */,
@@ -273,6 +276,7 @@
 				70BB0B09245142DA002019B3 /* ImageURLData.swift in Sources */,
 				709D1EC42449D5C500F4AB4A /* ActivityCollectionViewCell.swift in Sources */,
 				703FC1D82450514100DF7BFA /* myAnnotation.swift in Sources */,
+				709C426D2453F09A003C3193 /* FilterButtonTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -157,13 +157,77 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingCell" id="nBN-SC-OHL">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingCell" id="nBN-SC-OHL" customClass="FilterButtonTableViewCell" customModule="Safe_Wickers" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nBN-SC-OHL" id="u7k-jh-laD">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUN-mB-BB6">
+                                            <rect key="frame" x="77" y="5.5" width="49" height="33"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <state key="normal" title="Initials">
+                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="initialsSorting:" destination="nBN-SC-OHL" eventType="touchUpInside" id="xjA-az-EVP"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorting by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lH7-Jc-UK5">
+                                            <rect key="frame" x="10" y="0.0" width="62" height="43.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqr-gq-mET">
+                                            <rect key="frame" x="148" y="5.5" width="67" height="33"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <state key="normal" title="Distance">
+                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="distanceSorting:" destination="nBN-SC-OHL" eventType="touchUpInside" id="ahQ-ul-DIt"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UfX-VB-8ue">
+                                            <rect key="frame" x="131" y="14.5" width="12" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Only Safe Beach" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qft-S8-fgH">
+                                            <rect key="frame" x="252" y="14.5" width="93" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yEa-yI-V7X">
+                                            <rect key="frame" x="355" y="6.5" width="51" height="31"/>
+                                        </switch>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Qft-S8-fgH" firstAttribute="centerY" secondItem="lH7-Jc-UK5" secondAttribute="centerY" id="8VH-H8-yIQ"/>
+                                        <constraint firstItem="qqr-gq-mET" firstAttribute="centerY" secondItem="u7k-jh-laD" secondAttribute="centerY" id="Cv2-WY-6sF"/>
+                                        <constraint firstAttribute="bottom" secondItem="lH7-Jc-UK5" secondAttribute="bottom" id="H1t-ht-Wa7"/>
+                                        <constraint firstItem="yEa-yI-V7X" firstAttribute="leading" secondItem="Qft-S8-fgH" secondAttribute="trailing" constant="10" id="LFP-VP-kqQ"/>
+                                        <constraint firstItem="yEa-yI-V7X" firstAttribute="centerY" secondItem="Qft-S8-fgH" secondAttribute="centerY" id="PSO-xF-hmO"/>
+                                        <constraint firstItem="UfX-VB-8ue" firstAttribute="centerY" secondItem="lH7-Jc-UK5" secondAttribute="centerY" id="Pfa-cZ-CBI"/>
+                                        <constraint firstItem="lH7-Jc-UK5" firstAttribute="top" secondItem="u7k-jh-laD" secondAttribute="top" id="UqD-gC-aIw"/>
+                                        <constraint firstItem="qqr-gq-mET" firstAttribute="leading" secondItem="UfX-VB-8ue" secondAttribute="trailing" constant="5" id="VQn-OT-Cvx"/>
+                                        <constraint firstItem="UfX-VB-8ue" firstAttribute="leading" secondItem="hUN-mB-BB6" secondAttribute="trailing" constant="5" id="XwS-mo-cFT"/>
+                                        <constraint firstItem="lH7-Jc-UK5" firstAttribute="leading" secondItem="u7k-jh-laD" secondAttribute="leading" constant="10" id="knZ-Dt-LCa"/>
+                                        <constraint firstItem="hUN-mB-BB6" firstAttribute="centerY" secondItem="lH7-Jc-UK5" secondAttribute="centerY" id="tYZ-vb-kfF"/>
+                                        <constraint firstItem="hUN-mB-BB6" firstAttribute="leading" secondItem="lH7-Jc-UK5" secondAttribute="trailing" constant="5" id="wo1-b9-7d4"/>
+                                        <constraint firstAttribute="trailing" secondItem="yEa-yI-V7X" secondAttribute="trailing" constant="10" id="yqC-GM-lef"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="onlySafeLabel" destination="Qft-S8-fgH" id="s3v-yo-GSA"/>
+                                    <outlet property="onlySafeSwitch" destination="yEa-yI-V7X" id="raS-TD-VSx"/>
+                                    <outlet property="orLabel" destination="UfX-VB-8ue" id="tJL-DR-sGS"/>
+                                    <outlet property="sortLabel" destination="lH7-Jc-UK5" id="Zah-96-aSG"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="beachCell" rowHeight="277" id="3Y7-Sq-KA0" customClass="BeachListTableViewCell" customModule="Safe_Wickers" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="99.5" width="414" height="277"/>
@@ -609,6 +673,6 @@
         <image name="yes" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8cv-sQ-l4A"/>
+        <segue reference="o6p-Op-uhG"/>
     </inferredMetricsTieBreakers>
 </document>
