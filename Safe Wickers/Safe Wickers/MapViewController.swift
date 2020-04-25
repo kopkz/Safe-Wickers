@@ -66,7 +66,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     // zoom the map to search region
     func centerMapOnLocation(location: CLLocation)
     {
-        let coordinateRegion = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: 10000, longitudinalMeters: 10000)
+        let coordinateRegion = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: 20000, longitudinalMeters: 20000)
         
         mapView.setRegion(coordinateRegion, animated: true)
         

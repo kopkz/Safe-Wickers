@@ -12,9 +12,10 @@ class BeachDetailViewController: UIViewController {
     @IBOutlet weak var beachImageView: UIImageView!
     @IBOutlet weak var beachNameLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var beachDesTextView: UITextView!
     
-    @IBOutlet weak var beachInfoTableView: UITableView!
+    @IBOutlet weak var ifPortImageView: UIImageView!
+    @IBOutlet weak var ifGuardImageView: UIImageView!
+    @IBOutlet weak var windSpeedValue: UILabel!
     
     var beach: Beach?
     
@@ -24,7 +25,17 @@ class BeachDetailViewController: UIViewController {
         
         beachNameLabel.text = beach?.beachName
         distanceLabel.text = "\((beach?.distance!)!/1000) km"
-        beachDesTextView.text = beach?.descrip
+        windSpeedValue.text = "\(beach!.windSpeed!) m/s"
+        if beach!.ifGuard! {
+            ifGuardImageView.image = UIImage(named: "yes")
+        }else{
+            ifGuardImageView.image = UIImage(named: "no")
+        }
+        if beach!.ifPort! {
+            ifPortImageView.image = UIImage(named: "yes")
+        }else{
+            ifPortImageView.image = UIImage(named: "no")
+        }
         
         //TODO load real image
         beachImageView.image = UIImage(named: beach!.imageName!)

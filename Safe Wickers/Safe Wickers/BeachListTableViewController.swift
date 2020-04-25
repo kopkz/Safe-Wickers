@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import SDWebImage
 
-class BeachListTableViewController: UITableViewController {
+class BeachListTableViewController: UITableViewController{
     
     var regionLocation: CLLocationCoordinate2D?
     var matchingItems:[MKMapItem] = []
@@ -19,6 +19,9 @@ class BeachListTableViewController: UITableViewController {
     var activityName: String?
     var indicator = UIActivityIndicatorView()
     var imageURLs:[String] = []
+    var lifeGuardLoactions:[String] = []
+    
+    let weatherApiID = "da9c3535ceb9e41bb432c229b579f2a8"
     
     let SECTION_SETTING = 0
     let SECTION_BEACH = 1
@@ -48,7 +51,13 @@ class BeachListTableViewController: UITableViewController {
         //edit navi bar
         addNavBarImage()
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        
+        //create a loading animation
+        indicator.style = UIActivityIndicatorView.Style.gray
+        indicator.center = self.tableView.center
+        self.view.addSubview(indicator)
+        indicator.startAnimating()
+       
+        lifeGuardLoactions = lifeGuardLoaction()
         //get beach info
         getBeachLocationList()
         
@@ -57,18 +66,22 @@ class BeachListTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        
+       
+        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        //create a loading animation
-        indicator.style = UIActivityIndicatorView.Style.gray
-        indicator.center = self.tableView.center
-        self.view.addSubview(indicator)
-        
-        loadImage()
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//        //create a loading animation
+//        indicator.style = UIActivityIndicatorView.Style.gray
+//        indicator.center = self.tableView.center
+//        self.view.addSubview(indicator)
+//
+//        //loadImage()
+//    }
     
     
     
@@ -87,84 +100,203 @@ class BeachListTableViewController: UITableViewController {
             
             //searchIamgeOnline(beach: "st kilda beach")
             
-            let beach = Beach(beachName: beachName!, latitude: latitude, longitude: longitude, imageName: "defaultBeachImage.jpg", distance: distance!, risk: "s", ifGuard: ifGuard, ifPort: ifPort, descrip: "")
+//            let des = item.placemark.locality ?? ""
+            let windSpeed = getCurrentWeatherDate(beach: item)
+            
+            let risk = chechRisk(ifPort: ifPort, ifGuard: ifGuard, windSpeed: windSpeed)
+           
+            let beach = Beach(beachName: beachName!, latitude: latitude, longitude: longitude, imageName: "defaultBeachImage.jpg", distance: distance!, risk: risk, ifGuard: ifGuard, ifPort: ifPort, descrip: "", windSpeed: windSpeed)
             
             beachList.append(beach)
         }
         
     }
     
+    //chech the risk according to activity, wind , guard, port
     
-    func loadImage(){
-    // start anminating the loading as the URL request is made
-    indicator.startAnimating()
-    indicator.backgroundColor = UIColor.white
-    
-        for beach in beachList{
-            searchIamgeOnline(beach: beach.beachName!)
-        }
-        if beachList.count == imageURLs.count {
-            var index = 0
-            while index < beachList.count{
-                beachList[index].imageName = imageURLs[index]
-                index = index + 1
+    func chechRisk(ifPort: Bool, ifGuard: Bool, windSpeed: Double) -> String{
+        var risk = "u"
+        if activityName == "Boating" {
+            if ifPort{
+                if ifGuard{
+                    if (windSpeed*2.237).isLess(than: 39) && windSpeed != 0.0 {
+                        risk = "s"
+                    }
+                }
             }
         }
         
-        // Regardless of response end the loading icon from the main thread
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-            self.indicator.stopAnimating()
-            self.indicator.hidesWhenStopped = true
+        if activityName == "Surfing" {
+           if ifGuard{
+                if (windSpeed*2.237).isLess(than: 20) && windSpeed != 0.0 {
+                    risk = "s"
+                }
+            }
         }
-    
+        if activityName == "Swimming" {
+        if ifGuard{
+            if (windSpeed*2.237).isLess(than: 9) && windSpeed != 0.0 {
+                risk = "s"
+                }
+            }
+        }
+        return risk
     }
+    
+    
+    
+//    func loadImage(){
+//    // start anminating the loading as the URL request is made
+//    indicator.startAnimating()
+//    indicator.backgroundColor = UIColor.white
+//
+//        for beach in beachList{
+//            searchIamgeOnline(beach: beach.beachName!)
+//        }
+//        if beachList.count == imageURLs.count {
+//            var index = 0
+//            while index < beachList.count{
+//                beachList[index].imageName = imageURLs[index]
+//                index = index + 1
+//            }
+//        }
+//
+//        // Regardless of response end the loading icon from the main thread
+//        DispatchQueue.main.async {
+//            self.tableView.reloadData()
+//
+//            self.indicator.stopAnimating()
+//            self.indicator.hidesWhenStopped = true
+//        }
+//
+//    }
 
   
     
-    func searchIamgeOnline(beach: String) {
+//    func searchIamgeOnline(beach: String) {
+//
+//
+//        //key:   AIzaSyBDczIvDMC85RvOC1lKpxUGB50GH4mD6yc    AIzaSyBcZK2M_pWExrukRTeeMBJ_LgFv13lIVQI
+//
+//        let searchString = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBDczIvDMC85RvOC1lKpxUGB50GH4mD6yc&cx=002407881098821145824:29fpb6s3hfq&q=\(beach)&searchType=image&num=1"
+//        let jsonURL = URL(string: searchString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+//        let task = URLSession.shared.dataTask(with: jsonURL!){
+//            (data, response, error) in
+//
+//
+//            // if error, show error message
+//            if let error = error {
+//                self.displayMessage(title: "Error", message: error.localizedDescription)
+//                return
+//            }
+//
+//            do{
+//                let decoder = JSONDecoder()
+//                let imageDate = try decoder.decode(OnlineImageData.self, from: data!)
+//
+//                guard let imageURL = imageDate.onlineImages?[0].imageURL else {
+//                    return
+//                }
+//               self.imageURLs.append(imageURL)
+//                print(imageURL)
+//
+//            } catch let err{
+//                DispatchQueue.main.async {
+//                   self.displayMessage(title: "Error", message: err.localizedDescription)
+//                }
+//            }
+//        }
+//        //start the data task
+//        task.resume()
+//    }
+//
+    
+    //get weather info of beach
+    
+    func getCurrentWeatherDate(beach: MKMapItem) -> Double{
+        var windSpeed: Double?
+        let lat = beach.placemark.location?.coordinate.latitude
+        let long = beach.placemark.location?.coordinate.longitude
         
-        let searchString = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBcZK2M_pWExrukRTeeMBJ_LgFv13lIVQI&cx=002407881098821145824:29fpb6s3hfq&q=\(beach)&searchType=image&num=1"
-        let jsonURL = URL(string: searchString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
-        let task = URLSession.shared.dataTask(with: jsonURL!){
-            (data, response, error) in
-            
-            
-            // if error, show error message
-            if let error = error {
-                self.displayMessage(title: "Error", message: error.localizedDescription)
-                return
-            }
-            
-            do{
-                let decoder = JSONDecoder()
-                let imageDate = try decoder.decode(OnlineImageData.self, from: data!)
-                
-                guard let imageURL = imageDate.onlineImages?[0].imageURL else {
-                    return
-                }
-               self.imageURLs.append(imageURL)
-                
-            } catch let err{
-                DispatchQueue.main.async {
-                   self.displayMessage(title: "Error", message: err.localizedDescription)
-                }
-            }
+        let urlString = "http://api.openweathermap.org/data/2.5/weather?lat=\(lat!)&lon=\(long!)&appid=\(weatherApiID)"
+        let url = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+        
+        guard let weatheData = NSData(contentsOf: url!) else {
+            return 0.0
         }
-        //start the data task
-        task.resume()
+        
+        
+                                    do{
+                                        let decoder = JSONDecoder()
+                                        let weather = try decoder.decode(WeatherURLData.self, from: weatheData as Data)
+                                        windSpeed = weather.windSpeed
+                                    } catch let err{
+                                        DispatchQueue.main.async {
+                                           self.displayMessage(title: "Error", message: err.localizedDescription)
+                                        }
+                                    }
+                
+//       let task = URLSession.shared.dataTask(with: url!){
+//                    (data, response, error) in
+//                    // if error, show error message
+//                    if let error = error {
+//                        self.displayMessage(title: "Error", message: error.localizedDescription)
+//                        return
+//                    }
+//
+//                    do{
+//                        let decoder = JSONDecoder()
+//                        let weather = try decoder.decode(WeatherURLData.self, from: data!)
+//                        print(weather.temp)
+//
+//                    } catch let err{
+//                        DispatchQueue.main.async {
+//                           self.displayMessage(title: "Error", message: err.localizedDescription)
+//                        }
+//                    }
+//                }
+//        task.resume()
+        return windSpeed ?? 0.0
     }
     
     
     
-    //TODO check the beach if have lifeguard
+    
+    
+    
+    // check the beach if have lifeguard
     func checkIfGuard(beach: MKMapItem) -> Bool{
-        return true
+        if let  lgLocation = beach.placemark.subLocality {
+            return lifeGuardLoactions.contains(lgLocation)
+        }
+        return false
     }
     
-    //TODO check the beach if have port
+    
+    
+    
+    //check the beach if have port
     func checkIfPort(beach: MKMapItem) -> Bool{
-        return true
+        
+        let melPort = CLLocation(latitude: -37.8432094464, longitude: 144.9267604579)
+        let welPort = CLLocation(latitude: -38.694353, longitude: 146.466637)
+        let geePort = CLLocation(latitude: -38.116666667, longitude: 144.383333333)
+        let portPort = CLLocation(latitude: -38.35, longitude: 141.616666667)
+
+        if (beach.placemark.location?.distance(from: melPort).isLess(than: 5000))! {
+            return true
+        }
+        if (beach.placemark.location?.distance(from: welPort).isLess(than: 5000))! {
+            return true
+        }
+        if (beach.placemark.location?.distance(from: geePort).isLess(than: 5000))! {
+            return true
+        }
+        if (beach.placemark.location?.distance(from: portPort).isLess(than: 5000))! {
+            return true
+        }
+        
+        return false
     }
     
     //sort the list
@@ -190,7 +322,7 @@ class BeachListTableViewController: UITableViewController {
         //create request
         let searchRequest = MKLocalSearch.Request()
         searchRequest.naturalLanguageQuery = "beach"
-        searchRequest.region = MKCoordinateRegion.init(center: regionLocation!, latitudinalMeters: 50000, longitudinalMeters: 50000)
+        searchRequest.region = MKCoordinateRegion.init(center: regionLocation!, latitudinalMeters: 20000, longitudinalMeters: 20000)
         
         let activeSearch = MKLocalSearch(request: searchRequest)
         
@@ -207,10 +339,12 @@ class BeachListTableViewController: UITableViewController {
                 self.matchingItems = response!.mapItems
                 self.loadBeachInfo()
                 self.fliteredList = self.beachList
+                self.indicator.stopAnimating()
                 self.tableView.reloadData()
             }
             
         }
+        
     }
     
     // MARK: - Table view data source
@@ -243,23 +377,27 @@ class BeachListTableViewController: UITableViewController {
         if indexPath.section == SECTION_COUNT{
             let countCell = tableView.dequeueReusableCell(withIdentifier: CELL_COUNT, for: indexPath)
             
-            countCell.textLabel?.text = "\(fliteredList.count) beaches in the database"
+            countCell.textLabel?.text = "\(fliteredList.count) beaches are fund in the area."
             return countCell
         }
         
             let beachCell = tableView.dequeueReusableCell(withIdentifier: CELL_BEACH, for: indexPath) as! BeachListTableViewCell
+       
             let beach = fliteredList[indexPath.row]
-            
+            //beach.beachName
             beachCell.beachNameLabel.text = beach.beachName
             beachCell.distanceLabel.text = "\(beach.distance!/1000) km"
-        
-        
+        //
         // load image online
             //beachCell.beachImage.image = UIImage(named: beach.imageName!)
         let url = URL(string: beach.beachName!)
        
         beachCell.beachImage!.sd_setImage(with: url, placeholderImage: UIImage(named: "defaultBeachImage.jpg"), completed: nil)
-            
+        if beach.risk == "s" {
+              beachCell.riskImageView.image = UIImage(named: "safe")
+        }else {
+            beachCell.riskImageView.image = UIImage(named: "unsafe")
+        }
             return beachCell
         
     }
@@ -343,4 +481,26 @@ class BeachListTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    fileprivate func lifeGuardLoaction() -> [String] {
+        if let path = Bundle.main.path(forResource: "lg_suburbs", ofType: "json") {
+            do {
+                let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: .dataReadingMapped)
+                let jsonResult = try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) as! [[String:String]]
+                
+                var countryNames = [String]()
+                for country in jsonResult {
+                    countryNames.append(country["lg_suburb"]!)
+                }
+                
+                return countryNames
+            } catch {
+                print("Error parsing jSON: \(error)")
+                return []
+            }
+        }
+        return []
+    }
+    
+    
 }
