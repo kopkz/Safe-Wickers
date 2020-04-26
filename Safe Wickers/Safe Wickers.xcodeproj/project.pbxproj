@@ -17,6 +17,8 @@
 		704C1C2024544855006351F0 /* DatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704C1C1F24544855006351F0 /* DatabaseProtocol.swift */; };
 		704C1C2224544AC3006351F0 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704C1C2124544AC3006351F0 /* CoreDataController.swift */; };
 		704C1C2424545432006351F0 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704C1C2324545432006351F0 /* MulticastDelegate.swift */; };
+		704C1C2824556A62006351F0 /* LovedBeachListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704C1C2724556A62006351F0 /* LovedBeachListTableViewController.swift */; };
+		704C1C2A24559854006351F0 /* LovedBeachTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704C1C2924559854006351F0 /* LovedBeachTableViewCell.swift */; };
 		707BABF2244C7E3000351335 /* victoria_suburb_names.json in Resources */ = {isa = PBXBuildFile; fileRef = 707BABF1244C7E3000351335 /* victoria_suburb_names.json */; };
 		707BAC5E244D9E6F00351335 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707BAC5D244D9E6F00351335 /* LocationSearchTable.swift */; };
 		7086B1AA244DBA0A005269B2 /* BeachListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7086B1A9244DBA0A005269B2 /* BeachListTableViewController.swift */; };
@@ -48,6 +50,8 @@
 		704C1C1F24544855006351F0 /* DatabaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseProtocol.swift; sourceTree = "<group>"; };
 		704C1C2124544AC3006351F0 /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		704C1C2324545432006351F0 /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
+		704C1C2724556A62006351F0 /* LovedBeachListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedBeachListTableViewController.swift; sourceTree = "<group>"; };
+		704C1C2924559854006351F0 /* LovedBeachTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedBeachTableViewCell.swift; sourceTree = "<group>"; };
 		707BABF1244C7E3000351335 /* victoria_suburb_names.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = victoria_suburb_names.json; path = "Safe Wickers/victoria_suburb_names.json"; sourceTree = "<group>"; };
 		707BAC5D244D9E6F00351335 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		7086B1A9244DBA0A005269B2 /* BeachListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachListTableViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +158,15 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
+		704C1C2624556A31006351F0 /* LovedBeachListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				704C1C2724556A62006351F0 /* LovedBeachListTableViewController.swift */,
+				704C1C2924559854006351F0 /* LovedBeachTableViewCell.swift */,
+			);
+			path = LovedBeachListScreen;
+			sourceTree = "<group>";
+		};
 		709D1EA12446BC2E00F4AB4A = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +199,7 @@
 				704C1C0B24543834006351F0 /* BeachListScreen */,
 				709D1EAD2446BC2F00F4AB4A /* AppDelegate.swift */,
 				709D1EBB2446BC3000F4AB4A /* Info.plist */,
+				704C1C2624556A31006351F0 /* LovedBeachListScreen */,
 				709D1EB62446BC3000F4AB4A /* Assets.xcassets */,
 				70BB0B0A2452A062002019B3 /* lg_suburbs.json */,
 			);
@@ -342,7 +356,9 @@
 				70A49DF0244E8A880042CD98 /* Beach.swift in Sources */,
 				704C1C2024544855006351F0 /* DatabaseProtocol.swift in Sources */,
 				7086B1AC244DC102005269B2 /* BeachListTableViewCell.swift in Sources */,
+				704C1C2824556A62006351F0 /* LovedBeachListTableViewController.swift in Sources */,
 				7086B1AA244DBA0A005269B2 /* BeachListTableViewController.swift in Sources */,
+				704C1C2A24559854006351F0 /* LovedBeachTableViewCell.swift in Sources */,
 				707BAC5E244D9E6F00351335 /* LocationSearchTable.swift in Sources */,
 				703FC1DA245051A400DF7BFA /* myAnnotationView.swift in Sources */,
 				704C1C1D24544801006351F0 /* LovedBeach+CoreDataProperties.swift in Sources */,

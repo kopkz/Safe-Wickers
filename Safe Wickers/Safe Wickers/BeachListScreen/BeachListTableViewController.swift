@@ -9,8 +9,14 @@
 import UIKit
 import MapKit
 import SDWebImage
+import CoreData
 
 class BeachListTableViewController: UITableViewController{
+    
+    weak var databaseController: DatabaseProtocol?
+    //database listener
+    var listenerType = ListenerType.lovedBeach
+    var lovedBeachs:[LovedBeach] = []
     
     var regionLocation: CLLocationCoordinate2D?
     var matchingItems:[MKMapItem] = []
@@ -61,13 +67,9 @@ class BeachListTableViewController: UITableViewController{
         //get beach info
         getBeachLocationList()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        
+        // Get the database controller once from the App Delegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        databaseController = appDelegate.databaseController
        
         
     }
@@ -108,8 +110,10 @@ class BeachListTableViewController: UITableViewController{
             
             
             let risk = chechRisk(ifPort: ifPort, ifGuard: ifGuard, windSpeed: windSpeed)
+            
+            let ifLoved = checkIfLoved(beachNmae: beachName!)
            
-            let beach = Beach(beachName: beachName!, latitude: latitude, longitude: longitude, imageName: imageNmae, distance: distance!, risk: risk, ifGuard: ifGuard, ifPort: ifPort, descrip: "", windSpeed: windSpeed, temp: temp, hum: hum, pre: pre)
+            let beach = Beach(beachName: beachName!, latitude: latitude, longitude: longitude, imageName: imageNmae, distance: distance!, risk: risk, ifGuard: ifGuard, ifPort: ifPort, descrip: "", windSpeed: windSpeed, temp: temp, hum: hum, pre: pre, ifLoved: ifLoved)
             
             beachList.append(beach)
         }
@@ -417,6 +421,10 @@ class BeachListTableViewController: UITableViewController{
             let beachCell = tableView.dequeueReusableCell(withIdentifier: CELL_BEACH, for: indexPath) as! BeachListTableViewCell
        
             let beach = fliteredList[indexPath.row]
+            beachCell.delegate = self
+            beachCell.setBeach(beach: beach)
+            beachCell.loveUnloveButton.imageView?.image = beach.ifLoved! ? UIImage(named: "icons8-like-96-2") : UIImage(named: "icons8-unlike-96")
+        
             //beach.beachName
             beachCell.beachNameLabel.text = beach.beachName
             beachCell.distanceLabel.text = "\(beach.distance!/1000) km"
@@ -555,6 +563,67 @@ extension BeachListTableViewController: FilterCellDelegate {
     func sortingByDistance() {
         self.sortListByDistance()
     }
+}
+
+extension BeachListTableViewController: DatabaseListener{
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        databaseController?.addListener(listener: self)
+    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        databaseController?.removeListener(listener: self)
+    }
+    
+    func onLovedBeachChange(change: DatabaseChange, lovedBeachs: [LovedBeach]) {
+        self.lovedBeachs = lovedBeachs
+    }
+    
+    func checkIfLoved(beachNmae: String) -> Bool{
+        var ifLoved = false
+        for beach in lovedBeachs {
+            if beach.beachName == beachNmae{
+                ifLoved = true
+            }
+        }
+        return ifLoved
+    }
+    
+    func addLovedBeach(beach:Beach) {
+        
+        let ifLoved = checkIfLoved(beachNmae: beach.beachName!)
+        if ifLoved {
+            return
+        }
+        let _ = databaseController!.addLovedBeach(beachName: beach.beachName!, lat: beach.latitude!, long: beach.longitude!, imageName: beach.imageName!, ifGuard: beach.ifGuard!, ifPort: beach.ifPort!)
+    }
+    
+    func cancelLovedBeach(beachName: String) {
+        var unlovedBeach: LovedBeach?
+        for beach in lovedBeachs {
+            if beach.beachName == beachName{
+                unlovedBeach = beach
+            }
+        }
+        guard let unloved = unlovedBeach else {
+            return
+        }
+        
+        let _ = databaseController!.deleteLovedBeach(lovedBeach: unloved)
+    }
+    
+}
+
+extension BeachListTableViewController: LoveBeachDelagate {
+  
+    func loveUnloveBeach(beach: Beach) {
+        if beach.ifLoved! {
+            cancelLovedBeach(beachName: beach.beachName!)
+        }else {
+            addLovedBeach(beach: beach)
+        }
+        tableView.reloadData()
+    }
 }
