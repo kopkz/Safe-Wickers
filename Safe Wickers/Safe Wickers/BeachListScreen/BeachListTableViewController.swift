@@ -26,6 +26,7 @@ class BeachListTableViewController: UITableViewController{
     var indicator = UIActivityIndicatorView()
     var imageURLs:[String] = []
     var lifeGuardLoactions:[String] = []
+    var ifSearchBeachDirctly: Bool?
     
     let weatherApiID = "da9c3535ceb9e41bb432c229b579f2a8"
     
@@ -373,9 +374,14 @@ class BeachListTableViewController: UITableViewController{
             else
             {
                 //Getting data
-                self.matchingItems = response!.mapItems
+                if self.ifSearchBeachDirctly!{
+                    self.matchingItems = [response!.mapItems.first] as! [MKMapItem]
+                }else {
+                    self.matchingItems = response!.mapItems
+                }
                 self.loadBeachInfo()
                 self.fliteredList = self.beachList
+                
                 self.indicator.stopAnimating()
                 self.tableView.reloadData()
             }

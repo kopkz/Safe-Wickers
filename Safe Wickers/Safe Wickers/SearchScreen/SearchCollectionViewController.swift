@@ -327,6 +327,11 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
             let destination = segue.destination as! BeachListTableViewController
             destination.regionLocation = searchLocation
             destination.activityName = self.activityName
+            if (self.locationTextField.text?.hasSuffix("Beach"))!{
+                destination.ifSearchBeachDirctly = true
+            }else{
+                destination.ifSearchBeachDirctly = false
+            }
         }
     }
     
@@ -337,12 +342,13 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
 
 extension SearchCollectionViewController: HandleMapSearch {
     func createSearchLocation(placemark:MKPlacemark){
-        // cache the pin
         
         selectedLocation = placemark
-        
-        
-        if placemark.locality != nil && placemark.administrativeArea != nil {
+        if (placemark.name?.hasSuffix("Beach"))! {
+            self.searchLocation = placemark.coordinate
+            self.locationTextField.text = placemark.name
+            
+        }else if placemark.locality != nil && placemark.administrativeArea != nil {
             self.searchLocation = placemark.coordinate
             self.locationTextField.text = placemark.locality! + ", " + placemark.administrativeArea!
         } else {
