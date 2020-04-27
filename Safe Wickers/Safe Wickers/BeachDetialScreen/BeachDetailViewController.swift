@@ -118,11 +118,21 @@ class BeachDetailViewController: UIViewController {
         }
     }
     
+    func checkIfLoved(beachNmae: String) -> Bool{
+        var ifLoved = false
+        for beach in lovedBeachs {
+            if beach.beachName == beachNmae{
+                ifLoved = true
+            }
+        }
+        return ifLoved
+    }
+    
     // add beach to loved beach database
     func addLovedBeach(beach:Beach) {
         
-        let ifLoved = beach.ifLoved
-        if ifLoved! {
+        let ifLoved = checkIfLoved(beachNmae: beach.beachName!)
+        if ifLoved {
             return
         }
         let _ = databaseController!.addLovedBeach(beachName: beach.beachName!, lat: beach.latitude!, long: beach.longitude!, imageName: beach.imageName!, ifGuard: beach.ifGuard!, ifPort: beach.ifPort!)

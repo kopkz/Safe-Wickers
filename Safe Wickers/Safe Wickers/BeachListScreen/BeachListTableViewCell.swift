@@ -13,7 +13,7 @@ protocol LoveBeachDelagate {
 
 class BeachListTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var loveUnloveButton: UIButton!
+    @IBOutlet weak var loveUnloveButton: LoveButton!
     @IBOutlet weak var riskImageView: UIImageView!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var beachNameLabel: UILabel!
@@ -26,7 +26,6 @@ class BeachListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         loveUnloveButton.addTarget(self, action: #selector(loveUnloveButtonTaped), for: .touchUpInside)
-        loveUnloveButton.tintColor = UIColor.lightGray
     }
     func setBeach(beach: Beach){
         beachItem = beach

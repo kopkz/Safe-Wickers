@@ -424,7 +424,8 @@ class BeachListTableViewController: UITableViewController{
             let beach = fliteredList[indexPath.row]
             beachCell.delegate = self
             beachCell.setBeach(beach: beach)
-            beachCell.loveUnloveButton.imageView?.image = beach.ifLoved! ? UIImage(named: "icons8-like-96-2") : UIImage(named: "icons8-unlike-96")
+            beachCell.loveUnloveButton.isLove = beach.ifLoved!
+//            beachCell.loveUnloveButton.imageView?.image = beach.ifLoved! ? UIImage(named: "icons8-like-96-2") : UIImage(named: "icons8-unlike-96")
         
             //beach.beachName
             beachCell.beachNameLabel.text = beach.beachName
