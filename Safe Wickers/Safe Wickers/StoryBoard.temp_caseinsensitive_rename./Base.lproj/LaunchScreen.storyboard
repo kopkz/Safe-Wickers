@@ -18,16 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lunchImage1" translatesAutoresizingMaskIntoConstraints="NO" id="sDV-lm-uiU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="B5J-Mf-7Ue">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sDV-lm-uiU" secondAttribute="bottom" id="7hv-n8-gLH"/>
-                            <constraint firstItem="sDV-lm-uiU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RVr-AN-Zxz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sDV-lm-uiU" secondAttribute="trailing" id="Roy-gJ-Bdt"/>
-                            <constraint firstItem="sDV-lm-uiU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="v9p-Zg-v9i"/>
+                            <constraint firstItem="B5J-Mf-7Ue" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8oc-fH-bMx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B5J-Mf-7Ue" secondAttribute="bottom" id="FIY-JA-i14"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B5J-Mf-7Ue" secondAttribute="trailing" id="W7b-nS-Biy"/>
+                            <constraint firstItem="B5J-Mf-7Ue" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pxb-bV-i91"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="lunchImage1" width="640" height="480"/>
+        <image name="lunchImage" width="222.66667175292969" height="472.33334350585938"/>
     </resources>
 </document>

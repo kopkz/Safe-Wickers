@@ -28,6 +28,7 @@ class BeachListTableViewController: UITableViewController{
     var lifeGuardLoactions:[String] = []
     var ifSearchBeachDirctly: Bool?
     
+    
     let weatherApiID = "da9c3535ceb9e41bb432c229b579f2a8"
     
     let SECTION_SETTING = 0
@@ -52,6 +53,7 @@ class BeachListTableViewController: UITableViewController{
         navController.navigationBar.backItem?.title = "Back"
     }
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

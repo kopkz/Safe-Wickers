@@ -22,10 +22,15 @@ class FilterButtonTableViewCell: UITableViewCell {
     @IBOutlet weak var onlySafeSwitch: UISwitch!
     
     var delegate: FilterCellDelegate?
+    let relativeFontConstant: CGFloat = 0.046
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+//        sortLabel.font = sortLabel.font.withSize(self.frame.height * relativeFontConstant)
+//        orLabel.font = orLabel.font.withSize(self.frame.height * relativeFontConstant)
+//        onlySafeLabel.font = onlySafeLabel.font.withSize(self.frame.height * relativeFontConstant)
+        
         onlySafeSwitch.addTarget(self, action: #selector(switchDidChange), for: .valueChanged)
     }
 
