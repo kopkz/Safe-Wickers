@@ -15,6 +15,7 @@ class LovedBeachListTableViewController: UITableViewController, DatabaseListener
 
     var databaseController: DatabaseProtocol?
     var lovedBeachs:[LovedBeach] = []
+    var beach: Beach?
     var listenerType = ListenerType.lovedBeach
     
     var locationManager: CLLocationManager = CLLocationManager()
@@ -39,9 +40,8 @@ class LovedBeachListTableViewController: UITableViewController, DatabaseListener
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         addNavBarImage()
-        
+        self.tableView.tableFooterView = UIView.init(frame: CGRect.zero)
         // Get the database controller once from the App Delegate
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         databaseController = appDelegate.databaseController
@@ -79,6 +79,7 @@ class LovedBeachListTableViewController: UITableViewController, DatabaseListener
     
     func onLovedBeachChange(change: DatabaseChange, lovedBeachs: [LovedBeach]) {
         self.lovedBeachs = lovedBeachs
+        self.tableView.reloadData()
     }
     
     // MARK: - Table view data source
@@ -101,14 +102,14 @@ class LovedBeachListTableViewController: UITableViewController, DatabaseListener
         
         cell.beachNameLabel.text = lovedBeach.beachName
         
-        let beachLocation = CLLocation(latitude:lovedBeach.lat, longitude: lovedBeach.long)
-        
-        if let loction = currentLocation{
-            let distance = loction.distance(from:beachLocation).rounded()
-            cell.distanceLabel.text = "\(distance/1000) km"
-        }else{
-                cell.distanceLabel.text = ""
-            }
+//        let beachLocation = CLLocation(latitude:lovedBeach.lat, longitude: lovedBeach.long)
+//
+//        if let loction = currentLocation{
+//            let distance = loction.distance(from:beachLocation).rounded()
+//            cell.distanceLabel.text = "\(distance/1000) km"
+//        }else{
+//                cell.distanceLabel.text = ""
+//            }
 //        if let distance = currentLocation?.distance(from:beachLocation).rounded() {
 //            cell.distanceLabel.text = "\(distance/1000) km"
 //        } else{
@@ -126,6 +127,7 @@ class LovedBeachListTableViewController: UITableViewController, DatabaseListener
             return 300
     }
 
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -134,24 +136,89 @@ class LovedBeachListTableViewController: UITableViewController, DatabaseListener
     }
     */
 
-    /*
+    //header of section
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Your Favourite Beaches:"
+    }
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            let beach = lovedBeachs[indexPath.row]
             // Delete the row from the data source
+             self.lovedBeachs.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            self.databaseController?.deleteLovedBeach(lovedBeach: beach)
+            
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    // action after select a cell
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        getBeachInfo(lovedBeach: lovedBeachs[indexPath.row])
+        performSegue(withIdentifier: "loveToBeachDetail", sender: self)
     }
-    */
+
+    // create a beach send to detail screen
+    func getBeachInfo(lovedBeach:LovedBeach){
+        let beachName = lovedBeach.beachName
+        let lat = lovedBeach.lat
+        let long = lovedBeach.long
+        let imageName = lovedBeach.imageNmae
+        let ifPort = lovedBeach.ifPort
+        let ifGuard = lovedBeach.ifGuard
+        let beachLocation = CLLocation(latitude:lovedBeach.lat, longitude: lovedBeach.long)
+        let distance = currentLocation?.distance(from: beachLocation).rounded()
+        
+        let weatherData = getCurrentWeatherDate(beach: lovedBeach)
+        let windSpeed = weatherData[0]
+        let temp = weatherData[1]
+        let hum = weatherData[2]
+        let pre = weatherData[3]
+        
+        self.beach = Beach(beachName: beachName!, latitude: lat, longitude: long, imageName: imageName!, distance: distance ?? 0.0, risk: "s", ifGuard: ifGuard, ifPort: ifPort, descrip: "", windSpeed: windSpeed, temp: temp, hum: hum, pre: pre, ifLoved: true)
+    }
+    
+    // get weather data
+    func getCurrentWeatherDate(beach: LovedBeach) -> [Double]{
+        var weatherData: [Double] = []
+        let lat = beach.lat
+        let long = beach.long
+        
+        let weatherApiID = "da9c3535ceb9e41bb432c229b579f2a8"
+        let urlString = "http://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(long)&appid=\(weatherApiID)"
+        let url = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+        
+        guard let weatheData = NSData(contentsOf: url!) else {
+            return []
+        }
+        
+        
+        do{
+            let decoder = JSONDecoder()
+            let weather = try decoder.decode(WeatherURLData.self, from: weatheData as Data)
+            weatherData.append(weather.windSpeed)
+            weatherData.append(weather.temp)
+            weatherData.append(weather.humidity)
+            weatherData.append(weather.pressure)
+        } catch let err{
+            DispatchQueue.main.async {
+                self.displayMessage(title: "Error", message: err.localizedDescription)
+            }
+        }
+        return weatherData
+    }
+    
+    func displayMessage(title: String, message: String) {
+        // Setup an alert to show user details about the Person
+        // UIAlertController manages an alert instance
+        let alertController = UIAlertController(title: title, message: message,
+                                                preferredStyle: UIAlertController.Style.alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style:UIAlertAction.Style.default,handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+
 
     /*
     // Override to support conditional rearranging of the table view.
@@ -161,14 +228,28 @@ class LovedBeachListTableViewController: UITableViewController, DatabaseListener
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "loveToBeachDetail"{
+            let destination = segue.destination as! BeachDetailViewController
+            destination.beach = self.beach
+        }
+        if segue.identifier == "showLovedMapSegue" {
+            let destination = segue.destination as! MapViewController
+            destination.focusLocation = CLLocation(latitude: (currentLocation?.coordinate.latitude)!, longitude: (currentLocation?.coordinate.longitude)!)
+            var list: [Beach] = []
+            for item in lovedBeachs{
+                getBeachInfo(lovedBeach: item)
+                list.append(self.beach!)
+            }
+            destination.beachList = list
+        }
     }
-    */
+    
 
 }

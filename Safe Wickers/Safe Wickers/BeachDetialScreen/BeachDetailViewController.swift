@@ -31,9 +31,38 @@ class BeachDetailViewController: UIViewController {
     var beach: Beach?
     @IBOutlet weak var preValue: UILabel!
     
+    @IBOutlet weak var loveUnloveButton: LoveButton!
+    //database listener
+    var listenerType = ListenerType.lovedBeach
+    
+    weak var databaseController: DatabaseProtocol?
+    var lovedBeachs: [LovedBeach] = []
+    
+    
+    func addNavBarImage() {
+        let navController = navigationController!
+        navigationController?.navigationBar.barTintColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1)
+        let image = UIImage(named: "titleLogo.png")
+        let imageView = UIImageView(image: image)
+        let bannerWidth = navController.navigationBar.frame.size.width
+        let bannerHeight = navController.navigationBar.frame.size.height
+        let bannerX = bannerWidth / 2 - (image?.size.width)! / 2
+        let bannerY = bannerHeight / 2 - (image?.size.height)! / 2
+        imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight)
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = imageView
+        navController.navigationBar.backItem?.title = "Back"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //set up navigation bar
+        addNavBarImage()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        // Get the database controller once from the App Delegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        databaseController = appDelegate.databaseController
         
         beachNameLabel.text = beach?.beachName
         distanceLabel.text = "\((beach?.distance!)!/1000) km"
@@ -59,6 +88,10 @@ class BeachDetailViewController: UIViewController {
         humValue.text = "\(beach!.hum!) %"
         preValue.text = "\(beach!.pre!) hpa"
         // Do any additional setup after loading the view.
+        
+        loveUnloveButton.isLove = beach!.ifLoved!
+        loveUnloveButton.addTarget(self, action: #selector(loveUloveBeach), for: .touchUpInside)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -74,5 +107,55 @@ class BeachDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //love or unlove beach
+    
+    @objc func loveUloveBeach(){
+        if self.beach!.ifLoved!{
+            cancelLovedBeach(beachName: self.beach!.beachName!)
+        } else{
+            addLovedBeach(beach: self.beach!)
+        }
+    }
+    
+    // add beach to loved beach database
+    func addLovedBeach(beach:Beach) {
+        
+        let ifLoved = beach.ifLoved
+        if ifLoved! {
+            return
+        }
+        let _ = databaseController!.addLovedBeach(beachName: beach.beachName!, lat: beach.latitude!, long: beach.longitude!, imageName: beach.imageName!, ifGuard: beach.ifGuard!, ifPort: beach.ifPort!)
+    }
+    
+    // remove beach from loved beach database
+    func cancelLovedBeach(beachName: String) {
+        var unlovedBeach: LovedBeach?
+        for beach in lovedBeachs {
+            if beach.beachName == beachName{
+                unlovedBeach = beach
+            }
+        }
+        guard let unloved = unlovedBeach else {
+            return
+        }
+        
+        let _ = databaseController!.deleteLovedBeach(lovedBeach: unloved)
+    }
+}
 
+extension BeachDetailViewController: DatabaseListener{
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        databaseController?.addListener(listener: self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        databaseController?.removeListener(listener: self)
+    }
+    
+    func onLovedBeachChange(change: DatabaseChange, lovedBeachs: [LovedBeach]) {
+        self.lovedBeachs = lovedBeachs
+    }
 }

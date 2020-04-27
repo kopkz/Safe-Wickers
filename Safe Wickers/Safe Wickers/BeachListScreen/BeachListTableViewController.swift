@@ -103,10 +103,11 @@ class BeachListTableViewController: UITableViewController{
             let imageNmae = searchIamgeOnline(beach: "\(beachName!) Victoria")
             
 //            let des = item.placemark.locality ?? ""
-            let windSpeed = getCurrentWeatherDate(beach: item)[0]
-            let temp = getCurrentWeatherDate(beach: item)[1]
-            let hum = getCurrentWeatherDate(beach: item)[2]
-            let pre = getCurrentWeatherDate(beach: item)[3]
+            let weatherData = getCurrentWeatherDate(beach: item)
+            let windSpeed = weatherData[0]
+            let temp = weatherData[1]
+            let hum = weatherData[2]
+            let pre = weatherData[3]
             
             
             let risk = chechRisk(ifPort: ifPort, ifGuard: ifGuard, windSpeed: windSpeed)

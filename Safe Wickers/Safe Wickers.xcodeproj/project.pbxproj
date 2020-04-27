@@ -36,6 +36,7 @@
 		70BB0B09245142DA002019B3 /* ImageURLData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB0B08245142DA002019B3 /* ImageURLData.swift */; };
 		70BB0B0B2452A062002019B3 /* lg_suburbs.json in Resources */ = {isa = PBXBuildFile; fileRef = 70BB0B0A2452A062002019B3 /* lg_suburbs.json */; };
 		70BB0B0D2452AD2B002019B3 /* weatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB0B0C2452AD2B002019B3 /* weatherData.swift */; };
+		70FE9B83245692D900904091 /* LoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FE9B82245692D900904091 /* LoveButton.swift */; };
 		CB41842CF993B73794769121 /* Pods_Safe_Wickers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9982ACD8B8650BFDB86A7747 /* Pods_Safe_Wickers.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		70BB0B08245142DA002019B3 /* ImageURLData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURLData.swift; sourceTree = "<group>"; };
 		70BB0B0A2452A062002019B3 /* lg_suburbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lg_suburbs.json; sourceTree = "<group>"; };
 		70BB0B0C2452AD2B002019B3 /* weatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherData.swift; sourceTree = "<group>"; };
+		70FE9B82245692D900904091 /* LoveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveButton.swift; sourceTree = "<group>"; };
 		9982ACD8B8650BFDB86A7747 /* Pods_Safe_Wickers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Safe_Wickers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB08D21B751E7835FA167C33 /* Pods-Safe Wickers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safe Wickers.debug.xcconfig"; path = "Target Support Files/Pods-Safe Wickers/Pods-Safe Wickers.debug.xcconfig"; sourceTree = "<group>"; };
 		E7D2F70EB70F227933667760 /* Pods-Safe Wickers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safe Wickers.release.xcconfig"; path = "Target Support Files/Pods-Safe Wickers/Pods-Safe Wickers.release.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				704C1C2624556A31006351F0 /* LovedBeachListScreen */,
 				709D1EB62446BC3000F4AB4A /* Assets.xcassets */,
 				70BB0B0A2452A062002019B3 /* lg_suburbs.json */,
+				70FE9B82245692D900904091 /* LoveButton.swift */,
 			);
 			path = "Safe Wickers";
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				704C1C1C24544801006351F0 /* LovedBeach+CoreDataClass.swift in Sources */,
 				704C1C11245445DA006351F0 /* LovedBeachModel.xcdatamodeld in Sources */,
 				70BB0B09245142DA002019B3 /* ImageURLData.swift in Sources */,
+				70FE9B83245692D900904091 /* LoveButton.swift in Sources */,
 				704C1C2224544AC3006351F0 /* CoreDataController.swift in Sources */,
 				709D1EC42449D5C500F4AB4A /* ActivityCollectionViewCell.swift in Sources */,
 				704C1C2424545432006351F0 /* MulticastDelegate.swift in Sources */,

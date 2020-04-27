@@ -37,6 +37,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override func viewDidLoad() {
         super.viewDidLoad()
         addNavBarImage()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+
         // Do any additional setup after loading the view.
         showCusLocation()
         

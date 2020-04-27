@@ -10,10 +10,7 @@ import UIKit
 
 class LovedBeachTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var loveUnloveButton: UIButton!
     @IBOutlet weak var beachImageView: UIImageView!
-    @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var riskImageView: UIImageView!
     @IBOutlet weak var beachNameLabel: UILabel!
     
     override func awakeFromNib() {
