@@ -422,8 +422,7 @@ class BeachListTableViewController: UITableViewController{
         }
         if indexPath.section == SECTION_COUNT{
             let countCell = tableView.dequeueReusableCell(withIdentifier: CELL_COUNT, for: indexPath)
-            
-            countCell.textLabel?.text = "\(fliteredList.count) beaches are fund in the area."
+            countCell.textLabel?.text = "\(fliteredList.count) beaches are found in the area."
             return countCell
         }
         
