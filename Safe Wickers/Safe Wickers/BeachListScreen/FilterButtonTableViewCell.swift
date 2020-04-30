@@ -9,29 +9,24 @@
 import UIKit
 
 protocol FilterCellDelegate{
-    func sortingByInitials()
-    func sortingByDistance()
-    func onlyShowSafeBeach()
-    func showAllBeach()
+    func showSortingMenue()
 }
 
 class FilterButtonTableViewCell: UITableViewCell {
-    @IBOutlet weak var sortLabel: UILabel!
-    @IBOutlet weak var orLabel: UILabel!
-    @IBOutlet weak var onlySafeLabel: UILabel!
-    @IBOutlet weak var onlySafeSwitch: UISwitch!
+   
+    @IBOutlet weak var showSortingMenueButton: UIButton!
     
     var delegate: FilterCellDelegate?
-    let relativeFontConstant: CGFloat = 0.046
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-//        sortLabel.font = sortLabel.font.withSize(self.frame.height * relativeFontConstant)
-//        orLabel.font = orLabel.font.withSize(self.frame.height * relativeFontConstant)
-//        onlySafeLabel.font = onlySafeLabel.font.withSize(self.frame.height * relativeFontConstant)
         
-        onlySafeSwitch.addTarget(self, action: #selector(switchDidChange), for: .valueChanged)
+        showSortingMenueButton.layer.borderColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1).cgColor
+        showSortingMenueButton.tintColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1)
+        showSortingMenueButton.layer.borderWidth = 1
+        showSortingMenueButton.layer.cornerRadius = 5
+        showSortingMenueButton.addTarget(self, action: #selector(showMenue), for: .touchUpInside)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,22 +34,10 @@ class FilterButtonTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    @IBAction func onlySafeSwitch(_ sender: UISwitch) {
-        delegate?.onlyShowSafeBeach()
+    
+    @objc func showMenue(){
+        delegate?.showSortingMenue()
     }
     
-    @IBAction func distanceSorting(_ sender: Any) {
-        delegate?.sortingByDistance()
-    }
-    @IBAction func initialsSorting(_ sender: UIButton) {
-        delegate?.sortingByInitials()
-    }
-    @objc func switchDidChange(){
-        if onlySafeSwitch.isOn{
-            delegate?.onlyShowSafeBeach()
-        } else{
-           delegate?.showAllBeach()
-        }
-    }
     
 }

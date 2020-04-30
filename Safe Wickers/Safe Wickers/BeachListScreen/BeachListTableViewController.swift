@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import SDWebImage
 import CoreData
+import Popover_OC
 
 class BeachListTableViewController: UITableViewController{
     
@@ -27,6 +28,8 @@ class BeachListTableViewController: UITableViewController{
     var imageURLs:[String] = []
     var lifeGuardLoactions:[String] = []
     var ifSearchBeachDirctly: Bool?
+    var ifOnlyLifeGuard: Bool?
+    var ifOnlyPort: Bool?
     
     
     let weatherApiID = "da9c3535ceb9e41bb432c229b579f2a8"
@@ -63,6 +66,14 @@ class BeachListTableViewController: UITableViewController{
         //create a loading animation
         indicator.style = UIActivityIndicatorView.Style.gray
         indicator.center = self.tableView.center
+//        //add text to indicator
+//        let indicatorLabel = UILabel()
+//        indicatorLabel.text = "LOADING"
+//        indicatorLabel.textColor = UIColor.gray
+//        indicatorLabel.font = UIFont(name: "Avenir Light", size: 10)
+//        indicatorLabel.sizeToFit()
+//        indicatorLabel.center = CGPoint(x: indicator.center.x, y: indicator.center.y + 30)
+//        indicator.addSubview(indicatorLabel)
         self.view.addSubview(indicator)
         indicator.startAnimating()
        
@@ -101,8 +112,9 @@ class BeachListTableViewController: UITableViewController{
             let ifGuard = checkIfGuard(beach: item)
             let ifPort = checkIfPort(beach: item)
             
-            //TODO load internet iamge, risk(wind), descip
             
+            // when test other functuon stop search image
+//            let imageNmae = ""
             let imageNmae = searchIamgeOnline(beach: "\(beachName!) Victoria")
             
 //            let des = item.placemark.locality ?? ""
@@ -356,6 +368,23 @@ class BeachListTableViewController: UITableViewController{
          self.tableView.reloadData()
     }
     
+    // filter by lifeguard
+    func fliterListByLifeGuard(){
+        fliteredList = beachList.filter({(beach: Beach) -> Bool in
+            return beach.ifGuard ?? false
+        })
+        self.tableView.reloadData()
+    }
+    
+    // filter by port
+    func fliterListByPort(){
+        fliteredList = beachList.filter({(beach: Beach) -> Bool in
+            return beach.ifPort ?? false
+        })
+        self.tableView.reloadData()
+    }
+    
+    
     // serch neaby beach
     func getBeachLocationList() {
       
@@ -397,7 +426,7 @@ class BeachListTableViewController: UITableViewController{
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         
-        return 3
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -419,11 +448,6 @@ class BeachListTableViewController: UITableViewController{
             //settingCell.textLabel?.text = " \(String(describing: activityName))TODO: filter button"
             settingCell.delegate = self
             return settingCell
-        }
-        if indexPath.section == SECTION_COUNT{
-            let countCell = tableView.dequeueReusableCell(withIdentifier: CELL_COUNT, for: indexPath)
-            countCell.textLabel?.text = "\(fliteredList.count) beaches are found in the area."
-            return countCell
         }
         
             let beachCell = tableView.dequeueReusableCell(withIdentifier: CELL_BEACH, for: indexPath) as! BeachListTableViewCell
@@ -556,6 +580,30 @@ class BeachListTableViewController: UITableViewController{
 }
 
 extension BeachListTableViewController: FilterCellDelegate {
+    func showSortingMenue() {
+        let action1 = PopoverAction.init(title: "Sorting by name") { (action1) in
+            self.sortingByInitials()
+        }
+        let action2 = PopoverAction.init(title: "Sorting by distance") { (action2) in
+            self.sortingByDistance()
+        }
+        let action3 = PopoverAction.init(title: "Show all beachs ") { (action3) in
+            self.showAllBeach()
+        }
+        let action4 = PopoverAction.init(title: "Only safe beachs") { (action4) in
+            self.onlyShowSafeBeach()
+        }
+        let action5 = PopoverAction.init(title: "Only lifeGuard patroled beachs") { (action4) in
+            self.fliterListByLifeGuard()
+        }
+        let action6 = PopoverAction.init(title: "Only port nearby beachs") { (action4) in
+            self.fliterListByPort()
+        }
+        let sortingMenueView = PopoverView()
+        sortingMenueView.show(to: CGPoint(x: self.view.bounds.width, y: 130), with: [action1!, action2!, action3!, action4!, action5!, action6!])
+        
+    }
+    
     func onlyShowSafeBeach() {
         self.fliterList()
     }

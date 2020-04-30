@@ -8,5 +8,6 @@ target 'Safe Wickers' do
   # Pods for Safe Wickers
   pod 'Cosmos', '~> 21.0'
   pod 'SDWebImage', '~> 5.0'
+  pod 'Popover.OC'
   
 end

@@ -25,7 +25,8 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
     
     @IBOutlet weak var locationLabel: UILabel!
     
-   
+    @IBOutlet weak var searchButton: UIButton!
+    
     @IBOutlet weak var locationTextField: UITextField!
     
    
@@ -35,21 +36,6 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
     
     @IBOutlet weak var activityCollectionView: UICollectionView!
     
-    
-    @IBAction func showSearchBar(_ sender: Any) {
-        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
-        
-        let searchController = UISearchController(searchResultsController: locationSearchTable)
-        searchController.searchResultsUpdater = locationSearchTable
-        
-        searchController.searchBar.delegate = self
-        searchController.searchBar.placeholder = "Search for location or beach"
-       
-        present(searchController,animated: true,completion: nil)
-        
-        locationSearchTable.handleMapSearchDelegate = self
-        
-    }
     
     var selectedLocation: MKPlacemark?
     
@@ -93,8 +79,14 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
         locationManager.distanceFilter = kCLLocationAccuracyKilometer
         locationManager.delegate = self
 
-
-      
+        
+        // add action of outlets
+        locationTextField.addTarget(self, action: #selector(showSearchBar), for: .allTouchEvents)
+        searchButton.addTarget(self, action: #selector(searchBeach), for: .touchUpInside)
+        searchButton.layer.borderColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1).cgColor
+        searchButton.tintColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1)
+        searchButton.layer.borderWidth = 1
+        searchButton.layer.cornerRadius = 5
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -113,22 +105,24 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
         currentLocation = location.coordinate
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+  // show search bar
+    @objc func showSearchBar(){
+        
+        locationTextField.resignFirstResponder()
+        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
+        
+        let searchController = UISearchController(searchResultsController: locationSearchTable)
+        searchController.searchResultsUpdater = locationSearchTable
+        
+        searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = "Search for location or beach"
+        
+        present(searchController,animated: true,completion: nil)
+        searchController.searchBar.becomeFirstResponder()
+        
+        locationSearchTable.handleMapSearchDelegate = self
+        
     }
-    */
-
-    // MARK: UICollectionViewDataSource
-
-//     func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 1
-//    }
 
 
      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -232,7 +226,7 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
     
     
     
-    @IBAction func searchButton(_ sender: Any) {
+    @objc func searchBeach() {
         if searchLocation == nil {
             let alertController = UIAlertController(title: "Location Missing", message: "Location missing, try to search a location or use current location.", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
