@@ -11,6 +11,8 @@ import SDWebImage
 
 
 class BeachDetailViewController: UIViewController {
+    
+    @IBOutlet weak var contentViewHC: NSLayoutConstraint!
     @IBOutlet weak var beachImageView: UIImageView!
     @IBOutlet weak var beachNameLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
@@ -56,6 +58,9 @@ class BeachDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //set up scroll view
+//        self.contentViewHC.constant = UIScreen.main.bounds.size.height
+        self.contentViewHC.constant = 1000
 
         //set up navigation bar
         addNavBarImage()

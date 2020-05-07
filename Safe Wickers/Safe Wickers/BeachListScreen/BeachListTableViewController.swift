@@ -114,8 +114,8 @@ class BeachListTableViewController: UITableViewController{
             
             
             // when test other functuon stop search image
-//            let imageNmae = ""
-            let imageNmae = searchIamgeOnline(beach: "\(beachName!) Victoria")
+            let imageNmae = ""
+//            let imageNmae = searchIamgeOnline(beach: "\(beachName!) Victoria")
             
 //            let des = item.placemark.locality ?? ""
             let weatherData = getCurrentWeatherDate(beach: item)
@@ -587,16 +587,16 @@ extension BeachListTableViewController: FilterCellDelegate {
         let action2 = PopoverAction.init(title: "Sorting by distance") { (action2) in
             self.sortingByDistance()
         }
-        let action3 = PopoverAction.init(title: "Show all beachs ") { (action3) in
+        let action3 = PopoverAction.init(title: "Show all beaches ") { (action3) in
             self.showAllBeach()
         }
-        let action4 = PopoverAction.init(title: "Only safe beachs") { (action4) in
+        let action4 = PopoverAction.init(title: "Only safe beaches") { (action4) in
             self.onlyShowSafeBeach()
         }
-        let action5 = PopoverAction.init(title: "Only lifeGuard patroled beachs") { (action4) in
+        let action5 = PopoverAction.init(title: "Only lifeGuard patroled beaches") { (action4) in
             self.fliterListByLifeGuard()
         }
-        let action6 = PopoverAction.init(title: "Only port nearby beachs") { (action4) in
+        let action6 = PopoverAction.init(title: "Only port nearby beaches") { (action4) in
             self.fliterListByPort()
         }
         let sortingMenueView = PopoverView()
