@@ -124,76 +124,100 @@ class BeachListTableViewController: UITableViewController{
             let hum = weatherData[2]
             let pre = weatherData[3]
             
+            let uv = uvapi(lat: latitude, long: longitude)
             
-            let risk = chechRisk(ifPort: ifPort, ifGuard: ifGuard, windSpeed: windSpeed)
+            let tides = tidesapi(lat: latitude, long: longitude)
+            let tideState = checkTideState(tides: tides)
+            let tideHeight = getTideHeight(tides: tides)
             
+            
+            let risk = chechRisk(ifPort: ifPort, ifGuard: ifGuard, windSpeed: windSpeed, uv: uv, tideState: tideState)
+
             let ifLoved = checkIfLoved(beachNmae: beachName!)
-           
-            let beach = Beach(beachName: beachName!, latitude: latitude, longitude: longitude, imageName: imageNmae, distance: distance!, risk: risk, ifGuard: ifGuard, ifPort: ifPort, descrip: "", windSpeed: windSpeed, temp: temp, hum: hum, pre: pre, ifLoved: ifLoved)
-            
+
+            let beach = Beach(beachName: beachName!, latitude: latitude, longitude: longitude, imageName: imageNmae, distance: distance!, risk: risk, ifGuard: ifGuard, ifPort: ifPort, descrip: "", windSpeed: windSpeed, temp: temp, hum: hum, pre: pre, ifLoved: ifLoved, uv: uv, tideState: tideState, tideHeight: tideHeight)
+
             beachList.append(beach)
         }
         
     }
     
-    //chech the risk according to activity, wind , guard, port
+    //chech the risk according to activity, wind , guard, port, uv, tide, detail algoritm in data plan SM page
     
-    func chechRisk(ifPort: Bool, ifGuard: Bool, windSpeed: Double) -> String{
-        var risk = "u"
+    func chechRisk(ifPort: Bool, ifGuard: Bool, windSpeed: Double, uv: Double, tideState: String) -> String{
+        var portRating: Int?
+        var guardRating: Int?
+        var windRating: Int?
+        var uvRating: Int?
+        var tideRating: Int?
+        var risk: String?
+        
+        if ifPort {
+            portRating = 1
+        } else {
+            portRating = 3
+        }
+        
+        if ifGuard {
+            guardRating = 1
+        } else {
+            guardRating = 3
+        }
+        
+        if (windSpeed*2.237).isLess(than: 9) {
+            windRating = 1
+        } else if (windSpeed*2.237).isLess(than: 16) {
+            windRating = 2
+        } else {
+            windRating = 3
+        }
+        
+        if uv.isLess(than: 5) {
+            uvRating = 1
+        } else if uv.isLess(than: 8) {
+            uvRating = 2
+        } else {
+            uvRating = 3
+        }
+        
+        switch tideState {
+        case "LOW TIDE":
+            tideRating = 3
+        case "HIGH TIDE":
+            tideRating = 3
+        case "MID TIDE":
+            tideRating = 2
+        case "SLACK TIDE":
+            tideRating = 1
+        default:
+            tideRating = 2
+        }
+    
+        
+        
         if activityName == "Boating" {
-            if ifPort{
-                    if (windSpeed*2.237).isLess(than: 39) && windSpeed != 0.0 {
-                        risk = "s"
-                }
+           let riskRating = portRating! + guardRating! + windRating! + uvRating! + tideRating!
+            if riskRating <= 9 {
+                risk = "l"
+            } else if riskRating <= 12 {
+                risk = "m"
+            } else {
+                risk = "h"
+            }
+        } else {
+            let riskRating = guardRating! + windRating! + uvRating! + tideRating!
+            if riskRating < 6 {
+                risk = "l"
+            } else if riskRating < 9 {
+                risk = "m"
+            } else {
+                risk = "h"
             }
         }
         
-        if activityName == "Surfing" {
-           if ifGuard{
-                if (windSpeed*2.237).isLess(than: 20) && windSpeed != 0.0 {
-                    risk = "s"
-                }
-            }
-        }
-        if activityName == "Swimming" {
-        if ifGuard{
-            if (windSpeed*2.237).isLess(than: 9) && windSpeed != 0.0 {
-                risk = "s"
-                }
-            }
-        }
-        return risk
+      
+        return risk!
     }
-    
-    
-    
-//    func loadImage(){
-//    // start anminating the loading as the URL request is made
-//    indicator.startAnimating()
-//    indicator.backgroundColor = UIColor.white
-//
-//        for beach in beachList{
-//            searchIamgeOnline(beach: beach.beachName!)
-//        }
-//        if beachList.count == imageURLs.count {
-//            var index = 0
-//            while index < beachList.count{
-//                beachList[index].imageName = imageURLs[index]
-//                index = index + 1
-//            }
-//        }
-//
-//        // Regardless of response end the loading icon from the main thread
-//        DispatchQueue.main.async {
-//            self.tableView.reloadData()
-//
-//            self.indicator.stopAnimating()
-//            self.indicator.hidesWhenStopped = true
-//        }
-//
-//    }
-
-  
     
     func searchIamgeOnline(beach: String) -> String {
         var beachImageURL: String?
@@ -202,34 +226,7 @@ class BeachListTableViewController: UITableViewController{
 
         let searchString = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBDczIvDMC85RvOC1lKpxUGB50GH4mD6yc&cx=002407881098821145824:29fpb6s3hfq&q=\(beach)&searchType=image&num=1"
         let jsonURL = URL(string: searchString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
-//        let task = URLSession.shared.dataTask(with: jsonURL!){
-//            (data, response, error) in
-//
-//
-//            // if error, show error message
-//            if let error = error {
-//                self.displayMessage(title: "Error", message: error.localizedDescription)
-//                return
-//            }
-//
-//            do{
-//                let decoder = JSONDecoder()
-//                let imageDate = try decoder.decode(OnlineImageData.self, from: data!)
-//
-//                guard let imageURL = imageDate.onlineImages?[0].imageURL else {
-//                    return
-//                }
-//               self.imageURLs.append(imageURL)
-//                print(imageURL)
-//
-//            } catch let err{
-//                DispatchQueue.main.async {
-//                   self.displayMessage(title: "Error", message: err.localizedDescription)
-//                }
-//            }
-//        }
-//        //start the data task
-//        task.resume()
+
         
         guard let urlData = NSData(contentsOf: jsonURL!) else{ return ""}
         
@@ -277,33 +274,119 @@ class BeachListTableViewController: UITableViewController{
                                            self.displayMessage(title: "Error", message: err.localizedDescription)
                                         }
                                     }
-                
-//       let task = URLSession.shared.dataTask(with: url!){
-//                    (data, response, error) in
-//                    // if error, show error message
-//                    if let error = error {
-//                        self.displayMessage(title: "Error", message: error.localizedDescription)
-//                        return
-//                    }
-//
-//                    do{
-//                        let decoder = JSONDecoder()
-//                        let weather = try decoder.decode(WeatherURLData.self, from: data!)
-//                        print(weather.temp)
-//
-//                    } catch let err{
-//                        DispatchQueue.main.async {
-//                           self.displayMessage(title: "Error", message: err.localizedDescription)
-//                        }
-//                    }
-//                }
-//        task.resume()
         return weatherData
     }
     
+    // get UV data of the beach
+    // uv api
+    func uvapi(lat: Double, long: Double) -> Double {
+        
+        var uv: Double?
+        let sem = DispatchSemaphore.init(value: 0)
+        
+        //backup key: 7d473ca9dd980058039404acc2f591c8    52cdda85a1f37c9eedc23a29cc5f5c11
+        let headers = [
+            "x-access-token": "7d473ca9dd980058039404acc2f591c8"
+        ]
+        let request = NSMutableURLRequest(url: NSURL(string: "https://api.openuv.io/api/v1/uv?lat=\(lat)&lng=\(long)")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
+        
+        let dataTask = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in defer {sem.signal()}
+            if (error != nil) {
+                print(error?.localizedDescription as Any)
+            } else {
+                do {
+                    
+                    let decoder = JSONDecoder()
+                    let uvData = try decoder.decode(UVData.self, from: data!)
+                    uv = uvData.uv
+                    
+                } catch let err { print(err)
+                }
+            }
+        })
+        
+        dataTask.resume()
+        sem.wait()
+        return uv ?? 6.0
+    }
+    
+    //get cuurent tide height
+    func getTideHeight(tides: TidesData) -> Double{
+        let height = tides.heights![0].height
+        return height!
+    }
+    
+    // check cuurnet tide state
+    func checkTideState(tides: TidesData) -> String{
+        let tide = tides.tides![0]
+        
+        let tideTimeStamp = tide.tideTimeStamp
+        let tideState = tide.tideState
+        
+        let currentTime = Date()
+        let currentTimeStamp = Int(currentTime.timeIntervalSince1970)
+        
+        let diff = tideTimeStamp! - currentTimeStamp
+        
+        if diff < 300 {
+            return tideState!
+        } else if diff < 3600 {
+            return "MID TIDE"
+        } else if diff < 18000 {
+            return "SLACK TIDE"
+        } else if diff < 21600 {
+            return "MID TIDE"
+        } else {
+            if tideState == "HIGH TIDE" {
+                return "LOW TIDE"
+            } else {
+                return "HIGH TIDE"
+            }
+        }
+    }
     
     
-    
+    // get data form tide API
+    func tidesapi(lat: Double, long: Double) -> TidesData{
+        var tide: TidesData?
+        let sem = DispatchSemaphore.init(value: 0)
+        // tides
+        let headers = [
+            "x-rapidapi-host": "tides.p.rapidapi.com",
+            "x-rapidapi-key": "fffef8c1dcmsh4e578ad11989305p1fe58cjsnf0e1f2e55a6b"
+        ]
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "https://tides.p.rapidapi.com/tides?interval=60&duration=1440&latitude=44.414&longitude=-2.097")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in defer {sem.signal()}
+            if (error != nil) {
+                print(error?.localizedDescription as Any)
+            } else {
+                do {
+                    //                    let test = try JSONSerialization.jsonObject(with: data!, options: [])
+                    //                    print(test)
+                    let decoder = JSONDecoder()
+                    tide = try decoder.decode(TidesData.self, from: data!)
+                    //                    tide = tideDatas.tides?[0]
+                    
+                } catch let err { print(err)
+                }
+            }
+        })
+        
+        dataTask.resume()
+        sem.wait()
+        return tide!
+    }
     
     
     // check the beach if have lifeguard
@@ -467,11 +550,18 @@ class BeachListTableViewController: UITableViewController{
         let url = URL(string: beach.imageName!)
        
         beachCell.beachImage!.sd_setImage(with: url, placeholderImage: UIImage(named: "defaultBeachImage.jpg"), completed: nil)
-        if beach.risk == "s" {
-              beachCell.riskImageView.image = UIImage(named: "safe")
-        }else {
-            beachCell.riskImageView.image = UIImage(named: "unsafe")
+        
+        switch beach.risk {
+        case "l":
+            beachCell.riskImageView.image = UIImage(named: "lowRisk")
+        case "m":
+            beachCell.riskImageView.image = UIImage(named: "midRisk")
+        case "h":
+            beachCell.riskImageView.image = UIImage(named: "highRisk")
+        default:
+            beachCell.riskImageView.image = UIImage(named: "midRisk")
         }
+        
             return beachCell
         
     }

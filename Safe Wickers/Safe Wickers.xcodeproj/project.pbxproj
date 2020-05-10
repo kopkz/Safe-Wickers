@@ -19,6 +19,10 @@
 		704C1C2424545432006351F0 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704C1C2324545432006351F0 /* MulticastDelegate.swift */; };
 		704C1C2824556A62006351F0 /* LovedBeachListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704C1C2724556A62006351F0 /* LovedBeachListTableViewController.swift */; };
 		704C1C2A24559854006351F0 /* LovedBeachTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704C1C2924559854006351F0 /* LovedBeachTableViewCell.swift */; };
+		706B952E246792A000D80ED4 /* UVData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B952D246792A000D80ED4 /* UVData.swift */; };
+		706B953024683A0900D80ED4 /* TidesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B952F24683A0900D80ED4 /* TidesData.swift */; };
+		706B953224683BE100D80ED4 /* TideData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B953124683BE100D80ED4 /* TideData.swift */; };
+		706B95342468681900D80ED4 /* TideHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B95332468681900D80ED4 /* TideHeight.swift */; };
 		707BABF2244C7E3000351335 /* victoria_suburb_names.json in Resources */ = {isa = PBXBuildFile; fileRef = 707BABF1244C7E3000351335 /* victoria_suburb_names.json */; };
 		707BAC5E244D9E6F00351335 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707BAC5D244D9E6F00351335 /* LocationSearchTable.swift */; };
 		7086B1AA244DBA0A005269B2 /* BeachListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7086B1A9244DBA0A005269B2 /* BeachListTableViewController.swift */; };
@@ -60,6 +64,10 @@
 		704C1C2324545432006351F0 /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		704C1C2724556A62006351F0 /* LovedBeachListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedBeachListTableViewController.swift; sourceTree = "<group>"; };
 		704C1C2924559854006351F0 /* LovedBeachTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedBeachTableViewCell.swift; sourceTree = "<group>"; };
+		706B952D246792A000D80ED4 /* UVData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVData.swift; sourceTree = "<group>"; };
+		706B952F24683A0900D80ED4 /* TidesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidesData.swift; sourceTree = "<group>"; };
+		706B953124683BE100D80ED4 /* TideData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TideData.swift; sourceTree = "<group>"; };
+		706B95332468681900D80ED4 /* TideHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TideHeight.swift; sourceTree = "<group>"; };
 		707BABF1244C7E3000351335 /* victoria_suburb_names.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = victoria_suburb_names.json; path = "Safe Wickers/victoria_suburb_names.json"; sourceTree = "<group>"; };
 		707BAC5D244D9E6F00351335 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		7086B1A9244DBA0A005269B2 /* BeachListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachListTableViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +260,10 @@
 				70BB0B0C2452AD2B002019B3 /* weatherData.swift */,
 				7088003E2465A8050003A945 /* TransData.swift */,
 				708800402465A8410003A945 /* TransResult.swift */,
+				706B952D246792A000D80ED4 /* UVData.swift */,
+				706B952F24683A0900D80ED4 /* TidesData.swift */,
+				706B953124683BE100D80ED4 /* TideData.swift */,
+				706B95332468681900D80ED4 /* TideHeight.swift */,
 			);
 			path = URLdecode;
 			sourceTree = "<group>";
@@ -402,7 +414,9 @@
 				7086B1AA244DBA0A005269B2 /* BeachListTableViewController.swift in Sources */,
 				7088003D246580D80003A945 /* FlagTableViewCell.swift in Sources */,
 				704C1C2A24559854006351F0 /* LovedBeachTableViewCell.swift in Sources */,
+				706B953024683A0900D80ED4 /* TidesData.swift in Sources */,
 				707BAC5E244D9E6F00351335 /* LocationSearchTable.swift in Sources */,
+				706B952E246792A000D80ED4 /* UVData.swift in Sources */,
 				703FC1DA245051A400DF7BFA /* myAnnotationView.swift in Sources */,
 				704C1C1D24544801006351F0 /* LovedBeach+CoreDataProperties.swift in Sources */,
 				703FC1DE24507C8D00DF7BFA /* BeachDetailViewController.swift in Sources */,
@@ -413,7 +427,9 @@
 				70BB0B0D2452AD2B002019B3 /* weatherData.swift in Sources */,
 				704C1C1C24544801006351F0 /* LovedBeach+CoreDataClass.swift in Sources */,
 				704C1C11245445DA006351F0 /* LovedBeachModel.xcdatamodeld in Sources */,
+				706B95342468681900D80ED4 /* TideHeight.swift in Sources */,
 				70BB0B09245142DA002019B3 /* ImageURLData.swift in Sources */,
+				706B953224683BE100D80ED4 /* TideData.swift in Sources */,
 				70FE9B83245692D900904091 /* LoveButton.swift in Sources */,
 				704C1C2224544AC3006351F0 /* CoreDataController.swift in Sources */,
 				709D1EC42449D5C500F4AB4A /* ActivityCollectionViewCell.swift in Sources */,

@@ -33,6 +33,15 @@ class BeachDetailViewController: UIViewController {
     var beach: Beach?
     @IBOutlet weak var preValue: UILabel!
     
+    @IBOutlet weak var uvLabel: UILabel!
+    
+    @IBOutlet weak var uvValueLabel: UILabel!
+    
+    @IBOutlet weak var tideStateLabel: UILabel!
+    @IBOutlet weak var tideStateValueLabel: UILabel!
+    @IBOutlet weak var tideHeightLabel: UILabel!
+    @IBOutlet weak var tideHeightValueLabel: UILabel!
+    
     @IBOutlet weak var loveUnloveButton: LoveButton!
     //database listener
     var listenerType = ListenerType.lovedBeach
@@ -92,6 +101,9 @@ class BeachDetailViewController: UIViewController {
         tempValue.text = "\(tempC.rounded()) ℃"
         humValue.text = "\(beach!.hum!) %"
         preValue.text = "\(beach!.pre!) hpa"
+        uvValueLabel.text = "\(beach!.uv!.rounded())"
+        tideHeightValueLabel.text = "\(beach!.tideHeight!) m"
+        tideStateValueLabel.text = beach?.tideState
         // Do any additional setup after loading the view.
         
         loveUnloveButton.isLove = beach!.ifLoved!

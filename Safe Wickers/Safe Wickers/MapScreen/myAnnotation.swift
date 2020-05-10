@@ -37,10 +37,12 @@ class myAnnotation: NSObject, MKAnnotation
     var  markerTintColor: UIColor
     {
         switch ifSafe {
-        case "u":
+        case "h":
             return .red
-        case "s":
+        case "l":
             return .green
+        case "m":
+            return .yellow
         default:
             return .black
         }
@@ -48,12 +50,15 @@ class myAnnotation: NSObject, MKAnnotation
     
     var imageName: String?
     {
-        if ifSafe == "s" {
-            return "safe.png"
+        switch ifSafe {
+        case "h":
+            return "highRisk"
+        case "l":
+            return "lowRisk"
+        case "m":
+            return "midRisk"
+        default:
+            return nil
         }
-        else {
-            return "unsafe.png"
-        }
-        
     }
 }
