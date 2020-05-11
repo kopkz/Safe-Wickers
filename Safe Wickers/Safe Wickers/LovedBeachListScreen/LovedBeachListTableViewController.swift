@@ -119,6 +119,8 @@ class LovedBeachListTableViewController: UITableViewController, DatabaseListener
         cell.beachImageView!.sd_setImage(with: url, placeholderImage: UIImage(named: "defaultBeachImage.jpg"), completed: nil)
 
         // Configure the cell...
+        //TODO get rating from database or load beach info methods
+        cell.setRating(rating: 2.5)
 
         return cell
     }
@@ -257,7 +259,7 @@ class LovedBeachListTableViewController: UITableViewController, DatabaseListener
         
         dataTask.resume()
         sem.wait()
-        return uv!
+        return uv ?? 6.0
     }
     
     //get cuurent tide height

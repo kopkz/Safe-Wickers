@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cosmos
 protocol LoveBeachDelagate {
     func loveUnloveBeach(beach: Beach)
 }
@@ -19,16 +20,26 @@ class BeachListTableViewCell: UITableViewCell {
     @IBOutlet weak var beachNameLabel: UILabel!
     @IBOutlet weak var beachImage: UIImageView!
     
+    @IBOutlet weak var cosmosView: CosmosView!
     var delegate: LoveBeachDelagate?
     var beachItem: Beach!
+    var rating: Double?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         loveUnloveButton.addTarget(self, action: #selector(loveUnloveButtonTaped), for: .touchUpInside)
+        cosmosView.settings.updateOnTouch = false
+        cosmosView.settings.fillMode = .precise
+        
+        
     }
     func setBeach(beach: Beach){
         beachItem = beach
+    }
+    func setRating(rating: Double) {
+        self.rating = rating
+        cosmosView.rating = rating
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

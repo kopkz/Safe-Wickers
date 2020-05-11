@@ -534,7 +534,9 @@ class BeachListTableViewController: UITableViewController{
         }
         
             let beachCell = tableView.dequeueReusableCell(withIdentifier: CELL_BEACH, for: indexPath) as! BeachListTableViewCell
-       
+
+        
+        
             let beach = fliteredList[indexPath.row]
             beachCell.delegate = self
             beachCell.setBeach(beach: beach)
@@ -561,6 +563,11 @@ class BeachListTableViewController: UITableViewController{
         default:
             beachCell.riskImageView.image = UIImage(named: "midRisk")
         }
+        
+        
+        //TODO get rating from database or load beach info methods
+        beachCell.setRating(rating: 3.5)
+        
         
             return beachCell
         

@@ -8,9 +8,12 @@
 
 import UIKit
 import SDWebImage
+import Cosmos
 
 
 class BeachDetailViewController: UIViewController {
+    
+    @IBOutlet weak var cosmosView: CosmosView!
     
     @IBOutlet weak var contentViewHC: NSLayoutConstraint!
     @IBOutlet weak var beachImageView: UIImageView!
@@ -106,8 +109,36 @@ class BeachDetailViewController: UIViewController {
         tideStateValueLabel.text = beach?.tideState
         // Do any additional setup after loading the view.
         
+        //TODO get rating from database or beach object passed from previous class
+        cosmosView.settings.updateOnTouch = false
+        cosmosView.settings.fillMode = .precise
+        cosmosView.rating = 0.5
+        
+        
         loveUnloveButton.isLove = beach!.ifLoved!
         loveUnloveButton.addTarget(self, action: #selector(loveUloveBeach), for: .touchUpInside)
+        
+    }
+    
+    
+    @IBAction func giveRatingButton(_ sender: Any) {
+        
+        
+        let alert = UIAlertController(title: "Give your rating", message: "\n\n\n", preferredStyle: .alert)
+        alert.isModalInPopover = true
+        let ratingCosmosView = CosmosView(frame: CGRect(x: 75, y: 70, width: 250, height: 100))
+        ratingCosmosView.settings.fillMode = .full
+        alert.view.addSubview(ratingCosmosView)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (UIAlertAction) in
+        }))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+            self.cosmosView.rating = ratingCosmosView.rating
+        }))
+        
+        self.present(alert,animated: true, completion: nil )
+        
+        
+        
         
     }
     
