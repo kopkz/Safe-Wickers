@@ -11,6 +11,7 @@ import MapKit
 import SDWebImage
 import CoreData
 import Popover_OC
+import Alamofire
 
 class BeachListTableViewController: UITableViewController{
     
@@ -18,6 +19,7 @@ class BeachListTableViewController: UITableViewController{
     //database listener
     var listenerType = ListenerType.lovedBeach
     var lovedBeachs:[LovedBeach] = []
+    var ratings: [String:Double] = [:]
     
     var regionLocation: CLLocationCoordinate2D?
     var matchingItems:[MKMapItem] = []
@@ -111,6 +113,9 @@ class BeachListTableViewController: UITableViewController{
             
             let ifGuard = checkIfGuard(beach: item)
             let ifPort = checkIfPort(beach: item)
+            
+            //get rating from sql database
+            getRating(beachName: beachName!)
             
             
             // when test other functuon stop search image
@@ -504,6 +509,41 @@ class BeachListTableViewController: UITableViewController{
         
     }
     
+    // get rating data from mysql database
+    func getRating(beachName: String){
+        var avRating = 0.0
+        //Defined a constant that holds the URL for our web service
+        let URL_GET_RATING = "http://172.20.10.3/safe_wickers/v1/getRating.php"
+        //creating parameters for the get request
+        let parameters : Parameters = ["beach_name" : beachName]
+        //Sending http get request
+        Alamofire.request(URL_GET_RATING, method: .get, parameters: parameters).responseJSON { response in
+            do {
+                var ratingStrings: [String] = []
+                let data = try JSONSerialization.jsonObject(with: response.data!, options: .allowFragments) as! [[String:String]]
+                for obj in data{
+                    ratingStrings.append(obj["rating_level"]!)
+                }
+                
+                for ratingString in ratingStrings{
+                    let rating = Int(ratingString)
+                    avRating = avRating + Double(rating!)
+                }
+                
+                avRating = avRating/Double(ratingStrings.count)
+                if avRating > 0{
+                    self.ratings.updateValue(avRating, forKey: beachName)
+                } else {
+                    self.ratings.updateValue(0, forKey: beachName)
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                //                print(self.tttt)
+            } catch{}
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -565,8 +605,12 @@ class BeachListTableViewController: UITableViewController{
         }
         
         
-        //TODO get rating from database or load beach info methods
-        beachCell.setRating(rating: 3.5)
+        // get rating from database or load beach info methods
+        for obj in ratings{
+            if beach.beachName! == obj.key {
+                beachCell.setRating(rating: obj.value)
+            } 
+        }
         
         
             return beachCell

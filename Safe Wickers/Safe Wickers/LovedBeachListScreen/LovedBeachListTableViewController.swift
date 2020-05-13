@@ -10,9 +10,11 @@ import UIKit
 import CoreData
 import MapKit
 import SDWebImage
+import Alamofire
 
 class LovedBeachListTableViewController: UITableViewController, DatabaseListener, CLLocationManagerDelegate {
-
+    
+    var ratings: [String:Double] = [:]
     var databaseController: DatabaseProtocol?
     var lovedBeachs:[LovedBeach] = []
     var beach: Beach?
@@ -39,7 +41,9 @@ class LovedBeachListTableViewController: UITableViewController, DatabaseListener
     
     
     override func viewDidLoad() {
+    
         super.viewDidLoad()
+        self.tableView.estimatedRowHeight = 0
         addNavBarImage()
         self.tableView.tableFooterView = UIView.init(frame: CGRect.zero)
         // Get the database controller once from the App Delegate
@@ -79,6 +83,9 @@ class LovedBeachListTableViewController: UITableViewController, DatabaseListener
     
     func onLovedBeachChange(change: DatabaseChange, lovedBeachs: [LovedBeach]) {
         self.lovedBeachs = lovedBeachs
+        for beach in lovedBeachs {
+             getRating(beachName: beach.beachName!)
+        }
         self.tableView.reloadData()
     }
     
@@ -119,8 +126,13 @@ class LovedBeachListTableViewController: UITableViewController, DatabaseListener
         cell.beachImageView!.sd_setImage(with: url, placeholderImage: UIImage(named: "defaultBeachImage.jpg"), completed: nil)
 
         // Configure the cell...
-        //TODO get rating from database or load beach info methods
-        cell.setRating(rating: 2.5)
+        // get rating from database or load beach info methods
+        for obj in ratings{
+            if lovedBeach.beachName! == obj.key {
+                cell.setRating(rating: obj.value)
+            }
+        }
+        
 
         return cell
     }
@@ -160,6 +172,11 @@ class LovedBeachListTableViewController: UITableViewController, DatabaseListener
         getBeachInfo(lovedBeach: lovedBeachs[indexPath.row])
         performSegue(withIdentifier: "loveToBeachDetail", sender: self)
     }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
 
     // create a beach send to detail screen
     func getBeachInfo(lovedBeach:LovedBeach){
@@ -334,6 +351,37 @@ class LovedBeachListTableViewController: UITableViewController, DatabaseListener
         dataTask.resume()
         sem.wait()
         return tide!
+    }
+    
+    // get rating data from mysql database
+    func getRating(beachName: String){
+        var avRating = 0.0
+        //Defined a constant that holds the URL for our web service
+        let URL_GET_RATING = "http://172.20.10.3/safe_wickers/v1/getRating.php"
+        //creating parameters for the get request
+        let parameters : Parameters = ["beach_name" : beachName]
+        //Sending http get request
+        Alamofire.request(URL_GET_RATING, method: .get, parameters: parameters).responseJSON { response in
+            do {
+                var ratingStrings: [String] = []
+                let data = try JSONSerialization.jsonObject(with: response.data!, options: .allowFragments) as! [[String:String]]
+                for obj in data{
+                    ratingStrings.append(obj["rating_level"]!)
+                }
+                
+                for ratingString in ratingStrings{
+                    let rating = Int(ratingString)
+                    avRating = avRating + Double(rating!)
+                }
+                
+                avRating = avRating/Double(ratingStrings.count)
+                self.ratings.updateValue(avRating, forKey: beachName)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                //                print(self.tttt)
+            } catch{}
+        }
     }
 
     /*

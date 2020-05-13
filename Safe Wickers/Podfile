@@ -9,5 +9,6 @@ target 'Safe Wickers' do
   pod 'Cosmos', '~> 21.0'
   pod 'SDWebImage', '~> 5.0'
   pod 'Popover.OC'
+  pod 'Alamofire', '~> 4.3'
   
 end

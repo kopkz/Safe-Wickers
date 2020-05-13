@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import Alamofire
 
 class CompareViewController: UIViewController {
 
-
+    var tttt: [String:Double] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getRating(beachName: "St Kilda Beach")
+        getRating(beachName: "Elwood Beach")
+        getRating(beachName: "1234")
         
         // Do any additional setup after loading the view.
 //        let clearImage = UIImage(named: "clearImage")
@@ -30,6 +34,40 @@ class CompareViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // get rating data from mysql database
+    func getRating(beachName: String){
+        var avRating = 0.0
+        //Defined a constant that holds the URL for our web service
+        let URL_GET_RATING = "http://172.20.10.3/safe_wickers/v1/getRating.php"
+        //creating parameters for the get request
+        let parameters : Parameters = ["beach_name" : beachName]
+        //Sending http get request
+        Alamofire.request(URL_GET_RATING, method: .get, parameters: parameters).responseJSON { response in
+            do {
+                var ratingStrings: [String] = []
+                let data = try JSONSerialization.jsonObject(with: response.data!, options: .allowFragments) as! [[String:String]]
+                for obj in data{
+                    ratingStrings.append(obj["rating_level"]!)
+                }
+                
+                for ratingString in ratingStrings{
+                    let rating = Int(ratingString)
+                    avRating = avRating + Double(rating!)
+                }
+                
+                avRating = avRating/Double(ratingStrings.count)
+                if avRating > 0{
+                    self.tttt.updateValue(avRating, forKey: beachName)
+                } else {
+                    self.tttt.updateValue(0, forKey: beachName)
+                }
+//                print(self.tttt)
+            } catch{}
+        }
+    }
+    
+    
     
     //get cuurent tide height
     func getTideHeight(tides: TidesData) -> Double{
@@ -143,6 +181,10 @@ class CompareViewController: UIViewController {
         return uv ?? 6.0
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
 }
 

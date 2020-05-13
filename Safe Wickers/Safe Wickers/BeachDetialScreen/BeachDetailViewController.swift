@@ -9,6 +9,7 @@
 import UIKit
 import SDWebImage
 import Cosmos
+import Alamofire
 
 
 class BeachDetailViewController: UIViewController {
@@ -112,7 +113,8 @@ class BeachDetailViewController: UIViewController {
         //TODO get rating from database or beach object passed from previous class
         cosmosView.settings.updateOnTouch = false
         cosmosView.settings.fillMode = .precise
-        cosmosView.rating = 0.5
+        cosmosView.rating = 0
+        getRating(beachName: beach!.beachName!)
         
         
         loveUnloveButton.isLove = beach!.ifLoved!
@@ -132,15 +134,72 @@ class BeachDetailViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (UIAlertAction) in
         }))
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
-            self.cosmosView.rating = ratingCosmosView.rating
+            self.giveRating(beachName: self.beach!.beachName!, ratingLevel: Int(ratingCosmosView.rating))
+            self.getRating(beachName: self.beach!.beachName!)
         }))
         
         self.present(alert,animated: true, completion: nil )
-        
-        
-        
-        
     }
+    
+    //post a rating to database
+    func giveRating(beachName: String, ratingLevel: Int){
+        //Defined a constant that holds the URL for our web service
+        let URL_GIVE_RATING = "http://172.20.10.3/safe_wickers/v1/giveRating.php"
+        //creating parameters for the get request
+        let parameters : Parameters = ["beach_name" : beachName, "rating_level" : ratingLevel]
+        //Sending http get request
+        Alamofire.request(URL_GIVE_RATING, method: .post, parameters: parameters).responseJSON { response in
+            //getting the json value from the server
+            if let result = response.result.value {
+                //converting it as NSDictionary
+                let jsonData = result as! NSDictionary
+                //displaying the message in alet
+                let responseAlert = UIAlertController(title: jsonData.value(forKey: "message") as! String?, message: nil, preferredStyle: .alert)
+                self.present(responseAlert, animated: true, completion: nil)
+                // miss after 1 second
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+                    self.presentedViewController?.dismiss(animated: false, completion: nil)
+                }
+            }
+            
+        }
+    }
+    
+    
+    
+    // get rating data from mysql database
+    func getRating(beachName: String){
+        var avRating = 0.0
+        //Defined a constant that holds the URL for our web service
+        let URL_GET_RATING = "http://172.20.10.3/safe_wickers/v1/getRating.php"
+        //creating parameters for the get request
+        let parameters : Parameters = ["beach_name" : beachName]
+        //Sending http get request
+        Alamofire.request(URL_GET_RATING, method: .get, parameters: parameters).responseJSON { response in
+            do {
+                var ratingStrings: [String] = []
+                let data = try JSONSerialization.jsonObject(with: response.data!, options: .allowFragments) as! [[String:String]]
+                for obj in data{
+                    ratingStrings.append(obj["rating_level"]!)
+                }
+                
+                for ratingString in ratingStrings{
+                    let rating = Int(ratingString)
+                    avRating = avRating + Double(rating!)
+                }
+                
+                avRating = avRating/Double(ratingStrings.count)
+                if !(avRating > 0){
+                    avRating = 0
+                }
+                DispatchQueue.main.async {
+                    self.cosmosView.rating = avRating
+                }
+                //                print(self.tttt)
+            } catch{}
+        }
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

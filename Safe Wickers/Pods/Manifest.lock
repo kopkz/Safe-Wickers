@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.9.1)
   - Cosmos (21.0.0)
   - Popover.OC (2.2)
   - SDWebImage (5.7.3):
@@ -6,21 +7,24 @@ PODS:
   - SDWebImage/Core (5.7.3)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.3)
   - Cosmos (~> 21.0)
   - Popover.OC
   - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Cosmos
     - Popover.OC
     - SDWebImage
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Cosmos: 3dfb6e4ba48bd48b8c9aa2a77048ae11ed114f96
   Popover.OC: bfcce8307f77593e1e1d7cf58604077f74e114bc
   SDWebImage: 97351f6582ceca541ea294ba66a1fcb342a331c2
 
-PODFILE CHECKSUM: f8d38ea0d166afb3a79cb1e11ff82b24b9f4285a
+PODFILE CHECKSUM: b7b97c518e98b3ef6a68ce0ede7e7547cf7b2529
 
 COCOAPODS: 1.9.1

@@ -39,7 +39,11 @@ class BeachListTableViewCell: UITableViewCell {
     }
     func setRating(rating: Double) {
         self.rating = rating
-        cosmosView.rating = rating
+//        if self.rating == 0 {
+//            cosmosView.rating = 1
+//        } else{
+            cosmosView.rating = rating
+//        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
