@@ -42,6 +42,7 @@
 		709D1EC2244972E300F4AB4A /* SearchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1EC1244972E300F4AB4A /* SearchCollectionViewController.swift */; };
 		709D1EC42449D5C500F4AB4A /* ActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1EC32449D5C500F4AB4A /* ActivityCollectionViewCell.swift */; };
 		709D1EC62449DD2100F4AB4A /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1EC52449DD2100F4AB4A /* Activities.swift */; };
+		709DAEDA246C7023006F05BB /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709DAED9246C7023006F05BB /* CustomSlider.swift */; };
 		70A49DF0244E8A880042CD98 /* Beach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A49DEF244E8A870042CD98 /* Beach.swift */; };
 		70BB0B07245141FD002019B3 /* OnlineImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB0B06245141FD002019B3 /* OnlineImageData.swift */; };
 		70BB0B09245142DA002019B3 /* ImageURLData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB0B08245142DA002019B3 /* ImageURLData.swift */; };
@@ -89,6 +90,7 @@
 		709D1EC1244972E300F4AB4A /* SearchCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewController.swift; sourceTree = "<group>"; };
 		709D1EC32449D5C500F4AB4A /* ActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCollectionViewCell.swift; sourceTree = "<group>"; };
 		709D1EC52449DD2100F4AB4A /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
+		709DAED9246C7023006F05BB /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		70A49DEF244E8A870042CD98 /* Beach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beach.swift; sourceTree = "<group>"; };
 		70BB0B06245141FD002019B3 /* OnlineImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineImageData.swift; sourceTree = "<group>"; };
 		70BB0B08245142DA002019B3 /* ImageURLData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURLData.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				709D1EB62446BC3000F4AB4A /* Assets.xcassets */,
 				70BB0B0A2452A062002019B3 /* lg_suburbs.json */,
 				70FE9B82245692D900904091 /* LoveButton.swift */,
+				709DAED9246C7023006F05BB /* CustomSlider.swift */,
 			);
 			path = "Safe Wickers";
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				703FC1DE24507C8D00DF7BFA /* BeachDetailViewController.swift in Sources */,
 				709D1EC2244972E300F4AB4A /* SearchCollectionViewController.swift in Sources */,
 				7088003B246572E90003A945 /* BeachFlag.swift in Sources */,
+				709DAEDA246C7023006F05BB /* CustomSlider.swift in Sources */,
 				708800122463BEE50003A945 /* CompareViewController.swift in Sources */,
 				709D1EAE2446BC2F00F4AB4A /* AppDelegate.swift in Sources */,
 				70BB0B0D2452AD2B002019B3 /* weatherData.swift in Sources */,

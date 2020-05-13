@@ -11,13 +11,29 @@ import Alamofire
 
 class CompareViewController: UIViewController {
 
+    @IBOutlet weak var activtySegment: UISegmentedControl!
     var tttt: [String:Double] = [:]
+    
+    func addNavBarImage() {
+        let navController = navigationController!
+        navigationController?.navigationBar.barTintColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1)
+        let image = UIImage(named: "titleLogo.png")
+        let imageView = UIImageView(image: image)
+        let bannerWidth = navController.navigationBar.frame.size.width
+        let bannerHeight = navController.navigationBar.frame.size.height
+        let bannerX = bannerWidth / 2 - (image?.size.width)! / 2
+        let bannerY = bannerHeight / 2 - (image?.size.height)! / 2
+        imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight)
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = imageView
+        navController.navigationBar.backItem?.title = "Back"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getRating(beachName: "St Kilda Beach")
-        getRating(beachName: "Elwood Beach")
-        getRating(beachName: "1234")
+        
+        addNavBarImage()
+        self.activtySegment.tintColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1)
         
         // Do any additional setup after loading the view.
 //        let clearImage = UIImage(named: "clearImage")
