@@ -9,7 +9,7 @@ import UIKit
 
 class LoveButton: UIButton {
     
-    var isLove = false
+    var isLove: Bool = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,7 +22,11 @@ class LoveButton: UIButton {
     }
     
     func initButton() {
-        
+//        if isLove{
+//            setImage(UIImage(named: "icons8-like-96"), for: .normal)
+//        } else {
+//            setImage(UIImage(named: "icons8-unlike-96"), for: .normal)
+//        }
         setImage(UIImage(named: "icons8-unlike-96"), for: .normal)
         self.tintColor = UIColor.white
         addTarget(self, action: #selector(LoveButton.buttonPressed), for: .touchUpInside)

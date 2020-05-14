@@ -8,11 +8,99 @@
 
 import UIKit
 import Alamofire
+import CoreData
+import Cosmos
+import MapKit
 
-class CompareViewController: UIViewController {
+class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate {
 
+    @IBOutlet weak var selectBeachLabel: UILabel!
+    @IBOutlet weak var vsLabel: UILabel!
+    
+    @IBOutlet weak var ratingLabel: UILabel!
+    
+    @IBOutlet weak var riskLabel: UILabel!
+    
+    @IBOutlet weak var windSpeedLabel: UILabel!
+    
+    @IBOutlet weak var tideLabel: UILabel!
+    
+    @IBOutlet weak var uvLabel: UILabel!
+    @IBOutlet weak var lifeguardLabel: UILabel!
+    
+    @IBOutlet weak var portLabel: UILabel!
+    
+    @IBOutlet weak var beach_1_textField: UITextField!
+    
+    @IBOutlet weak var beach_2_textField: UITextField!
+    
+    @IBOutlet weak var beach_1_cosmosView: CosmosView!
+    
+    @IBOutlet weak var beach_2_cosmosView: CosmosView!
+    
+    @IBOutlet weak var beach_1_riskSlider: CustomSlider!
+    
+    @IBOutlet weak var beach_2_riskSlider: CustomSlider!
+    
+    @IBOutlet weak var beach_1_windSlider: CustomSlider!
+    
+    @IBOutlet weak var beach_2_windSlider: CustomSlider!
+    
+    @IBOutlet weak var beach_1_windValue: UILabel!
+    
+    @IBOutlet weak var beach_2_windValue: UILabel!
+    
+    
+    @IBOutlet weak var beach_1_tideSlider: CustomSlider!
+    
+    @IBOutlet weak var beach_1_tideValue: UILabel!
+    @IBOutlet weak var beach_2_tiderSlider: CustomSlider!
+    @IBOutlet weak var beach_2_tiderValue: UILabel!
+    
+    @IBOutlet weak var beach_1_uvSlider: CustomSlider!
+    
+    @IBOutlet weak var beach_1_uvValue: UILabel!
+    
+    @IBOutlet weak var beach_2_uvSlider: CustomSlider!
+    
+    @IBOutlet weak var beach_2_uvValue: UILabel!
+    
+    @IBOutlet weak var beach_2_lifeguardImage: UIImageView!
+    
+    @IBOutlet weak var beach_2_portImage: UIImageView!
+    
+    
+    @IBOutlet weak var beach_1_lifeguardImage: UIImageView!
+    
+    
+    @IBOutlet weak var beach_1_portImage: UIImageView!
     @IBOutlet weak var activtySegment: UISegmentedControl!
-    var tttt: [String:Double] = [:]
+    
+    
+    @IBOutlet weak var beach_1_detiallButton: UIButton!
+    
+    @IBOutlet weak var beach_2_detailButton: UIButton!
+    
+    
+    
+    @IBOutlet weak var contentViewHC: NSLayoutConstraint!
+    
+    var pickerView = UIPickerView()
+    var pickValue: LovedBeach?
+    var pickChoices : [Any] = []
+    
+    let BEACH_1 = 0
+    let BEACH_2 = 1
+    
+    var ratings: [String:Double] = [:]
+    
+    var databaseController: DatabaseProtocol?
+    var lovedBeachs:[LovedBeach] = []
+    var comparedBeach: Beach?
+    var listenerType = ListenerType.lovedBeach
+    
+    var locationManager: CLLocationManager = CLLocationManager()
+    var currentLocation: CLLocation?
     
     func addNavBarImage() {
         let navController = navigationController!
@@ -35,24 +123,343 @@ class CompareViewController: UIViewController {
         addNavBarImage()
         self.activtySegment.tintColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1)
         
-        // Do any additional setup after loading the view.
-//        let clearImage = UIImage(named: "clearImage")
-//        testSlider.setMaximumTrackImage(clearImage, for: .normal)
+        self.contentViewHC.constant = 1000
+        
+        // Get the database controller once from the App Delegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        databaseController = appDelegate.databaseController
+        
+        
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = kCLLocationAccuracyKilometer
+        locationManager.delegate = self
+        
+        //add action to beach text field
+        beach_1_textField.addTarget(self, action: #selector(showBeach1Picker), for: .allTouchEvents)
+        beach_2_textField.addTarget(self, action: #selector(showBeach2Picker), for: .allTouchEvents)
+        loadDefualtValue()
+        
+        activtySegment.addTarget(self, action: #selector(self.SegmentedChanged(_:)), for: .valueChanged)
+        beach_2_detailButton.addTarget(self, action: #selector(buttonDidTap), for: .touchUpInside)
+        beach_1_detiallButton.addTarget(self, action: #selector(buttonDidTap), for: .touchUpInside)
+    }
+    @objc func buttonDidTap(sender: UIButton) {
+        if sender == beach_2_detailButton {
+            createBeach(beachNo: BEACH_2)
+        }
+        if sender == beach_1_detiallButton {
+            createBeach(beachNo: BEACH_1)
+        }
+        
+    }
+    //create beach data for passing to detail page
+    func createBeach(beachNo: Int) {
+        let beachName = (beachNo == BEACH_1) ? beach_1_textField.text : beach_2_textField.text
+        if beachName!.isEmpty {return}
+        
+        let loveBeach = lovedBeachs.filter({$0.beachName == beachName}).first
+        let lat = loveBeach?.lat
+        let long = loveBeach?.long
+        let image = loveBeach?.imageNmae
+        let ifPort = loveBeach?.ifPort
+        let ifGuard = loveBeach?.ifGuard
+        let beachLocation = CLLocation(latitude:loveBeach!.lat, longitude: loveBeach!.long)
+        let distance = currentLocation?.distance(from: beachLocation).rounded()
+        
+        let weatherData = getCurrentWeatherDate(beach: loveBeach!)
+        let windSpeed = weatherData[0]
+        let temp = weatherData[1]
+        let hum = weatherData[2]
+        let pre = weatherData[3]
+        
+        let uv = uvapi(lat: lat!, long: long!)
+        
+        let tides = tidesapi(lat: lat!, long: long!)
+        let tideState = checkTideState(tides: tides)
+        let tideHeight = getTideHeight(tides: tides)
+        
+        self.comparedBeach = Beach(beachName: beachName!, latitude: lat!, longitude: long!, imageName: image!, distance: distance ?? 0.0, risk: "s", ifGuard: ifGuard!, ifPort: ifPort!, descrip: "", windSpeed: windSpeed, temp: temp, hum: hum, pre: pre, ifLoved: true, uv: uv, tideState: tideState, tideHeight: tideHeight)
+        
+        performSegue(withIdentifier: "compareToBeachDetail", sender: self)
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   @objc func SegmentedChanged(_ segmented:UISegmentedControl) {
+        if !beach_1_textField.text!.isEmpty {
+            let beach = lovedBeachs.filter({$0.beachName == beach_1_textField.text}).first
+            loadData(beachNo: BEACH_1, beach: beach!)
+        }
+        if !beach_2_textField.text!.isEmpty {
+            let beach = lovedBeachs.filter({$0.beachName == beach_1_textField.text}).first
+            loadData(beachNo: BEACH_2, beach: beach!)
+        }
+        
     }
-    */
+    
+    func loadDefualtValue(){
+        beach_1_uvSlider.value = 0
+        beach_1_uvValue.text = "N/A"
+        beach_1_tideSlider.value = 0
+        beach_1_tideValue.text = "N/A"
+        beach_1_portImage.image = nil
+        beach_1_windValue.text = "N/A"
+        beach_1_cosmosView.rating = 0
+        beach_1_riskSlider.value = 0
+        beach_1_windSlider.value = 0
+        beach_1_lifeguardImage.image = nil
+        
+        beach_2_uvSlider.value = 0
+        beach_2_uvValue.text = "N/A"
+        beach_2_tiderSlider.value = 0
+        beach_2_tiderValue.text = "N/A"
+        beach_2_portImage.image = nil
+        beach_2_windValue.text = "N/A"
+        beach_2_cosmosView.rating = 0
+        beach_2_riskSlider.value = 0
+        beach_2_windSlider.value = 0
+        beach_2_lifeguardImage.image = nil
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        databaseController?.addListener(listener: self)
+        locationManager.startUpdatingLocation()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        databaseController?.removeListener(listener: self)
+        locationManager.stopUpdatingLocation()
+    }
+    
+    func onLovedBeachChange(change: DatabaseChange, lovedBeachs: [LovedBeach]) {
+        self.lovedBeachs = lovedBeachs
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last!
+        currentLocation = location
+    }
+    
+    @objc func showBeach1Picker() {
+        if lovedBeachs.isEmpty {
+            //displaying the message in alet
+            let responseAlert = UIAlertController(title: "Empty Favourite List", message: "Please add some favourite beaches first.", preferredStyle: .alert)
+            self.present(responseAlert, animated: true, completion: nil)
+            // miss after 1 second
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+                self.presentedViewController?.dismiss(animated: false, completion: nil)
+            }
+        }
+        pickChoices = lovedBeachs
+        let alert = UIAlertController(title: "Select Beach 1", message: "\n\n\n\n\n\n", preferredStyle: .alert)
+        alert.isModalInPopover = true
+        let pickerFrame = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 140))
+        alert.view.addSubview(pickerFrame)
+        pickerFrame.dataSource = self
+        pickerFrame.delegate = self
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+            if self.pickValue == nil {
+                self.pickValue = self.pickChoices.first as? LovedBeach
+            }
+            self.beach_1_textField.text = self.pickValue!.beachName
+            self.loadData(beachNo: self.BEACH_1, beach: self.pickValue!)
+            self.pickValue = nil
+        }))
+        
+        self.present(alert,animated: true, completion: nil )
+    }
+ 
+    @objc func showBeach2Picker() {
+        pickChoices = lovedBeachs
+        let alert = UIAlertController(title: "Select Beach 2", message: "\n\n\n\n\n\n", preferredStyle: .alert)
+        alert.isModalInPopover = true
+        let pickerFrame = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 140))
+        alert.view.addSubview(pickerFrame)
+        pickerFrame.dataSource = self
+        pickerFrame.delegate = self
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+            if self.pickValue == nil {
+                self.pickValue = self.pickChoices.first as? LovedBeach
+                
+            }
+            self.beach_2_textField.text = self.pickValue!.beachName
+            self.loadData(beachNo: self.BEACH_2, beach: self.pickValue!)
+            self.pickValue = nil
+        }))
+        
+        self.present(alert,animated: true, completion: nil )
+    }
+    
+    //set up picker view
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickChoices.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let titile = (pickChoices[row] as! LovedBeach).beachName
+        return titile
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        pickValue = pickChoices[row] as? LovedBeach
+    }
+    
+    //load all compare data
+    func loadData(beachNo: Int, beach:LovedBeach){
+        
+        //load port and guard
+        if beachNo == BEACH_1 {
+            self.beach_1_lifeguardImage.image = beach.ifGuard ? UIImage(named: "yse") : UIImage(named: "no")
+            if beach.ifPort {
+                self.beach_1_portImage.image = UIImage(named: "yes")
+            } else {
+                self.beach_1_portImage.image = UIImage(named: "no")
+            }
+        } else {
+            self.beach_2_lifeguardImage.image = beach.ifGuard ? UIImage(named: "yse") : UIImage(named: "no")
+            if beach.ifPort {
+                self.beach_2_portImage.image = UIImage(named: "yes")
+            } else {
+                self.beach_2_portImage.image = UIImage(named: "no")
+            }
+        }
+        
+        //load rating
+        getRating(beachNo: beachNo, beachName: beach.beachName!)
+        //load tide
+        let tideData = tidesapi(lat: beach.lat, long: beach.long)
+        let tideState = checkTideState(tides: tideData)
+        var tideSliderValue: Float = 0
+        switch tideState {
+        case "SLACK TIDE":
+            tideSliderValue = 1
+        case "MID TIDE":
+            tideSliderValue = 5
+        case "LOW TIDE":
+            tideSliderValue = 9
+        case "HIGH TIDE":
+            tideSliderValue = 1
+        default:
+            tideSliderValue = 0
+        }
+        if beachNo == BEACH_1 {
+            self.beach_1_tideValue.text = tideState
+            self.beach_1_tideSlider.value = tideSliderValue
+        }else {
+            self.beach_2_tiderValue.text = tideState
+            self.beach_2_tiderSlider.value = tideSliderValue
+        }
+        
+        //load uv
+        let uv = uvapi(lat: beach.lat, long: beach.long)
+        var uvSliderValue :Float = 0
+        if uv.isLess(than: 5) {
+            uvSliderValue = 1
+        } else if uv.isLess(than: 8) {
+            uvSliderValue = 5
+        } else {
+            uvSliderValue = 9
+        }
+        if beachNo == BEACH_1 {
+            self.beach_1_uvValue.text = "\(uv)"
+            self.beach_1_uvSlider.value = uvSliderValue
+        } else {
+            self.beach_2_uvValue.text = "\(uv)"
+            self.beach_2_uvSlider.value = uvSliderValue
+        }
+        
+        //load wind speed
+        let weather = getCurrentWeatherDate(beach: beach)
+        let windSpeed = weather[0]
+        var windSliderValue :Float = 0
+        if (windSpeed*2.237).isLess(than: 9) {
+            windSliderValue = 1
+        } else if (windSpeed*2.237).isLess(than: 16) {
+            windSliderValue = 5
+        } else {
+            windSliderValue = 9
+        }
+        
+        if beachNo == BEACH_1 {
+            self.beach_1_windValue.text = "\(windSpeed) m/s"
+            self.beach_1_windSlider.value = windSliderValue
+        } else {
+            self.beach_2_windValue.text = "\(windSpeed) m/s"
+            self.beach_2_windSlider.value = windSliderValue
+        }
+        //check risk level
+        switch uvSliderValue {
+        case 1:
+            uvSliderValue = 1
+        case 5:
+            uvSliderValue = 2
+        case 9:
+            uvSliderValue = 3
+        default:
+            uvSliderValue = 1
+        }
+        
+        switch windSliderValue {
+        case 1:
+            windSliderValue = 1
+        case 5:
+            windSliderValue = 2
+        case 9:
+            windSliderValue = 3
+        default:
+            windSliderValue = 1
+        }
+        
+        switch tideSliderValue {
+        case 1:
+            tideSliderValue = 1
+        case 5:
+            tideSliderValue = 2
+        case 9:
+            tideSliderValue = 3
+        default:
+            tideSliderValue = 1
+        }
+        let guardPoint:Float = beach.ifGuard ? 1: 3
+        
+        let riskPoint = uvSliderValue + windSliderValue + tideSliderValue + guardPoint
+        
+        var riskSliderValue :Float = 0
+        if self.activtySegment.selectedSegmentIndex == 2 {
+            let portPoint:Float = beach.ifPort ? 1: 3
+            if (riskPoint + portPoint) <= 9{
+                riskSliderValue = 1
+            } else if (riskPoint + portPoint) <= 12 {
+                riskSliderValue = 5
+            } else {
+                riskSliderValue = 9
+            }
+        } else {
+            if riskPoint < 6 {
+                riskSliderValue = 1
+            } else if riskPoint < 6 {
+                riskSliderValue = 5
+            } else {
+                riskSliderValue = 9
+            }
+        }
+        if beachNo == BEACH_1 {
+            self.beach_1_riskSlider.value = riskSliderValue
+        } else {
+            self.beach_2_riskSlider.value = riskSliderValue
+        }
+    }
+    
     
     // get rating data from mysql database
-    func getRating(beachName: String){
+    func getRating(beachNo: Int, beachName: String){
         var avRating = 0.0
         //Defined a constant that holds the URL for our web service
         let URL_GET_RATING = "http://172.20.10.3/safe_wickers/v1/getRating.php"
@@ -74,11 +481,26 @@ class CompareViewController: UIViewController {
                 
                 avRating = avRating/Double(ratingStrings.count)
                 if avRating > 0{
-                    self.tttt.updateValue(avRating, forKey: beachName)
+                    if beachNo == self.BEACH_1 {
+                        DispatchQueue.main.async {
+                            self.beach_1_cosmosView.rating = avRating
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            self.beach_2_cosmosView.rating = avRating
+                        }
+                    }
                 } else {
-                    self.tttt.updateValue(0, forKey: beachName)
+                    if beachNo == self.BEACH_1 {
+                        DispatchQueue.main.async {
+                            self.beach_1_cosmosView.rating = 0
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            self.beach_2_cosmosView.rating = 0
+                        }
+                    }
                 }
-//                print(self.tttt)
             } catch{}
         }
     }
@@ -197,11 +619,51 @@ class CompareViewController: UIViewController {
         return uv ?? 6.0
     }
     
+    // get weather data
+    func getCurrentWeatherDate(beach: LovedBeach) -> [Double]{
+        var weatherData: [Double] = []
+        let lat = beach.lat
+        let long = beach.long
+        
+        let weatherApiID = "da9c3535ceb9e41bb432c229b579f2a8"
+        let urlString = "http://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(long)&appid=\(weatherApiID)"
+        let url = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+        
+        guard let weatheData = NSData(contentsOf: url!) else {
+            return []
+        }
+        
+        
+        do{
+            let decoder = JSONDecoder()
+            let weather = try decoder.decode(WeatherURLData.self, from: weatheData as Data)
+            weatherData.append(weather.windSpeed)
+            weatherData.append(weather.temp)
+            weatherData.append(weather.humidity)
+            weatherData.append(weather.pressure)
+        } catch let err{
+            print(err.localizedDescription)
+        }
+        return weatherData
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     if segue.identifier == "compareToBeachDetail"{
+     let destination = segue.destination as! BeachDetailViewController
+     destination.beach = self.comparedBeach
+     }
+    }
+    
 }
-
 

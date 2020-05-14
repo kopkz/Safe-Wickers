@@ -31,6 +31,7 @@ class BeachListTableViewCell: UITableViewCell {
         loveUnloveButton.addTarget(self, action: #selector(loveUnloveButtonTaped), for: .touchUpInside)
         cosmosView.settings.updateOnTouch = false
         cosmosView.settings.fillMode = .precise
+        //loveUnloveButton.isLove = beachItem.ifLoved!
         
         
     }
