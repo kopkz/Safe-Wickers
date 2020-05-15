@@ -574,7 +574,7 @@ class BeachListTableViewController: UITableViewController{
         }
         
             let beachCell = tableView.dequeueReusableCell(withIdentifier: CELL_BEACH, for: indexPath) as! BeachListTableViewCell
-
+        beachCell.riskLevelLabel.text = NSLocalizedString("Beachlist_riskLabel", comment: "Beachlist_riskLabel")
         
         
             let beach = fliteredList[indexPath.row]
@@ -722,24 +722,26 @@ class BeachListTableViewController: UITableViewController{
 
 extension BeachListTableViewController: FilterCellDelegate {
     func showSortingMenue() {
-        let action1 = PopoverAction.init(title: "Sorting by name") { (action1) in
-            self.sortingByInitials()
-        }
-        let action2 = PopoverAction.init(title: "Sorting by distance") { (action2) in
-            self.sortingByDistance()
-        }
-        let action3 = PopoverAction.init(title: "Show all beaches ") { (action3) in
-            self.showAllBeach()
-        }
-        let action4 = PopoverAction.init(title: "Only safe beaches") { (action4) in
-            self.onlyShowSafeBeach()
-        }
-        let action5 = PopoverAction.init(title: "Only lifeGuard patroled beaches") { (action4) in
-            self.fliterListByLifeGuard()
-        }
-        let action6 = PopoverAction.init(title: "Only port nearby beaches") { (action4) in
-            self.fliterListByPort()
-        }
+         let action1 = PopoverAction.init(title: NSLocalizedString("List_sortingByName", comment: "List_sortingByName")) { (action1) in
+                   self.sortingByInitials()
+                   
+                  
+               }
+               let action2 = PopoverAction.init(title: NSLocalizedString("List_sortingByDistance", comment: "List_sortingByDistance")) { (action2) in
+                   self.sortingByDistance()
+               }
+               let action3 = PopoverAction.init(title: NSLocalizedString("List_sortingAllBeaches", comment: "List_sortingAllBeaches")) { (action3) in
+                   self.showAllBeach()
+               }
+               let action4 = PopoverAction.init(title: NSLocalizedString("List_sortingSafeBeaches", comment: "List_sortingSafeBeaches")) { (action4) in
+                   self.onlyShowSafeBeach()
+               }
+               let action5 = PopoverAction.init(title: NSLocalizedString("List_SortinglifeGuard", comment: "List_SortinglifeGuard")) { (action4) in
+                   self.fliterListByLifeGuard()
+               }
+               let action6 = PopoverAction.init(title: NSLocalizedString("List_SortingPort", comment: "List_SortingPort")) { (action4) in
+                   self.fliterListByPort()
+               }
         let sortingMenueView = PopoverView()
         sortingMenueView.show(to: CGPoint(x: self.view.bounds.width, y: 130), with: [action1!, action2!, action3!, action4!, action5!, action6!])
         
@@ -764,7 +766,6 @@ extension BeachListTableViewController: FilterCellDelegate {
 }
 
 extension BeachListTableViewController: DatabaseListener{
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         databaseController?.addListener(listener: self)
@@ -811,6 +812,7 @@ extension BeachListTableViewController: DatabaseListener{
         
         let _ = databaseController!.deleteLovedBeach(lovedBeach: unloved)
     }
+    
     
 }
 

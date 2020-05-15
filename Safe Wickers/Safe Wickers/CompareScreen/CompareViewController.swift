@@ -119,10 +119,12 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        settranslate_Compare()
         addNavBarImage()
         self.activtySegment.tintColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1)
-        
+        self.activtySegment.setTitle(NSLocalizedString("seg_swimming", comment: "seg_swimming"), forSegmentAt: 0)
+        self.activtySegment.setTitle(NSLocalizedString("seg_surfing", comment: "seg_surfing"), forSegmentAt: 1)
+        self.activtySegment.setTitle(NSLocalizedString("seg_boating", comment: "seg_boating"), forSegmentAt: 2)
         self.contentViewHC.constant = 1000
         
         // Get the database controller once from the App Delegate
@@ -245,7 +247,7 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
     @objc func showBeach1Picker() {
         if lovedBeachs.isEmpty {
             //displaying the message in alet
-            let responseAlert = UIAlertController(title: "Empty Favourite List", message: "Please add some favourite beaches first.", preferredStyle: .alert)
+            let responseAlert = UIAlertController(title: NSLocalizedString("Compare_warn_empty", comment: "Compare_warn_empty"), message: NSLocalizedString("Compare_warn_empty_message", comment: "Compare_warn_empty_message"), preferredStyle: .alert)
             self.present(responseAlert, animated: true, completion: nil)
             // miss after 1 second
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
@@ -253,14 +255,14 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
             }
         }
         pickChoices = lovedBeachs
-        let alert = UIAlertController(title: "Select Beach 1", message: "\n\n\n\n\n\n", preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("Compare_select1beach", comment: "Compare_select1beach"), message: "\n\n\n\n\n\n", preferredStyle: .alert)
         alert.isModalInPopover = true
         let pickerFrame = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 140))
         alert.view.addSubview(pickerFrame)
         pickerFrame.dataSource = self
         pickerFrame.delegate = self
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Compare_warn_Cancel" , comment: "Compare_warn_Cancel" ), style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Compare_warn_OK", comment: "Compare_warn_OK"), style: .default, handler: { (UIAlertAction) in
             if self.pickValue == nil {
                 self.pickValue = self.pickChoices.first as? LovedBeach
             }
@@ -274,14 +276,14 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
  
     @objc func showBeach2Picker() {
         pickChoices = lovedBeachs
-        let alert = UIAlertController(title: "Select Beach 2", message: "\n\n\n\n\n\n", preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("Compare_select2beach", comment: "Compare_select2beach"), message: "\n\n\n\n\n\n", preferredStyle: .alert)
         alert.isModalInPopover = true
         let pickerFrame = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 140))
         alert.view.addSubview(pickerFrame)
         pickerFrame.dataSource = self
         pickerFrame.delegate = self
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Compare_warn_Cancel2", comment: "Compare_warn_Cancel2"), style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Compare_warn_OK2", comment: "Compare_warn_OK2"), style: .default, handler: { (UIAlertAction) in
             if self.pickValue == nil {
                 self.pickValue = self.pickChoices.first as? LovedBeach
                 
@@ -664,6 +666,21 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
      destination.beach = self.comparedBeach
      }
     }
-    
+    func settranslate_Compare()
+    {
+        vsLabel.text = NSLocalizedString("Compare_vsLabel", comment: "Compare_vsLabel")
+        ratingLabel.text = NSLocalizedString("Compare_ratingLabel", comment: "Compare_ratingLabel")
+        riskLabel.text = NSLocalizedString("Compare_riskLabel", comment: "Compare_riskLabel")
+        windSpeedLabel.text = NSLocalizedString("Compare_wind", comment: "Compare_wind")
+        tideLabel.text = NSLocalizedString("Compare_tide", comment: "Compare_tide")
+        uvLabel.text = NSLocalizedString("Compare_UV", comment: "Compare_UV")
+        beach_1_detiallButton.setTitle(NSLocalizedString("Compare_detal1Button", comment: "Compare_detal1Button"), for: .normal)
+        beach_2_detailButton.setTitle(NSLocalizedString("Compare_detal2Button", comment: "Compare_detal2Button"), for: .normal)
+        selectBeachLabel.text = NSLocalizedString("Compare_slectLabel", comment: "Compare_slectLabel")
+        beach_1_textField.text = NSLocalizedString("CompareTextField1", comment: "CompareTextField1")
+        beach_2_textField.text = NSLocalizedString("CompareTextField2", comment: "CompareTextField2")
+        lifeguardLabel.text = NSLocalizedString("Compare_lifeguard", comment: "Compare_lifeguard")
+        portLabel.text = NSLocalizedString("Compare_port", comment: "Compare_port")
+    }
 }
 

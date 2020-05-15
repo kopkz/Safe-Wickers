@@ -16,6 +16,11 @@ class BeachDetailViewController: UIViewController {
     
     @IBOutlet weak var cosmosView: CosmosView!
     
+    @IBOutlet weak var lifeGuardLab: UILabel!
+    @IBOutlet weak var PortLabel: UILabel!
+ 
+    @IBOutlet weak var beachdetail_Ratingbutton: UIButton!
+    @IBOutlet weak var windSpeedLabel: UILabel!
     @IBOutlet weak var contentViewHC: NSLayoutConstraint!
     @IBOutlet weak var beachImageView: UIImageView!
     @IBOutlet weak var beachNameLabel: UILabel!
@@ -70,6 +75,7 @@ class BeachDetailViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        setuptranslation_beachDetail()
         super.viewDidLoad()
         //set up scroll view
 //        self.contentViewHC.constant = UIScreen.main.bounds.size.height
@@ -119,21 +125,21 @@ class BeachDetailViewController: UIViewController {
         
         loveUnloveButton.isLove = beach!.ifLoved!
         loveUnloveButton.addTarget(self, action: #selector(loveUloveBeach), for: .touchUpInside)
-        
+        setuptranslation_beachDetail()
     }
     
     
     @IBAction func giveRatingButton(_ sender: Any) {
         
         
-        let alert = UIAlertController(title: "Give your rating", message: "\n\n\n", preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("Detail_Ratting_message", comment: "Detail_Ratting_message"), message: "\n\n\n", preferredStyle: .alert)
         alert.isModalInPopover = true
         let ratingCosmosView = CosmosView(frame: CGRect(x: 75, y: 70, width: 250, height: 100))
         ratingCosmosView.settings.fillMode = .full
         alert.view.addSubview(ratingCosmosView)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Detail_Ratting_Cancel", comment: "Detail_Ratting_Cancel"), style: .cancel, handler: { (UIAlertAction) in
         }))
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Detail_Ratting_OK", comment: "Detail_Ratting_OK"), style: .default, handler: { (UIAlertAction) in
             self.giveRating(beachName: self.beach!.beachName!, ratingLevel: Int(ratingCosmosView.rating))
             self.getRating(beachName: self.beach!.beachName!)
         }))
@@ -275,4 +281,22 @@ extension BeachDetailViewController: DatabaseListener{
     func onLovedBeachChange(change: DatabaseChange, lovedBeachs: [LovedBeach]) {
         self.lovedBeachs = lovedBeachs
     }
+    func setuptranslation_beachDetail()
+    {
+        //beachNameLabel.text = NSLocalizedString("BeachDetail_beachNameLabel", comment: "BeachDetail_beachNameLabel")
+        distanceLabel.text = NSLocalizedString("BeachDetail_distanceLabel", comment: "BeachDetail_distanceLabel")
+        windSpeedLabel.text = NSLocalizedString("BeachDetail_windSpeedLabel", comment: "BeachDetail_windSpeedLabel")
+        lifeGuardLab.text = NSLocalizedString("BeachDetail_lifeGuardLabel", comment: "BeachDetail_lifeGuardLabel")
+        PortLabel.text = NSLocalizedString("BeachDetail_PortLabel", comment: "BeachDetail_PortLabel")
+        
+        
+        beachdetail_Ratingbutton.setTitle(NSLocalizedString("beachDetail_rattingButton", comment: "beachDetail_rattingButton"), for: .normal)
+        tempLabel.text = NSLocalizedString("BeachDetail_tempLabel", comment: "BeachDetail_tempLabel")
+        tideStateLabel.text = NSLocalizedString("BeachDetail_tideStateLabel" , comment: "BeachDetail_tideStateLabel" )
+        tideHeightLabel.text = NSLocalizedString("BeachDetail_tideHeightLabel", comment: "BeachDetail_tideHeightLabel")
+        humLabel.text = NSLocalizedString("BeachDetail_humLabel", comment: "BeachDetail_humLabel")
+        preLabel.text = NSLocalizedString("BeachDetail_preLabel", comment: "BeachDetail_preLabel")
+        uvLabel.text = NSLocalizedString("BeachDetail_uvLabel" , comment: "BeachDetail_uvLabel" )
+    }
+    
 }

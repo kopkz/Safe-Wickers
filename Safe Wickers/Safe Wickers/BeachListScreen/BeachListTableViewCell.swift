@@ -13,12 +13,13 @@ protocol LoveBeachDelagate {
 }
 
 class BeachListTableViewCell: UITableViewCell {
-
+   
     @IBOutlet weak var loveUnloveButton: LoveButton!
     @IBOutlet weak var riskImageView: UIImageView!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var beachNameLabel: UILabel!
     @IBOutlet weak var beachImage: UIImageView!
+    @IBOutlet weak var riskLevelLabel: UILabel!
     
     @IBOutlet weak var cosmosView: CosmosView!
     var delegate: LoveBeachDelagate?

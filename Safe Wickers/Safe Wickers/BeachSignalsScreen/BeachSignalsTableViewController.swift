@@ -14,6 +14,8 @@ import func CommonCrypto.CC_MD5
 import typealias CommonCrypto.CC_LONG
 
 class BeachSignalsTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource,UIImagePickerControllerDelegate {
+    @IBOutlet weak var SelectLanguage: UIBarButtonItem!
+    
     
     var pickerView = UIPickerView()
     var pickValue = String()
@@ -56,7 +58,7 @@ class BeachSignalsTableViewController: UITableViewController, UIPickerViewDelega
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-
+        SelectLanguage.title = NSLocalizedString("Sig_SelectLanguage", comment: "Sig_SelectLanguage")
     }
 
     // MARK: - Table view data source
@@ -78,7 +80,7 @@ class BeachSignalsTableViewController: UITableViewController, UIPickerViewDelega
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == SECTION_LANGUAGE{
             let languageCell = tableView.dequeueReusableCell(withIdentifier: CELL_LANGUAGE, for: indexPath)
-            languageCell.textLabel?.text = "Current Language: \(currentLanguage)"
+            languageCell.textLabel?.text = NSLocalizedString("sign_cur_language", comment: "sign_cur_language") + "\(currentLanguage)"
             return languageCell
         }
         
@@ -161,16 +163,16 @@ class BeachSignalsTableViewController: UITableViewController, UIPickerViewDelega
     @IBAction func selectLanguage(_ sender: Any) {
         pickChoices = ["English", "简体中文", "日本語", "한국어", "Français", "Español", "ภาษาไทย", "العربية", "русский язык", "Português", "Deutsch", "Italiano", "Ελληνικά", "Nederlands", "Polski", "български", "Eesti", "Dansk", "Suomi", "Česko", "Română", "SlovenskoName", "Svenska", "MagyarName", "ViệtName", "繁體中文"]
         
-        let alert = UIAlertController(title: "Select Language", message: "\n\n\n\n\n\n\n\n", preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("signal Select Language", comment: "signal Select Language"), message: "\n\n\n\n\n\n\n\n", preferredStyle: .alert)
         alert.isModalInPopover = true
         let pickerFrame = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 180))
         alert.view.addSubview(pickerFrame)
         pickerFrame.dataSource = self
         pickerFrame.delegate = self
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("sign_Cancel", comment: "sign_Cancel"), style: .cancel, handler: { (UIAlertAction) in
             self.removeSpinner()
         }))
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("sign_OK", comment: "sign_OK"), style: .default, handler: { (UIAlertAction) in
 
             self.translation(language: self.pickValue)
             }))
@@ -379,7 +381,7 @@ extension BeachSignalsTableViewController {
         //add text to indicator
         let indicatorLabel = UILabel()
         indicatorLabel.frame = CGRect(x: indiView!.bounds.width/8, y: indiView!.bounds.height/70, width: 100, height: 30)
-        indicatorLabel.text = "Translating..."
+        indicatorLabel.text = NSLocalizedString("Translating...", comment: "Translating...")
         indicatorLabel.textColor = UIColor.white
         indicatorLabel.font = UIFont(name: "Avenir Light", size: 20)
         indicatorLabel.sizeToFit()

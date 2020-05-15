@@ -52,6 +52,8 @@
 		70BB0B0B2452A062002019B3 /* lg_suburbs.json in Resources */ = {isa = PBXBuildFile; fileRef = 70BB0B0A2452A062002019B3 /* lg_suburbs.json */; };
 		70BB0B0D2452AD2B002019B3 /* weatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB0B0C2452AD2B002019B3 /* weatherData.swift */; };
 		70FE9B83245692D900904091 /* LoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FE9B82245692D900904091 /* LoveButton.swift */; };
+		846C6064246E4E0F0013DA9A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 846C6066246E4E0F0013DA9A /* Localizable.strings */; };
+		846C6069246E676C0013DA9A /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C6068246E676C0013DA9A /* TabBarControllerViewController.swift */; };
 		CB41842CF993B73794769121 /* Pods_Safe_Wickers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9982ACD8B8650BFDB86A7747 /* Pods_Safe_Wickers.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,11 @@
 		70BB0B0A2452A062002019B3 /* lg_suburbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lg_suburbs.json; sourceTree = "<group>"; };
 		70BB0B0C2452AD2B002019B3 /* weatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherData.swift; sourceTree = "<group>"; };
 		70FE9B82245692D900904091 /* LoveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveButton.swift; sourceTree = "<group>"; };
+		846C6060246E4D820013DA9A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		846C6061246E4D820013DA9A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		846C6065246E4E0F0013DA9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		846C6067246E4E210013DA9A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		846C6068246E676C0013DA9A /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
 		9982ACD8B8650BFDB86A7747 /* Pods_Safe_Wickers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Safe_Wickers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB08D21B751E7835FA167C33 /* Pods-Safe Wickers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safe Wickers.debug.xcconfig"; path = "Target Support Files/Pods-Safe Wickers/Pods-Safe Wickers.debug.xcconfig"; sourceTree = "<group>"; };
 		E7D2F70EB70F227933667760 /* Pods-Safe Wickers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safe Wickers.release.xcconfig"; path = "Target Support Files/Pods-Safe Wickers/Pods-Safe Wickers.release.xcconfig"; sourceTree = "<group>"; };
@@ -250,6 +257,8 @@
 		709D1EAC2446BC2F00F4AB4A /* Safe Wickers */ = {
 			isa = PBXGroup;
 			children = (
+				846C6068246E676C0013DA9A /* TabBarControllerViewController.swift */,
+				846C6066246E4E0F0013DA9A /* Localizable.strings */,
 				709B6C06246E3B6600F56148 /* SettingScreen */,
 				708800372465725E0003A945 /* BeachSignalsScreen */,
 				708800102463BEB90003A945 /* CompareScreen */,
@@ -349,6 +358,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 709D1EA12446BC2E00F4AB4A;
 			productRefGroup = 709D1EAB2446BC2F00F4AB4A /* Products */;
@@ -368,6 +378,7 @@
 				707BABF2244C7E3000351335 /* victoria_suburb_names.json in Resources */,
 				70BB0B0B2452A062002019B3 /* lg_suburbs.json in Resources */,
 				709D1EBA2446BC3000F4AB4A /* LaunchScreen.storyboard in Resources */,
+				846C6064246E4E0F0013DA9A /* Localizable.strings in Resources */,
 				709D1EB72446BC3000F4AB4A /* Assets.xcassets in Resources */,
 				709D1EB52446BC2F00F4AB4A /* Main.storyboard in Resources */,
 				70880036246571320003A945 /* flags.json in Resources */,
@@ -445,6 +456,7 @@
 				7088003B246572E90003A945 /* BeachFlag.swift in Sources */,
 				709DAEDA246C7023006F05BB /* CustomSlider.swift in Sources */,
 				709B6C0C246E3BD000F56148 /* HelpTableViewCell.swift in Sources */,
+				846C6069246E676C0013DA9A /* TabBarControllerViewController.swift in Sources */,
 				708800122463BEE50003A945 /* CompareViewController.swift in Sources */,
 				709D1EAE2446BC2F00F4AB4A /* AppDelegate.swift in Sources */,
 				70BB0B0D2452AD2B002019B3 /* weatherData.swift in Sources */,
@@ -472,6 +484,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				709D1EB42446BC2F00F4AB4A /* Base */,
+				846C6061246E4D820013DA9A /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -480,8 +493,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				709D1EB92446BC3000F4AB4A /* Base */,
+				846C6060246E4D820013DA9A /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		846C6066246E4E0F0013DA9A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				846C6065246E4E0F0013DA9A /* en */,
+				846C6067246E4E210013DA9A /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -491,6 +514,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -552,6 +576,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

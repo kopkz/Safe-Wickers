@@ -67,12 +67,13 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
         if indexPath.section == SECTION_SETTING {
             let cell = tableView.dequeueReusableCell(withIdentifier: CELL_SETTING, for: indexPath) as! SettingTableViewCell
             cell.iconImage.image = UIImage(named: "language")
-            cell.settingItemLabel.text = "Language"
+            cell.settingItemLabel.text = NSLocalizedString("SettingLanguage", comment: "SettingLanguage")
             return cell
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_HELP, for: indexPath) as! HelpTableViewCell
-        cell.helpItemLabel.text = "About Us"
+        
+        cell.helpItemLabel.text = NSLocalizedString("About us", comment: "About us")
         cell.iconImage.image = UIImage(named: "help")
         // Configure the cell...
 
@@ -81,9 +82,9 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == SECTION_SETTING{
-            return "System Setting"
+            return NSLocalizedString("System Setting", comment: "System Setting")
         }
-        return "Help and Information"
+        return NSLocalizedString("Help and Information", comment: "Help and Information")
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -96,17 +97,18 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == SECTION_SETTING {
             self.pickChoices = ["English", "简体中文", "हिन्दी"]
-            let alert = UIAlertController(title: "Select System Language", message: "\n\n\n\n\n\n", preferredStyle: .alert)
+            let alert = UIAlertController(title: NSLocalizedString("Setting_Select_Language", comment: "Setting_Select_Language"), message: "\n\n\n\n\n\n", preferredStyle: .alert)
             alert.isModalInPopover = true
             let pickerFrame = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 140))
             alert.view.addSubview(pickerFrame)
             pickerFrame.dataSource = self
             pickerFrame.delegate = self
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Setting_warn_Cancel", comment: "Setting_warn_Cancel"), style: .cancel, handler: nil))
             
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Setting_warn_OK", comment: "Setting_warn_OK"), style: .default, handler: { (UIAlertAction) in
                 
                 if let cell = self.tableView.cellForRow(at: indexPath) as? SettingTableViewCell {
+                    
                     
                     if self.pickValue != "" {
                         cell.settingValueLabel.text = self.pickValue

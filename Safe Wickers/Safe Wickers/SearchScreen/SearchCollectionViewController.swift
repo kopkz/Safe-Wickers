@@ -39,6 +39,7 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
     
     var selectedLocation: MKPlacemark?
     
+    @IBOutlet weak var currentLocationButton: UIButton!
     var activities = [Activities]()
     var activityName: String?
     
@@ -87,6 +88,7 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
         searchButton.tintColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1)
         searchButton.layer.borderWidth = 1
         searchButton.layer.cornerRadius = 5
+        setuptranslation_searchpage1()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -115,7 +117,7 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
         searchController.searchResultsUpdater = locationSearchTable
         
         searchController.searchBar.delegate = self
-        searchController.searchBar.placeholder = "Search for location or beach"
+               searchController.searchBar.placeholder = NSLocalizedString("Search_Placeholder", comment: "Search_Placeholder")
         
         present(searchController,animated: true,completion: nil)
         searchController.searchBar.becomeFirstResponder()
@@ -217,8 +219,8 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
             
     }
         else {
-            let alertController = UIAlertController(title: "Location Not Found", message: "The location has not yet been determined.", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+            let alertController = UIAlertController(title: NSLocalizedString("Search_Location Not Found", comment: "Search_Location Not Found"), message: NSLocalizedString("Search_Location Not Foundmessage", comment: "Search_Location Not Foundmessage"), preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: NSLocalizedString("Se_Dismiss", comment: "Se_Dismiss"), style: .default, handler: nil))
                 present(alertController, animated: true, completion: nil)
     }
 
@@ -227,25 +229,26 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
     
     
     @objc func searchBeach() {
-        if searchLocation == nil {
-            let alertController = UIAlertController(title: "Location Missing", message: "Location missing, try to search a location or use current location.", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alertController, animated: true, completion: nil)
-        } else if activityName == nil {
-            let alertController = UIAlertController(title: "Actvity Missing", message: "Location missing, try to chose an activity.", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alertController, animated: true, completion: nil)
-        } else{
-            performSegue(withIdentifier: "ShowBeachList", sender: self)
+            if searchLocation == nil {
+
+                let alertController = UIAlertController(title: NSLocalizedString("Search_Warn_locationMissing", comment: "Search_Warn_locationMissing"), message: NSLocalizedString("Search_Warn_locationMissingMessage", comment: "Search_Warn_locationMissingMessage"), preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: NSLocalizedString("Search_Warn_locationOK", comment: "Search_Warn_locationOK"), style: .default, handler: nil))
+                present(alertController, animated: true, completion: nil)
+            } else if activityName == nil {
+                let alertController = UIAlertController(title: NSLocalizedString("Search_Warn_ActivityMissing", comment: "Search_Warn_ActivityMissing"), message: NSLocalizedString("Search_Warn_ActivityMissingMessage", comment: "Search_Warn_ActivityMissingMessage"), preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: NSLocalizedString("Search_Warn_ActivityOK", comment: "Search_Warn_ActivityOK"), style: .default, handler: nil))
+                present(alertController, animated: true, completion: nil)
+            } else{
+                performSegue(withIdentifier: "ShowBeachList", sender: self)
+            }
         }
-    }
     
     
     
     func createDefaultActivities(){
-        activities.append(Activities(imageName: "icons8-swimmer-96.png", activityName: "Swimming"))
-        activities.append(Activities(imageName: "icons8-surf-96.png", activityName: "Surfing"))
-        activities.append(Activities(imageName: "icons8-row-boat-96.png", activityName: "Boating"))
+        activities.append(Activities(imageName: "icons8-swimmer-96.png", activityName: NSLocalizedString("activety_swiming", comment: "activety_swiming")))
+        activities.append(Activities(imageName: "icons8-surf-96.png", activityName: NSLocalizedString("activity_surfing", comment: "activity_surfing")))
+        activities.append(Activities(imageName: "icons8-row-boat-96.png", activityName: NSLocalizedString("activity_boating", comment: "activity_boating")))
     }
     
     // from Coordinate to location name, ref: https://www.cnblogs.com/Free-Thinker/p/4843578.html
@@ -332,6 +335,19 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    func setuptranslation_searchpage1()
+    {
+        locationLabel.text = NSLocalizedString("Search_Page_Locationlabel", comment: "Search_Page_Locationlabel")
+        titleLabel.text = NSLocalizedString("Search_Page_titleLabel", comment: "Search_Page_titleLabel")
+        searchButton.setTitle(NSLocalizedString("Search_Page_searchButton", comment: "Search_Page_searchButton"), for: .normal)
+        activityLabel.text = NSLocalizedString("Search_Page_activityLabel", comment: "Search_Page_activityLabel")
+        currentLocationButton.setTitle(NSLocalizedString("Search_Page_currentLocationButton", comment: "Search_Page_currentLocationButton"), for: .normal)
+        locationTextField.text = NSLocalizedString("Search_Page_locationTextField", comment: "Search_Page_locationTextField")
+      
+    }
+    
+    
 }
 
 extension SearchCollectionViewController: HandleMapSearch {
@@ -348,8 +364,8 @@ extension SearchCollectionViewController: HandleMapSearch {
         } else {
             self.locationTextField.text = ""
             self.searchLocation = nil
-            let alertController = UIAlertController(title: "Wrong Location", message: "The location has not yet been determined, try again.", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+            let alertController = UIAlertController(title: NSLocalizedString("Search_Wrong_Location_warn", comment: "Search_Wrong_Location_warn"), message: NSLocalizedString("Search_Wrong_Location_warnMessage", comment: "Search_Wrong_Location_warnMessage"), preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: NSLocalizedString("Search_Wrong_Location_Dismiss", comment: "Search_Wrong_Location_Dismiss"), style: .default, handler: nil))
             present(alertController, animated: true, completion: nil)
         }
         
