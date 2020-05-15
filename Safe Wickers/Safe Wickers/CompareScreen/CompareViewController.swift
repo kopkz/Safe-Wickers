@@ -202,23 +202,23 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
         beach_1_uvValue.text = "N/A"
         beach_1_tideSlider.value = 0
         beach_1_tideValue.text = "N/A"
-        beach_1_portImage.image = nil
+        //beach_1_portImage.image = nil
         beach_1_windValue.text = "N/A"
         beach_1_cosmosView.rating = 0
         beach_1_riskSlider.value = 0
         beach_1_windSlider.value = 0
-        beach_1_lifeguardImage.image = nil
+        //beach_1_lifeguardImage.image = nil
         
         beach_2_uvSlider.value = 0
         beach_2_uvValue.text = "N/A"
         beach_2_tiderSlider.value = 0
         beach_2_tiderValue.text = "N/A"
-        beach_2_portImage.image = nil
+        //beach_2_portImage.image = nil
         beach_2_windValue.text = "N/A"
         beach_2_cosmosView.rating = 0
         beach_2_riskSlider.value = 0
         beach_2_windSlider.value = 0
-        beach_2_lifeguardImage.image = nil
+        //beach_2_lifeguardImage.image = nil
     }
     
     override func viewWillAppear(_ animated: Bool) {

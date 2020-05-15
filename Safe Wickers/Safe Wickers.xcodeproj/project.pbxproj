@@ -34,6 +34,9 @@
 		7088003D246580D80003A945 /* FlagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7088003C246580D80003A945 /* FlagTableViewCell.swift */; };
 		7088003F2465A8050003A945 /* TransData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7088003E2465A8050003A945 /* TransData.swift */; };
 		708800412465A8410003A945 /* TransResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708800402465A8410003A945 /* TransResult.swift */; };
+		709B6C08246E3B8D00F56148 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B6C07246E3B8D00F56148 /* SettingTableViewController.swift */; };
+		709B6C0A246E3BB500F56148 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B6C09246E3BB500F56148 /* SettingTableViewCell.swift */; };
+		709B6C0C246E3BD000F56148 /* HelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B6C0B246E3BD000F56148 /* HelpTableViewCell.swift */; };
 		709C426D2453F09A003C3193 /* FilterButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C426C2453F09A003C3193 /* FilterButtonTableViewCell.swift */; };
 		709D1EAE2446BC2F00F4AB4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1EAD2446BC2F00F4AB4A /* AppDelegate.swift */; };
 		709D1EB52446BC2F00F4AB4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709D1EB32446BC2F00F4AB4A /* Main.storyboard */; };
@@ -80,6 +83,9 @@
 		7088003C246580D80003A945 /* FlagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagTableViewCell.swift; sourceTree = "<group>"; };
 		7088003E2465A8050003A945 /* TransData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransData.swift; sourceTree = "<group>"; };
 		708800402465A8410003A945 /* TransResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransResult.swift; sourceTree = "<group>"; };
+		709B6C07246E3B8D00F56148 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		709B6C09246E3BB500F56148 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		709B6C0B246E3BD000F56148 /* HelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewCell.swift; sourceTree = "<group>"; };
 		709C426C2453F09A003C3193 /* FilterButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonTableViewCell.swift; sourceTree = "<group>"; };
 		709D1EAA2446BC2F00F4AB4A /* Safe Wickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Safe Wickers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709D1EAD2446BC2F00F4AB4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +217,16 @@
 			path = BeachSignalsScreen;
 			sourceTree = "<group>";
 		};
+		709B6C06246E3B6600F56148 /* SettingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				709B6C07246E3B8D00F56148 /* SettingTableViewController.swift */,
+				709B6C09246E3BB500F56148 /* SettingTableViewCell.swift */,
+				709B6C0B246E3BD000F56148 /* HelpTableViewCell.swift */,
+			);
+			path = SettingScreen;
+			sourceTree = "<group>";
+		};
 		709D1EA12446BC2E00F4AB4A = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +250,7 @@
 		709D1EAC2446BC2F00F4AB4A /* Safe Wickers */ = {
 			isa = PBXGroup;
 			children = (
+				709B6C06246E3B6600F56148 /* SettingScreen */,
 				708800372465725E0003A945 /* BeachSignalsScreen */,
 				708800102463BEB90003A945 /* CompareScreen */,
 				704C1C1E24544826006351F0 /* Database */,
@@ -418,6 +435,7 @@
 				7088003D246580D80003A945 /* FlagTableViewCell.swift in Sources */,
 				704C1C2A24559854006351F0 /* LovedBeachTableViewCell.swift in Sources */,
 				706B953024683A0900D80ED4 /* TidesData.swift in Sources */,
+				709B6C0A246E3BB500F56148 /* SettingTableViewCell.swift in Sources */,
 				707BAC5E244D9E6F00351335 /* LocationSearchTable.swift in Sources */,
 				706B952E246792A000D80ED4 /* UVData.swift in Sources */,
 				703FC1DA245051A400DF7BFA /* myAnnotationView.swift in Sources */,
@@ -426,11 +444,13 @@
 				709D1EC2244972E300F4AB4A /* SearchCollectionViewController.swift in Sources */,
 				7088003B246572E90003A945 /* BeachFlag.swift in Sources */,
 				709DAEDA246C7023006F05BB /* CustomSlider.swift in Sources */,
+				709B6C0C246E3BD000F56148 /* HelpTableViewCell.swift in Sources */,
 				708800122463BEE50003A945 /* CompareViewController.swift in Sources */,
 				709D1EAE2446BC2F00F4AB4A /* AppDelegate.swift in Sources */,
 				70BB0B0D2452AD2B002019B3 /* weatherData.swift in Sources */,
 				704C1C1C24544801006351F0 /* LovedBeach+CoreDataClass.swift in Sources */,
 				704C1C11245445DA006351F0 /* LovedBeachModel.xcdatamodeld in Sources */,
+				709B6C08246E3B8D00F56148 /* SettingTableViewController.swift in Sources */,
 				706B95342468681900D80ED4 /* TideHeight.swift in Sources */,
 				70BB0B09245142DA002019B3 /* ImageURLData.swift in Sources */,
 				706B953224683BE100D80ED4 /* TideData.swift in Sources */,

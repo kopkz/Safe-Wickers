@@ -49,6 +49,8 @@ class BeachSignalsTableViewController: UITableViewController, UIPickerViewDelega
         loadBeachSignal()
         addNavBarImage()
         transFlags = flags
+        
+        self.tableView.separatorStyle = .none
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -105,6 +107,11 @@ class BeachSignalsTableViewController: UITableViewController, UIPickerViewDelega
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alertController, animated: true, completion: nil)
     }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

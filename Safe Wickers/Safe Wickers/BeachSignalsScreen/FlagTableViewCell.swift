@@ -20,6 +20,11 @@ class FlagTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        let mScreenSize = UIScreen.main.bounds
+        let mSeparatorHeight = CGFloat(2.0) // Change height of speatator as you want
+        let mAddSeparator = UIView.init(frame: CGRect(x: 0, y: self.frame.size.height - mSeparatorHeight - 1, width: mScreenSize.width, height: mSeparatorHeight))
+        mAddSeparator.backgroundColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1) // Change backgroundColor of separator
+        self.addSubview(mAddSeparator)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
