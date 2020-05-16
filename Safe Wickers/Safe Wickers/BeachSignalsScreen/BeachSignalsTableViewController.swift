@@ -50,6 +50,7 @@ class BeachSignalsTableViewController: UITableViewController, UIPickerViewDelega
         addNavBarImage()
         transFlags = flags
         
+        
         self.tableView.separatorStyle = .none
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

@@ -40,7 +40,6 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         addNavBarImage()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

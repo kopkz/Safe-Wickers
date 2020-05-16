@@ -64,6 +64,8 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+     
     
         locationTextField.placeholder = "Search or Use current location"
         addNavBarImage()
