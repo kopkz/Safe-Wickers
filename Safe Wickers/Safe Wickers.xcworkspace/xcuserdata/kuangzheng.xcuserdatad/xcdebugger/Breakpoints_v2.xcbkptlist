@@ -2537,13 +2537,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
-            timestampString = "611150041.043648"
+            timestampString = "611292265.860063"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "220"
             endingLineNumber = "220"
-            landmarkName = "loveUloveBeach()"
-            landmarkType = "7">
+            landmarkName = "BeachDetailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2553,13 +2553,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
-            timestampString = "611150041.0438631"
+            timestampString = "611292265.860158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "221"
             endingLineNumber = "221"
-            landmarkName = "loveUloveBeach()"
-            landmarkType = "7">
+            landmarkName = "BeachDetailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2569,13 +2569,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
-            timestampString = "611150041.043982"
+            timestampString = "611292265.860209"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "223"
             endingLineNumber = "223"
-            landmarkName = "loveUloveBeach()"
-            landmarkType = "7">
+            landmarkName = "BeachDetailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2585,13 +2585,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
-            timestampString = "611150041.044077"
+            timestampString = "611292265.860255"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "222"
             endingLineNumber = "222"
-            landmarkName = "loveUloveBeach()"
-            landmarkType = "7">
+            landmarkName = "BeachDetailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2601,13 +2601,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
-            timestampString = "611150041.044191"
+            timestampString = "611292265.8602999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "224"
             endingLineNumber = "224"
-            landmarkName = "loveUloveBeach()"
-            landmarkType = "7">
+            landmarkName = "BeachDetailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2617,7 +2617,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
-            timestampString = "611150041.044294"
+            timestampString = "611292265.860345"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "226"
@@ -2633,13 +2633,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
-            timestampString = "611150041.044378"
+            timestampString = "611292265.860389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "225"
             endingLineNumber = "225"
-            landmarkName = "loveUloveBeach()"
-            landmarkType = "7">
+            landmarkName = "BeachDetailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2649,12 +2649,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
-            timestampString = "611150041.044486"
+            timestampString = "611292265.860436"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "239"
             endingLineNumber = "239"
-            landmarkName = "addLovedBeach(beach:)"
+            landmarkName = "checkIfLoved(beachNmae:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2665,12 +2665,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
-            timestampString = "611150041.044596"
+            timestampString = "611292265.860482"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "240"
             endingLineNumber = "240"
-            landmarkName = "addLovedBeach(beach:)"
+            landmarkName = "checkIfLoved(beachNmae:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2681,12 +2681,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
-            timestampString = "611150041.044691"
+            timestampString = "611292265.860525"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "241"
             endingLineNumber = "241"
-            landmarkName = "addLovedBeach(beach:)"
+            landmarkName = "checkIfLoved(beachNmae:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2697,12 +2697,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
-            timestampString = "611150041.044793"
+            timestampString = "611292265.860641"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "242"
             endingLineNumber = "242"
-            landmarkName = "addLovedBeach(beach:)"
+            landmarkName = "checkIfLoved(beachNmae:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2713,13 +2713,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
-            timestampString = "611150041.044874"
+            timestampString = "611292265.860701"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "243"
             endingLineNumber = "243"
-            landmarkName = "addLovedBeach(beach:)"
-            landmarkType = "7">
+            landmarkName = "BeachDetailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2729,13 +2729,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
-            timestampString = "611150041.04497"
+            timestampString = "611292265.8607661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "244"
             endingLineNumber = "244"
-            landmarkName = "addLovedBeach(beach:)"
-            landmarkType = "7">
+            landmarkName = "BeachDetailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2745,7 +2745,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
-            timestampString = "611150041.045079"
+            timestampString = "611292265.860835"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "245"
@@ -3129,7 +3129,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Safe Wickers/BeachListScreen/BeachListTableViewController.swift"
-            timestampString = "611089478.627635"
+            timestampString = "611292265.861656"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "138"

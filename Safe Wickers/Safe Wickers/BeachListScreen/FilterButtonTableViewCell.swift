@@ -19,9 +19,10 @@ class FilterButtonTableViewCell: UITableViewCell {
     var delegate: FilterCellDelegate?
     
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        showSortingMenueButton.setTitle(NSLocalizedString("beach_list_showSortingMenueButton", comment: "beach_list_showSortingMenueButton"), for: .init())
         showSortingMenueButton.layer.borderColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1).cgColor
         showSortingMenueButton.tintColor = UIColor(red:0.27, green:0.45, blue:0.58, alpha:1)
         showSortingMenueButton.layer.borderWidth = 1

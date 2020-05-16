@@ -56,9 +56,6 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if section == SECTION_HELP {
-            return 2
-        }
         return 1
     }
     

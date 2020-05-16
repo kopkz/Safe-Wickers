@@ -288,9 +288,7 @@ extension BeachDetailViewController: DatabaseListener{
         windSpeedLabel.text = NSLocalizedString("BeachDetail_windSpeedLabel", comment: "BeachDetail_windSpeedLabel")
         lifeGuardLab.text = NSLocalizedString("BeachDetail_lifeGuardLabel", comment: "BeachDetail_lifeGuardLabel")
         PortLabel.text = NSLocalizedString("BeachDetail_PortLabel", comment: "BeachDetail_PortLabel")
-        
-        
-        beachdetail_Ratingbutton.setTitle(NSLocalizedString("beachDetail_rattingButton", comment: "beachDetail_rattingButton"), for: .normal)
+    beachdetail_Ratingbutton.setTitle(NSLocalizedString("beachDetail_rattingButton", comment: "beachDetail_rattingButton"), for: .normal)
         tempLabel.text = NSLocalizedString("BeachDetail_tempLabel", comment: "BeachDetail_tempLabel")
         tideStateLabel.text = NSLocalizedString("BeachDetail_tideStateLabel" , comment: "BeachDetail_tideStateLabel" )
         tideHeightLabel.text = NSLocalizedString("BeachDetail_tideHeightLabel", comment: "BeachDetail_tideHeightLabel")

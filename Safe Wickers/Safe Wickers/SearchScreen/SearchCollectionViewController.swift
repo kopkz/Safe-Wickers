@@ -68,7 +68,7 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
         
      
     
-        locationTextField.placeholder = "Search or Use current location"
+        //locationTextField.placeholder = "Search or Use current location"
         addNavBarImage()
      
         createDefaultActivities()
@@ -116,6 +116,7 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
         let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
         
         let searchController = UISearchController(searchResultsController: locationSearchTable)
+        
         searchController.searchResultsUpdater = locationSearchTable
         
         searchController.searchBar.delegate = self
@@ -345,7 +346,7 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
         searchButton.setTitle(NSLocalizedString("Search_Page_searchButton", comment: "Search_Page_searchButton"), for: .normal)
         activityLabel.text = NSLocalizedString("Search_Page_activityLabel", comment: "Search_Page_activityLabel")
         currentLocationButton.setTitle(NSLocalizedString("Search_Page_currentLocationButton", comment: "Search_Page_currentLocationButton"), for: .normal)
-        locationTextField.text = NSLocalizedString("Search_Page_locationTextField", comment: "Search_Page_locationTextField")
+        locationTextField.placeholder = NSLocalizedString("Search_Page_locationTextField", comment: "Search_Page_locationTextField")
       
     }
     
