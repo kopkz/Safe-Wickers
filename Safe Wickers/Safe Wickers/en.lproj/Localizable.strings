@@ -91,7 +91,7 @@
 "sign_Cancel" = "Cancel";
 "sign_OK" = "OK";
 "Setting_Value" = "Setting Value";
-"sign_cur_language" = "Current Language";
+"sign_cur_language" = "Current Language: ";
 "seg_swimming" = "Swimming";
 "seg_surfing" = "Surfing";
 "seg_boating" = "Boating";

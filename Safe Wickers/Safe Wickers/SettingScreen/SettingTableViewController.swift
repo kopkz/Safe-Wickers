@@ -21,6 +21,7 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
     var pickChoices : [String] = []
     var index = IndexPath()
     
+    private let currentLang = AppSettings.shared.language
     
     // add logo image to navigationbar
     func addNavBarImage() {
@@ -46,6 +47,14 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        if (currentLang != AppSettings.shared.language) {
+            resetRootViewController()
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -64,6 +73,12 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
             let cell = tableView.dequeueReusableCell(withIdentifier: CELL_SETTING, for: indexPath) as! SettingTableViewCell
             cell.iconImage.image = UIImage(named: "language")
             cell.settingItemLabel.text = NSLocalizedString("SettingLanguage", comment: "SettingLanguage")
+            switch AppSettings.shared.language {
+            case .Chinese:
+                cell.settingValueLabel.text = "简体中文"
+            case .English:
+                cell.settingValueLabel.text = "English"
+            }
             return cell
         }
         
@@ -108,8 +123,23 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
                     
                     if self.pickValue != "" {
                         cell.settingValueLabel.text = self.pickValue
-                        //TODO: Change system language
+                        switch self.pickValue{
+                        case "English":
+                            AppSettings.shared.language = .English
+                        case "简体中文":
+                            AppSettings.shared.language = .Chinese
+                        case "हिन्दी":
+                            AppSettings.shared.language = .English
+                        default:
+                            return
                         }
+                        }
+                    let defaults = UserDefaults.standard
+                    defaults.set(AppSettings.shared.language.code, forKey: "appLanguage")
+                    self.tableView.reloadData()
+//                    if (self.currentLang != AppSettings.shared.language) {
+//                        self.resetRootViewController()
+//                    }
                     }}))
             
             self.present(alert,animated: true, completion: nil )
@@ -118,6 +148,15 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
         
     }
     
+    func resetRootViewController() {
+        if let appdelegate = UIApplication.shared.delegate {
+            let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+            if let mainController = storyBoard.instantiateViewController(withIdentifier: "rootViewController") as? UITabBarController{
+                appdelegate.window??.rootViewController = mainController
+                
+            }
+        }
+    }
     
     //set up picker view
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

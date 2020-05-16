@@ -9,9 +9,26 @@
 import UIKit
 
 class TabBarControllerViewController: UITabBarController {
+    private let currentLang = AppSettings.shared.language
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = UserDefaults.standard
+        
+        let languageCode = defaults.object(forKey: "appLanguage") as? String ?? "en"
+        switch languageCode {
+        case "en":
+            AppSettings.shared.language = .English
+        case "zh-Hans":
+            AppSettings.shared.language = .Chinese
+        default:
+            AppSettings.shared.language = .English
+        }
+        
+        if (currentLang != AppSettings.shared.language) {
+            resetRootViewController()
+        }
+        
 
         self.children[0].title = NSLocalizedString("tabBar_find", comment: "tabBar_find")
         self.children[1].title = NSLocalizedString("tabBar_favourite", comment: "tabBar_favourite")
@@ -20,6 +37,17 @@ class TabBarControllerViewController: UITabBarController {
         self.children[4].title = NSLocalizedString("tabBar_setting", comment: "tabBar_setting")
     }
     
+    
+    
+    func resetRootViewController() {
+        if let appdelegate = UIApplication.shared.delegate {
+            let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+            if let mainController = storyBoard.instantiateViewController(withIdentifier: "rootViewController") as? UITabBarController{
+                appdelegate.window??.rootViewController = mainController
+                
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation

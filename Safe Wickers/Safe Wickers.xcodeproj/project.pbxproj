@@ -37,6 +37,7 @@
 		709B6C08246E3B8D00F56148 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B6C07246E3B8D00F56148 /* SettingTableViewController.swift */; };
 		709B6C0A246E3BB500F56148 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B6C09246E3BB500F56148 /* SettingTableViewCell.swift */; };
 		709B6C0C246E3BD000F56148 /* HelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B6C0B246E3BD000F56148 /* HelpTableViewCell.swift */; };
+		709B6C10246FA19700F56148 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B6C0F246FA19700F56148 /* AppSettings.swift */; };
 		709C426D2453F09A003C3193 /* FilterButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C426C2453F09A003C3193 /* FilterButtonTableViewCell.swift */; };
 		709D1EAE2446BC2F00F4AB4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1EAD2446BC2F00F4AB4A /* AppDelegate.swift */; };
 		709D1EB52446BC2F00F4AB4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709D1EB32446BC2F00F4AB4A /* Main.storyboard */; };
@@ -88,6 +89,7 @@
 		709B6C07246E3B8D00F56148 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		709B6C09246E3BB500F56148 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		709B6C0B246E3BD000F56148 /* HelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewCell.swift; sourceTree = "<group>"; };
+		709B6C0F246FA19700F56148 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		709C426C2453F09A003C3193 /* FilterButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonTableViewCell.swift; sourceTree = "<group>"; };
 		709D1EAA2446BC2F00F4AB4A /* Safe Wickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Safe Wickers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709D1EAD2446BC2F00F4AB4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				70BB0B0A2452A062002019B3 /* lg_suburbs.json */,
 				70FE9B82245692D900904091 /* LoveButton.swift */,
 				709DAED9246C7023006F05BB /* CustomSlider.swift */,
+				709B6C0F246FA19700F56148 /* AppSettings.swift */,
 			);
 			path = "Safe Wickers";
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				7088003B246572E90003A945 /* BeachFlag.swift in Sources */,
 				709DAEDA246C7023006F05BB /* CustomSlider.swift in Sources */,
 				709B6C0C246E3BD000F56148 /* HelpTableViewCell.swift in Sources */,
+				709B6C10246FA19700F56148 /* AppSettings.swift in Sources */,
 				846C6069246E676C0013DA9A /* TabBarControllerViewController.swift in Sources */,
 				708800122463BEE50003A945 /* CompareViewController.swift in Sources */,
 				709D1EAE2446BC2F00F4AB4A /* AppDelegate.swift in Sources */,

@@ -90,7 +90,7 @@
 "sign_Cancel" = "取消";
 "sign_OK" = "好的";
 "Setting_Value" = "设置值";
-"sign_cur_language" = "当前语言";
+"sign_cur_language" = "当前语言: ";
 "seg_swimming" = "游泳";
 "seg_surfing" = "冲浪";
 "seg_boating" = "划船";
