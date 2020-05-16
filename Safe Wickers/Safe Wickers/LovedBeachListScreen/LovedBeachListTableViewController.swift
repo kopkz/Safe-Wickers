@@ -152,7 +152,7 @@ class LovedBeachListTableViewController: UITableViewController, DatabaseListener
 
     //header of section
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Your Favourite Beaches:"
+        return NSLocalizedString("Favourite_title", comment: "Favourite_title")
     }
     
     // Override to support editing the table view.
