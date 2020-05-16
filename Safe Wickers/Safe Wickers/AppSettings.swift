@@ -32,6 +32,7 @@ class AppSettings: NSObject {
     enum Language: String {
         case Chinese = "zh-Hans"
         case English = "en"
+        case Hindi = "hi"
         var code: String {
             return rawValue
         }

@@ -99,3 +99,5 @@
 "Search_Location Not Foundmessage" = "位置没有找到.";
 "Se_Dismiss" = "返回";
 "Sig_SelectLanguage" = "请选择语言";
+"Set_About_Us" = "关于我们";
+"Aboutus_Message" ="我们的团队 Safe wickers 致力于通过提供这个应用，减少游客在面对未知的维多利亚州海滩时遇到风险的可能，根据游客的位置和所进行的活动，我们不仅仅评估附近海滩的风险情况，同时我们也让用户能够简单快捷的获取这些海滩的重要信息.\n\n\n这些海滩的信息（比如名字，位置，图片，天气等）都来自于第三方API, 所以Safe Wickers不存在侵犯版权的行为.";

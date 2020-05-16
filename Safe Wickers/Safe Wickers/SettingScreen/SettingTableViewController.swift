@@ -78,6 +78,8 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
                 cell.settingValueLabel.text = "简体中文"
             case .English:
                 cell.settingValueLabel.text = "English"
+            case .Hindi:
+                cell.settingValueLabel.text = "हिन्दी"
             }
             return cell
         }
@@ -129,7 +131,7 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
                         case "简体中文":
                             AppSettings.shared.language = .Chinese
                         case "हिन्दी":
-                            AppSettings.shared.language = .English
+                            AppSettings.shared.language = .Hindi
                         default:
                             return
                         }

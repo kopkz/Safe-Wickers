@@ -35,8 +35,8 @@ class AboutUsViewController: UIViewController {
         addNavBarImage()
         
         // Do any additional setup after loading the view.
-        self.aboutUsLabel.text = "About Us"
-        self.infoLabel.text = "Our team Safe wickers aims to reduce the risks faced by tourists around the unknown beaches of Victoria, Australia by providing them with this application that will not only compute the safest beaches nearby for them based on their beach activities but also allow them easy access to important information in their language.\n\n\nThe information of beaches (name, location, image, weather,etc) come from third party APIs. Safe Wickers do not responses the copyright issues."
+        self.aboutUsLabel.text = NSLocalizedString("Set_About_Us", comment: "Set_About_Us")
+        self.infoLabel.text = NSLocalizedString("Aboutus_Message", comment: "Aboutus_Message")
     }
     
 

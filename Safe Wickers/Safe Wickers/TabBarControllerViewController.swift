@@ -23,6 +23,8 @@ class TabBarControllerViewController: UITabBarController {
             AppSettings.shared.language = .English
         case "zh-Hans":
             AppSettings.shared.language = .Chinese
+        case "hi" :
+            AppSettings.shared.language = .Hindi
         default:
             AppSettings.shared.language = .English
         }
