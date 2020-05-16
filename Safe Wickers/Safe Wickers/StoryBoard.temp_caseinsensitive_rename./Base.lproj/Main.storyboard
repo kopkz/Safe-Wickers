@@ -489,6 +489,9 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" id="Zvf-Tx-f0Z"/>
+                    <connections>
+                        <segue destination="SsP-Cn-ZIh" kind="show" identifier="showAboutUs" id="Mv4-pM-j42"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfd-zq-Lu0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1208,6 +1211,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpG-G4-ArV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4861" y="469"/>
+        </scene>
+        <!--About Us View Controller-->
+        <scene sceneID="Hvr-qI-egG">
+            <objects>
+                <viewController id="SsP-Cn-ZIh" customClass="AboutUsViewController" customModule="Safe_Wickers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AHt-aP-2CZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogv-3J-6Cy">
+                                <rect key="frame" x="20" y="98" width="105" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Da-DL-hel">
+                                <rect key="frame" x="20" y="158" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fb1-gG-Cy4" firstAttribute="trailing" secondItem="9Da-DL-hel" secondAttribute="trailing" constant="20" id="K3F-4y-8RK"/>
+                            <constraint firstItem="9Da-DL-hel" firstAttribute="top" secondItem="Ogv-3J-6Cy" secondAttribute="bottom" constant="30" id="WED-mm-ehF"/>
+                            <constraint firstItem="9Da-DL-hel" firstAttribute="leading" secondItem="fb1-gG-Cy4" secondAttribute="leading" constant="20" id="bPe-sY-yH0"/>
+                            <constraint firstItem="Ogv-3J-6Cy" firstAttribute="top" secondItem="fb1-gG-Cy4" secondAttribute="top" constant="10" id="dc6-8S-qRv"/>
+                            <constraint firstItem="Ogv-3J-6Cy" firstAttribute="leading" secondItem="fb1-gG-Cy4" secondAttribute="leading" constant="20" id="rYH-Nh-sid"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fb1-gG-Cy4"/>
+                    </view>
+                    <connections>
+                        <outlet property="aboutUsLabel" destination="Ogv-3J-6Cy" id="Iqu-kM-RiA"/>
+                        <outlet property="infoLabel" destination="9Da-DL-hel" id="bd7-Kw-aKV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rlK-Zm-vJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4861" y="1148"/>
         </scene>
         <!--Tab Bar Controller View Controller-->
         <scene sceneID="yl2-sM-qoP">

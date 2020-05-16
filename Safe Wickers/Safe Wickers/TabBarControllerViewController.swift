@@ -15,8 +15,10 @@ class TabBarControllerViewController: UITabBarController {
         super.viewDidLoad()
         let defaults = UserDefaults.standard
         
-        let languageCode = defaults.object(forKey: "appLanguage") as? String ?? "en"
+        let languageCode = defaults.object(forKey: "appLanguage") as? String ?? ""
         switch languageCode {
+        case "":
+            return
         case "en":
             AppSettings.shared.language = .English
         case "zh-Hans":

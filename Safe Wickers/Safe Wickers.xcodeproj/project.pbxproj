@@ -38,6 +38,7 @@
 		709B6C0A246E3BB500F56148 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B6C09246E3BB500F56148 /* SettingTableViewCell.swift */; };
 		709B6C0C246E3BD000F56148 /* HelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B6C0B246E3BD000F56148 /* HelpTableViewCell.swift */; };
 		709B6C10246FA19700F56148 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B6C0F246FA19700F56148 /* AppSettings.swift */; };
+		709B6C13246FB35B00F56148 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B6C12246FB35B00F56148 /* AboutUsViewController.swift */; };
 		709C426D2453F09A003C3193 /* FilterButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C426C2453F09A003C3193 /* FilterButtonTableViewCell.swift */; };
 		709D1EAE2446BC2F00F4AB4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1EAD2446BC2F00F4AB4A /* AppDelegate.swift */; };
 		709D1EB52446BC2F00F4AB4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709D1EB32446BC2F00F4AB4A /* Main.storyboard */; };
@@ -90,6 +91,7 @@
 		709B6C09246E3BB500F56148 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		709B6C0B246E3BD000F56148 /* HelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewCell.swift; sourceTree = "<group>"; };
 		709B6C0F246FA19700F56148 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		709B6C12246FB35B00F56148 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		709C426C2453F09A003C3193 /* FilterButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonTableViewCell.swift; sourceTree = "<group>"; };
 		709D1EAA2446BC2F00F4AB4A /* Safe Wickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Safe Wickers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709D1EAD2446BC2F00F4AB4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -236,6 +238,14 @@
 			path = SettingScreen;
 			sourceTree = "<group>";
 		};
+		709B6C11246FB33900F56148 /* AboutUsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				709B6C12246FB35B00F56148 /* AboutUsViewController.swift */,
+			);
+			path = AboutUsScreen;
+			sourceTree = "<group>";
+		};
 		709D1EA12446BC2E00F4AB4A = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +269,7 @@
 		709D1EAC2446BC2F00F4AB4A /* Safe Wickers */ = {
 			isa = PBXGroup;
 			children = (
+				709B6C11246FB33900F56148 /* AboutUsScreen */,
 				846C6068246E676C0013DA9A /* TabBarControllerViewController.swift */,
 				846C6066246E4E0F0013DA9A /* Localizable.strings */,
 				709B6C06246E3B6600F56148 /* SettingScreen */,
@@ -441,6 +452,7 @@
 				70BB0B07245141FD002019B3 /* OnlineImageData.swift in Sources */,
 				709D1EC62449DD2100F4AB4A /* Activities.swift in Sources */,
 				70880039246572B10003A945 /* BeachSignalsTableViewController.swift in Sources */,
+				709B6C13246FB35B00F56148 /* AboutUsViewController.swift in Sources */,
 				70A49DF0244E8A880042CD98 /* Beach.swift in Sources */,
 				704C1C2024544855006351F0 /* DatabaseProtocol.swift in Sources */,
 				7086B1AC244DC102005269B2 /* BeachListTableViewCell.swift in Sources */,
