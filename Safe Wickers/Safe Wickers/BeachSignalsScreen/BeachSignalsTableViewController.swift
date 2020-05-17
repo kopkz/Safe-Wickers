@@ -53,7 +53,7 @@ class BeachSignalsTableViewController: UITableViewController, UIPickerViewDelega
         transFlags = flags
         
         
-        self.tableView.separatorStyle = .none
+        self.tableView.separatorStyle = .singleLine
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -101,7 +101,7 @@ class BeachSignalsTableViewController: UITableViewController, UIPickerViewDelega
         if indexPath.section == SECTION_LANGUAGE{
             return 45
         }
-        return 270
+        return 115
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

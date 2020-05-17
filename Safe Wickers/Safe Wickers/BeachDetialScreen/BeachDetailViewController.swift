@@ -166,6 +166,13 @@ class BeachDetailViewController: UIViewController {
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
                     self.presentedViewController?.dismiss(animated: false, completion: nil)
                 }
+            } else {
+                let responseAlert = UIAlertController(title: "Network Error", message: "Cnnot connect to database, try again later.", preferredStyle: .alert)
+                self.present(responseAlert, animated: true, completion: nil)
+                // miss after 1 second
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+                    self.presentedViewController?.dismiss(animated: false, completion: nil)
+                }
             }
             
         }

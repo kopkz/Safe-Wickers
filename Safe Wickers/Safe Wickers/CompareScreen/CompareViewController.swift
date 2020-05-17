@@ -14,6 +14,11 @@ import MapKit
 
 class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate {
 
+   
+    @IBOutlet weak var beach_2_portLabel: UILabel!
+    @IBOutlet weak var beach_2_lifeguardLabel: UILabel!
+    @IBOutlet weak var beach_1_portLabel: UILabel!
+    @IBOutlet weak var beach_1_lifguardLabel: UILabel!
     @IBOutlet weak var selectBeachLabel: UILabel!
     @IBOutlet weak var vsLabel: UILabel!
     
@@ -210,6 +215,8 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
         beach_1_riskSlider.value = 0
         beach_1_windSlider.value = 0
         //beach_1_lifeguardImage.image = nil
+        beach_1_lifguardLabel.text = NSLocalizedString("compare_NoAvailable_label", comment: "compare_NoAvailable_label")
+        beach_1_portLabel.text = NSLocalizedString("compare_NoAvailable_label", comment: "compare_NoAvailable_label")
         
         beach_2_uvSlider.value = 0
         beach_2_uvValue.text = "N/A"
@@ -221,6 +228,8 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
         beach_2_riskSlider.value = 0
         beach_2_windSlider.value = 0
         //beach_2_lifeguardImage.image = nil
+        beach_2_lifeguardLabel.text = NSLocalizedString("compare_NoAvailable_label", comment: "compare_NoAvailable_label")
+        beach_2_portLabel.text = NSLocalizedString("compare_NoAvailable_label", comment: "compare_NoAvailable_label")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -319,17 +328,23 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
         //load port and guard
         if beachNo == BEACH_1 {
             self.beach_1_lifeguardImage.image = beach.ifGuard ? UIImage(named: "yse") : UIImage(named: "no")
+            self.beach_1_lifguardLabel.text = beach.ifGuard ? NSLocalizedString("compare_Available_label", comment: "compare_Available_label") : NSLocalizedString("compare_NoAvailable_label", comment: "compare_NoAvailable_label")
             if beach.ifPort {
                 self.beach_1_portImage.image = UIImage(named: "yes")
+                self.beach_1_portLabel.text = NSLocalizedString("compare_Available_label", comment: "compare_Available_label")
             } else {
                 self.beach_1_portImage.image = UIImage(named: "no")
+                self.beach_1_portLabel.text = NSLocalizedString("compare_NoAvailable_label", comment: "compare_NoAvailable_label")
             }
         } else {
             self.beach_2_lifeguardImage.image = beach.ifGuard ? UIImage(named: "yse") : UIImage(named: "no")
+            self.beach_2_lifeguardLabel.text = beach.ifGuard ? NSLocalizedString("compare_Available_label", comment: "compare_Available_label") : NSLocalizedString("compare_NoAvailable_label", comment: "compare_NoAvailable_label")
             if beach.ifPort {
                 self.beach_2_portImage.image = UIImage(named: "yes")
+                 self.beach_2_portLabel.text = NSLocalizedString("compare_Available_label", comment: "compare_Available_label")
             } else {
                 self.beach_2_portImage.image = UIImage(named: "no")
+                 self.beach_2_portLabel.text = NSLocalizedString("compare_NoAvailable_label", comment: "compare_NoAvailable_label")
             }
         }
         
