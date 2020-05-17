@@ -1,0 +1,3286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.IDETestFailureBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.0493571"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "317"
+            endingLineNumber = "317"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.049461"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "3"
+            endingLineNumber = "3"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.04954"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.049614"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.04968"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_9495F99639EACA53BF6E357543C78554_func0"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.382358"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "11">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.(reuseIdentifier in _9495F99639EACA53BF6E357543C78554).unsafeMutableAddressor : Swift.String"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.397396"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.04975"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.049808"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_9495F99639EACA53BF6E357543C78554_func0"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.407539"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "11">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.(reuseIdentifier in _9495F99639EACA53BF6E357543C78554).unsafeMutableAddressor : Swift.String"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.409487"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.049863"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_9495F99639EACA53BF6E357543C78554_func2"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.416436"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.(itemsPerRow in _9495F99639EACA53BF6E357543C78554).unsafeMutableAddressor : CoreGraphics.CGFloat"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.418997"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.049915"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.049968"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.050019"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.050078"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_9495F99639EACA53BF6E357543C78554_func1"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.435443"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.(sectionInsets in _9495F99639EACA53BF6E357543C78554).unsafeMutableAddressor : __C.UIEdgeInsets"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.437959"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.050131"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Safe_Wickers.SearchCollectionViewController"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.444815"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Safe_Wickers.SearchCollectionViewController"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.447052"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "219">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Safe_Wickers.SearchCollectionViewController&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.449424"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Safe_Wickers.SearchCollectionViewController&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.4518369"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "139">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.0501831"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.searchNavigationItem.getter : Swift.Optional&lt;__C.UINavigationItem&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.491522"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.searchNavigationItem.setter : Swift.Optional&lt;__C.UINavigationItem&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.493885"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.searchNavigationItem.modify : Swift.Optional&lt;__C.UINavigationItem&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.496513"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.searchNavigationItem.modify : Swift.Optional&lt;__C.UINavigationItem&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.499034"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Safe_Wickers.SearchCollectionViewController"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.501377"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "323">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Safe_Wickers.SearchCollectionViewController&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.503693"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "243">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.050234"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.searchNavigationItem.getter : Swift.Optional&lt;__C.UINavigationItem&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.5144351"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.searchNavigationItem.setter : Swift.Optional&lt;__C.UINavigationItem&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.51656"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.searchNavigationItem.modify : Swift.Optional&lt;__C.UINavigationItem&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.518687"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.searchNavigationItem.modify : Swift.Optional&lt;__C.UINavigationItem&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.5208"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Safe_Wickers.SearchCollectionViewController"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.522916"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "323">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Safe_Wickers.SearchCollectionViewController&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.524895"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "243">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.050283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.locationLabel.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.535006"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.locationLabel.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.5375479"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.locationLabel.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.540095"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.locationLabel.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.54222"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Safe_Wickers.SearchCollectionViewController"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.544533"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "425">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Safe_Wickers.SearchCollectionViewController&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.546705"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "345">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.050332"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.locationLabel.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.557444"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.locationLabel.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.560261"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.locationLabel.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.5627871"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.locationLabel.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.565348"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Safe_Wickers.SearchCollectionViewController"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.567975"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "425">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Safe_Wickers.SearchCollectionViewController&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.5702519"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "345">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.0503809"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.locationTextField.getter : Swift.Optional&lt;ACTextField.ACTextField&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.5815361"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.locationTextField.setter : Swift.Optional&lt;ACTextField.ACTextField&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.584085"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.locationTextField.modify : Swift.Optional&lt;ACTextField.ACTextField&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.5865721"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.locationTextField.modify : Swift.Optional&lt;ACTextField.ACTextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.588577"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Safe_Wickers.SearchCollectionViewController"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.590539"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "527">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Safe_Wickers.SearchCollectionViewController&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.592487"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "447">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.0504301"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.activities.getter : Swift.Array&lt;Safe_Wickers.Activities&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.722066"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.activities.setter : Swift.Array&lt;Safe_Wickers.Activities&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.724823"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.activities.modify : Swift.Array&lt;Safe_Wickers.Activities&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.726832"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.activities.modify : Swift.Array&lt;Safe_Wickers.Activities&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.728788"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Safe_Wickers.SearchCollectionViewController"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.7307791"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "842">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Safe_Wickers.SearchCollectionViewController&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.732765"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "756">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.0504791"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.locationManager.getter : __C.CLLocationManager"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.7721879"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.locationManager.setter : __C.CLLocationManager"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.774177"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.locationManager.modify : __C.CLLocationManager"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.77621"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.locationManager.modify : __C.CLLocationManager with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.778193"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Safe_Wickers.SearchCollectionViewController"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.781479"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1063">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Safe_Wickers.SearchCollectionViewController&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.78409"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "977">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.050529"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.searchLocation.getter : Swift.Optional&lt;__C.CLLocationCoordinate2D&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.797331"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.searchLocation.setter : Swift.Optional&lt;__C.CLLocationCoordinate2D&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.799931"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.searchLocation.modify : Swift.Optional&lt;__C.CLLocationCoordinate2D&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.802497"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.searchLocation.modify : Swift.Optional&lt;__C.CLLocationCoordinate2D&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.805153"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Safe_Wickers.SearchCollectionViewController"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.8076659"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "1196">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Safe_Wickers.SearchCollectionViewController&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.810205"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "1110">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.050578"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.currentLocation.getter : Swift.Optional&lt;__C.CLLocationCoordinate2D&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.822057"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.currentLocation.setter : Swift.Optional&lt;__C.CLLocationCoordinate2D&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.824623"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.currentLocation.modify : Swift.Optional&lt;__C.CLLocationCoordinate2D&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.827297"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.currentLocation.modify : Swift.Optional&lt;__C.CLLocationCoordinate2D&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.829812"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Safe_Wickers.SearchCollectionViewController"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.832549"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "1298">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Safe_Wickers.SearchCollectionViewController&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.835001"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "1212">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.050634"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.currentLocationName.getter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.872287"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "119">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.currentLocationName.setter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.874481"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "147">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.currentLocationName.modify : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.8768589"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.currentLocationName.modify : Swift.Optional&lt;Swift.String&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.878878"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Safe_Wickers.SearchCollectionViewController"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.8809251"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "1400">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Safe_Wickers.SearchCollectionViewController&gt;"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609010730.883406"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "1314">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.050684"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.050739"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.050788"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.050837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.050884"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.050931"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.050979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.0510319"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.05108"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.051127"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.051176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.051223"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.051271"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.051318"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.051366"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.05142"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.051468"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.0515161"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.051564"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
+            landmarkName = "currentLocationButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.051612"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "currentLocationButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.051659"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "currentLocationButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.051713"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
+            landmarkName = "currentLocationButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.051762"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
+            landmarkName = "currentLocationButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.05181"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "currentLocationButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.051857"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "254"
+            endingLineNumber = "254"
+            landmarkName = "createDefaultActivities()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.051903"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
+            landmarkName = "createDefaultActivities()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.051952"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "currentLocationButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.051999"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
+            landmarkName = "searchButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.052057"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.052104"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.SearchCollectionViewController.reverseGeocode() -&gt; ()"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609054357.6839859"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "284"
+                  endingLineNumber = "284"
+                  offsetFromSymbolStart = "642">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.CLPlacemark&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Safe_Wickers.SearchCollectionViewController.reverseGeocode() -&gt; ()"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609054357.6864671"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "285"
+                  endingLineNumber = "285"
+                  offsetFromSymbolStart = "171">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.052152"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.0522"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
+            landmarkName = "createDefaultActivities()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.052247"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
+            landmarkName = "createDefaultActivities()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.CLPlacemark&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Safe_Wickers.SearchCollectionViewController.reverseGeocode() -&gt; ()"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609054433.657322"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "287"
+                  endingLineNumber = "287"
+                  offsetFromSymbolStart = "429">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.CLPlacemark&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Safe_Wickers.SearchCollectionViewController.reverseGeocode() -&gt; ()"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/SearchCollectionViewController.swift"
+                  timestampString = "609054433.660491"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "287"
+                  endingLineNumber = "287"
+                  offsetFromSymbolStart = "2685">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.052294"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.052341"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
+            landmarkName = "reverseGeocode()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/LocationSearchTable.swift"
+            timestampString = "609262471.379837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "updateSearchResults(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/LocationSearchTable.swift"
+            timestampString = "609262471.379909"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "updateSearchResults(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/LocationSearchTable.swift"
+            timestampString = "609262471.379971"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "updateSearchResults(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.052448"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
+            landmarkName = "searchButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.0524991"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
+            landmarkName = "searchButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.0525481"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
+            landmarkName = "searchButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.052597"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "searchButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.052644"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "searchButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.387132"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.387311"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.387444"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "loadBeachInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.387562"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.387669"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.387769"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "loadBeachInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.387866"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "BeachListTableViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/SearchCollectionViewController.swift"
+            timestampString = "609475702.055177"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "SearchCollectionViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.387988"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "423"
+            endingLineNumber = "423"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.388086"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "loadBeachInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.388172"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
+            landmarkName = "getCurrentWeatherDate(beach:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.388263"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "getCurrentWeatherDate(beach:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.388347"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
+            landmarkName = "BeachListTableViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.388428"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "chechRisk(ifPort:ifGuard:windSpeed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.388495"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "chechRisk(ifPort:ifGuard:windSpeed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.388562"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "chechRisk(ifPort:ifGuard:windSpeed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.3886271"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "chechRisk(ifPort:ifGuard:windSpeed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListTableViewController.swift"
+            timestampString = "609499040.3886909"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "chechRisk(ifPort:ifGuard:windSpeed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
+            timestampString = "611301362.187957"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "BeachDetailViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
+            timestampString = "611301362.1880569"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "BeachDetailViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
+            timestampString = "611301362.188149"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
+            landmarkName = "BeachDetailViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
+            timestampString = "611301362.188277"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "BeachDetailViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
+            timestampString = "611301362.188341"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
+            landmarkName = "BeachDetailViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
+            timestampString = "611301362.188396"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
+            landmarkName = "loveUloveBeach()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
+            timestampString = "611301362.188445"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "BeachDetailViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
+            timestampString = "611301362.188496"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
+            landmarkName = "checkIfLoved(beachNmae:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
+            timestampString = "611301362.1885459"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
+            landmarkName = "checkIfLoved(beachNmae:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
+            timestampString = "611301362.188594"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "checkIfLoved(beachNmae:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
+            timestampString = "611301362.1886441"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
+            landmarkName = "checkIfLoved(beachNmae:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
+            timestampString = "611301362.1886899"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
+            landmarkName = "BeachDetailViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
+            timestampString = "611301362.188735"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "BeachDetailViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachDetialScreen/BeachDetailViewController.swift"
+            timestampString = "611301362.188781"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
+            landmarkName = "addLovedBeach(beach:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.476557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "translation(language:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.4797"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "translation(language:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.480708"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "translation(language:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.48164"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "390"
+            endingLineNumber = "390"
+            landmarkName = "showSpinner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.482675"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "389"
+            endingLineNumber = "389"
+            landmarkName = "showSpinner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.483541"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "391"
+            endingLineNumber = "391"
+            landmarkName = "showSpinner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.4845001"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
+            landmarkName = "translation(language:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.48551"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "selectLanguage(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.BeachSignalsTableViewController.selectLanguage(Any) -&gt; ()"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+                  timestampString = "610652045.329556"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "166"
+                  endingLineNumber = "166"
+                  offsetFromSymbolStart = "2800">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (__C.UIAlertAction) -&gt; () in Safe_Wickers.BeachSignalsTableViewController.selectLanguage(Any) -&gt; ()"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+                  timestampString = "610652045.3312269"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "34">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.486452"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "selectLanguage(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.4872659"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "selectLanguage(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.4880871"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "selectLanguage(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.488923"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
+            landmarkName = "selectLanguage(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.489935"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "selectLanguage(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.4908839"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "selectLanguage(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.492066"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "selectLanguage(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.493048"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
+            landmarkName = "translation(language:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.494029"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "translation(language:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.495046"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
+            landmarkName = "translation(language:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.496038"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
+            landmarkName = "translation(language:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.496968"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
+            landmarkName = "translation(language:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachSignalsScreen/BeachSignalsTableViewController.swift"
+            timestampString = "611231031.498286"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "translation(language:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/BeachListScreen/BeachListTableViewController.swift"
+            timestampString = "611292265.861656"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "loadBeachInfo()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Safe_Wickers.BeachListTableViewController.loadBeachInfo() -&gt; ()"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/BeachListScreen/BeachListTableViewController.swift"
+                  timestampString = "610784492.83397"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "3490">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Double&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Safe_Wickers.BeachListTableViewController.loadBeachInfo() -&gt; ()"
+                  moduleName = "Safe Wickers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuangzheng/Study/FIT5120/Safe-Wickers/Safe%20Wickers/Safe%20Wickers/BeachListScreen/BeachListTableViewController.swift"
+                  timestampString = "610784492.836329"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "909">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/LovedBeachListScreen/LovedBeachListTableViewController.swift"
+            timestampString = "611301151.2002259"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
+            landmarkName = "getBeachInfo(lovedBeach:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/LovedBeachListScreen/LovedBeachListTableViewController.swift"
+            timestampString = "611301151.200689"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "getBeachInfo(lovedBeach:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/CompareScreen/CompareViewController.swift"
+            timestampString = "611215091.9364181"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "325"
+            endingLineNumber = "325"
+            landmarkName = "loadData(beachNo:beach:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/CompareScreen/CompareViewController.swift"
+            timestampString = "611215091.936462"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "326"
+            endingLineNumber = "326"
+            landmarkName = "loadData(beachNo:beach:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/CompareScreen/CompareViewController.swift"
+            timestampString = "611215091.936502"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "327"
+            endingLineNumber = "327"
+            landmarkName = "loadData(beachNo:beach:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/CompareScreen/CompareViewController.swift"
+            timestampString = "611215091.936541"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "332"
+            endingLineNumber = "332"
+            landmarkName = "loadData(beachNo:beach:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Safe Wickers/CompareScreen/CompareViewController.swift"
+            timestampString = "611215091.936578"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "335"
+            endingLineNumber = "335"
+            landmarkName = "loadData(beachNo:beach:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
