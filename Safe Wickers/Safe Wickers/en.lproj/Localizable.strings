@@ -103,3 +103,6 @@
 "Aboutus_Message" = "Our team Safe wickers aims to reduce the risks faced by tourists around the unknown beaches of Victoria, Australia by providing them with this application that will not only compute the safest beaches nearby for them based on their beach activities but also allow them easy access to important information in their language.\n\n\nThe information of beaches (name, location, image, weather,etc) come from third party APIs. Safe Wickers do not responses the copyright issues.";
 "compare_Available_label" = "Available";
 "compare_NoAvailable_label" = "Not Available";
+"compare_meter_label_low" = "Low";
+"compare_meter_label_mid" = "Mid";
+"compare_meter_label_high" = "High";

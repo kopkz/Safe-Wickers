@@ -43,9 +43,9 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
     
     @IBOutlet weak var beach_2_cosmosView: CosmosView!
     
-    @IBOutlet weak var beach_1_riskSlider: CustomSlider!
-    
-    @IBOutlet weak var beach_2_riskSlider: CustomSlider!
+//    @IBOutlet weak var beach_1_riskSlider: CustomSlider!
+//    
+//    @IBOutlet weak var beach_2_riskSlider: CustomSlider!
     
     @IBOutlet weak var beach_1_windSlider: CustomSlider!
     
@@ -89,6 +89,9 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
     
     
     @IBOutlet weak var contentViewHC: NSLayoutConstraint!
+    
+    var beach_1_meter: RiskMeter!
+    var beach_2_meter: RiskMeter!
     
     var pickerView = UIPickerView()
     var pickValue: LovedBeach?
@@ -150,6 +153,24 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
         activtySegment.addTarget(self, action: #selector(self.SegmentedChanged(_:)), for: .valueChanged)
         beach_2_detailButton.addTarget(self, action: #selector(buttonDidTap), for: .touchUpInside)
         beach_1_detiallButton.addTarget(self, action: #selector(buttonDidTap), for: .touchUpInside)
+        
+        //add risk meter
+        beach_1_meter = RiskMeter(frame: CGRect(x: 20, y: 150, width: 80, height: 80))
+        beach_1_meter.translatesAutoresizingMaskIntoConstraints = false
+        
+        beach_2_meter = RiskMeter(frame: CGRect(x: 20, y: 150, width: 80, height: 80))
+        beach_2_meter.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addSubview(beach_1_meter)
+        self.view.addSubview(beach_2_meter)
+        
+        let sc1 = NSLayoutConstraint(item: beach_1_meter, attribute: .left, relatedBy: .equal, toItem: self.view, attribute: .left, multiplier: 1, constant: 30)
+        let sc2 = NSLayoutConstraint(item: beach_1_meter, attribute: .top, relatedBy: .equal, toItem: beach_1_cosmosView, attribute: .bottom, multiplier: 1, constant: 10)
+        let sc4 = NSLayoutConstraint(item: beach_2_meter, attribute: .left, relatedBy: .equal, toItem: self.beach_2_windSlider, attribute: .left, multiplier: 1, constant: 20)
+        let sc5 = NSLayoutConstraint(item: beach_2_meter, attribute: .top, relatedBy: .equal, toItem: beach_2_cosmosView, attribute: .bottom, multiplier: 1, constant: 10)
+        NSLayoutConstraint.activate([sc1, sc2, sc4, sc5])
+
+        
     }
     @objc func buttonDidTap(sender: UIButton) {
         if sender == beach_2_detailButton {
@@ -212,7 +233,7 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
         //beach_1_portImage.image = nil
         beach_1_windValue.text = "N/A"
         beach_1_cosmosView.rating = 0
-        beach_1_riskSlider.value = 0
+        //beach_1_riskSlider.value = 0
         beach_1_windSlider.value = 0
         //beach_1_lifeguardImage.image = nil
         beach_1_lifguardLabel.text = NSLocalizedString("compare_NoAvailable_label", comment: "compare_NoAvailable_label")
@@ -225,7 +246,7 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
         //beach_2_portImage.image = nil
         beach_2_windValue.text = "N/A"
         beach_2_cosmosView.rating = 0
-        beach_2_riskSlider.value = 0
+        //beach_2_riskSlider.value = 0
         beach_2_windSlider.value = 0
         //beach_2_lifeguardImage.image = nil
         beach_2_lifeguardLabel.text = NSLocalizedString("compare_NoAvailable_label", comment: "compare_NoAvailable_label")
@@ -446,31 +467,42 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
         }
         let guardPoint:Float = beach.ifGuard ? 1: 3
         
-        let riskPoint = uvSliderValue + windSliderValue + tideSliderValue + guardPoint
-        
-        var riskSliderValue :Float = 0
+        var riskPoint = uvSliderValue + windSliderValue + tideSliderValue + guardPoint
+        var ifBoating = false
         if self.activtySegment.selectedSegmentIndex == 2 {
             let portPoint:Float = beach.ifPort ? 1: 3
-            if (riskPoint + portPoint) <= 9{
-                riskSliderValue = 1
-            } else if (riskPoint + portPoint) <= 12 {
-                riskSliderValue = 5
-            } else {
-                riskSliderValue = 9
-            }
-        } else {
-            if riskPoint < 6 {
-                riskSliderValue = 1
-            } else if riskPoint < 6 {
-                riskSliderValue = 5
-            } else {
-                riskSliderValue = 9
-            }
+            riskPoint = riskPoint + portPoint
+            ifBoating = true
         }
+        
+        
+        
+//        var riskSliderValue :Float = 0
+//        if self.activtySegment.selectedSegmentIndex == 2 {
+//            let portPoint:Float = beach.ifPort ? 1: 3
+//            if (riskPoint + portPoint) <= 9{
+//                riskSliderValue = 1
+//            } else if (riskPoint + portPoint) <= 12 {
+//                riskSliderValue = 5
+//            } else {
+//                riskSliderValue = 9
+//            }
+//        } else {
+//            if riskPoint < 6 {
+//                riskSliderValue = 1
+//            } else if riskPoint < 6 {
+//                riskSliderValue = 5
+//            } else {
+//                riskSliderValue = 9
+//            }
+//        }
+        
         if beachNo == BEACH_1 {
-            self.beach_1_riskSlider.value = riskSliderValue
+            //self.beach_1_riskSlider.value = riskSliderValue
+            self.beach_1_meter.setPercent(riskPonit: Double(riskPoint), ifBoating: ifBoating)
+            
         } else {
-            self.beach_2_riskSlider.value = riskSliderValue
+            self.beach_2_meter.setPercent(riskPonit: Double(riskPoint), ifBoating: ifBoating)
         }
     }
     
