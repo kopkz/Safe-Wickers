@@ -375,7 +375,12 @@ class LovedBeachListTableViewController: UITableViewController, DatabaseListener
                 }
                 
                 avRating = avRating/Double(ratingStrings.count)
-                self.ratings.updateValue(avRating, forKey: beachName)
+                if avRating > 0{
+                    self.ratings.updateValue(avRating, forKey: beachName)
+                } else {
+                    self.ratings.updateValue(0, forKey: beachName)
+                }
+                //self.ratings.updateValue(avRating, forKey: beachName)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }

@@ -305,6 +305,15 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
     }
  
     @objc func showBeach2Picker() {
+        if lovedBeachs.isEmpty {
+            //displaying the message in alet
+            let responseAlert = UIAlertController(title: NSLocalizedString("Compare_warn_empty", comment: "Compare_warn_empty"), message: NSLocalizedString("Compare_warn_empty_message", comment: "Compare_warn_empty_message"), preferredStyle: .alert)
+            self.present(responseAlert, animated: true, completion: nil)
+            // miss after 1 second
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+                self.presentedViewController?.dismiss(animated: false, completion: nil)
+            }
+        }
         pickChoices = lovedBeachs
         let alert = UIAlertController(title: NSLocalizedString("Compare_select2beach", comment: "Compare_select2beach"), message: "\n\n\n\n\n\n", preferredStyle: .alert)
         alert.isModalInPopover = true

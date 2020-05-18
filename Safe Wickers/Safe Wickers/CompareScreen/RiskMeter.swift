@@ -106,9 +106,21 @@ class RiskMeter: UIView {
         var percentDouble: Double
         
         if ifBoating {
-            percentDouble = riskPonit/15
+            if riskPonit <= 9 {
+                 percentDouble = 0.25
+            } else if riskPonit <= 12 {
+                percentDouble = 0.5
+            } else {
+                percentDouble = 0.75
+            }
         } else {
-            percentDouble = riskPonit/12
+            if riskPonit < 6 {
+                percentDouble = 0.25
+            } else if riskPonit < 9 {
+                percentDouble = 0.5
+            } else {
+                percentDouble = 0.75
+            }
         }
         
         

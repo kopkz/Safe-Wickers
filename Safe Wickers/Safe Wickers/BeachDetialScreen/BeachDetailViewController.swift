@@ -25,7 +25,6 @@ class BeachDetailViewController: UIViewController {
     @IBOutlet weak var beachImageView: UIImageView!
     @IBOutlet weak var beachNameLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
-    
     @IBOutlet weak var ifPortImageView: UIImageView!
     @IBOutlet weak var ifGuardImageView: UIImageView!
     @IBOutlet weak var windSpeedValue: UILabel!
@@ -291,7 +290,7 @@ extension BeachDetailViewController: DatabaseListener{
     func setuptranslation_beachDetail()
     {
         //beachNameLabel.text = NSLocalizedString("BeachDetail_beachNameLabel", comment: "BeachDetail_beachNameLabel")
-        distanceLabel.text = NSLocalizedString("BeachDetail_distanceLabel", comment: "BeachDetail_distanceLabel")
+//        distanceLabel.text = NSLocalizedString("BeachDetail_distanceLabel", comment: "BeachDetail_distanceLabel")
         windSpeedLabel.text = NSLocalizedString("BeachDetail_windSpeedLabel", comment: "BeachDetail_windSpeedLabel")
         lifeGuardLab.text = NSLocalizedString("BeachDetail_lifeGuardLabel", comment: "BeachDetail_lifeGuardLabel")
         PortLabel.text = NSLocalizedString("BeachDetail_PortLabel", comment: "BeachDetail_PortLabel")
