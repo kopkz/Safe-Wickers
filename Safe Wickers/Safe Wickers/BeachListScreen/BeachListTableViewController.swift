@@ -119,8 +119,8 @@ class BeachListTableViewController: UITableViewController{
             
             
             // when test other functuon stop search image
-            let imageNmae = ""
-//            let imageNmae = searchIamgeOnline(beach: "\(beachName!) Victoria")
+//            let imageNmae = ""
+            let imageNmae = searchIamgeOnline(beach: "\(beachName!) Victoria")
             
 //            let des = item.placemark.locality ?? ""
             let weatherData = getCurrentWeatherDate(beach: item)
@@ -291,7 +291,7 @@ class BeachListTableViewController: UITableViewController{
         
         //backup key: 7d473ca9dd980058039404acc2f591c8    52cdda85a1f37c9eedc23a29cc5f5c11
         let headers = [
-            "x-access-token": "7d473ca9dd980058039404acc2f591c8"
+            "x-access-token": "52cdda85a1f37c9eedc23a29cc5f5c11"
         ]
         let request = NSMutableURLRequest(url: NSURL(string: "https://api.openuv.io/api/v1/uv?lat=\(lat)&lng=\(long)")! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
