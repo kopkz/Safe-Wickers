@@ -78,7 +78,7 @@ class BeachDetailViewController: UIViewController {
         super.viewDidLoad()
         //set up scroll view
 //        self.contentViewHC.constant = UIScreen.main.bounds.size.height
-        self.contentViewHC.constant = 1000
+        self.contentViewHC.constant = 450
 
         //set up navigation bar
         addNavBarImage()
@@ -166,7 +166,7 @@ class BeachDetailViewController: UIViewController {
                     self.presentedViewController?.dismiss(animated: false, completion: nil)
                 }
             } else {
-                let responseAlert = UIAlertController(title: "Network Error", message: "Cnnot connect to database, try again later.", preferredStyle: .alert)
+                let responseAlert = UIAlertController(title: NSLocalizedString("detail_Error_title", comment: "detail_Error_title"), message: NSLocalizedString("detail_Error_meassage", comment: "detail_Error_meassage"), preferredStyle: .alert)
                 self.present(responseAlert, animated: true, completion: nil)
                 // miss after 1 second
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {

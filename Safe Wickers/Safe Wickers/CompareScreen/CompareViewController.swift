@@ -15,6 +15,7 @@ import MapKit
 class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate {
 
    
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var beach_2_portLabel: UILabel!
     @IBOutlet weak var beach_2_lifeguardLabel: UILabel!
     @IBOutlet weak var beach_1_portLabel: UILabel!
@@ -133,7 +134,7 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
         self.activtySegment.setTitle(NSLocalizedString("seg_swimming", comment: "seg_swimming"), forSegmentAt: 0)
         self.activtySegment.setTitle(NSLocalizedString("seg_surfing", comment: "seg_surfing"), forSegmentAt: 1)
         self.activtySegment.setTitle(NSLocalizedString("seg_boating", comment: "seg_boating"), forSegmentAt: 2)
-        self.contentViewHC.constant = 1000
+        self.contentViewHC.constant = 400
         
         // Get the database controller once from the App Delegate
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -161,8 +162,11 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
         beach_2_meter = RiskMeter(frame: CGRect(x: 20, y: 150, width: 80, height: 80))
         beach_2_meter.translatesAutoresizingMaskIntoConstraints = false
         
-        self.view.addSubview(beach_1_meter)
-        self.view.addSubview(beach_2_meter)
+        self.contentView.addSubview(beach_1_meter)
+        self.contentView.addSubview(beach_2_meter)
+        
+//        self.view.addSubview(beach_1_meter)
+//        self.view.addSubview(beach_2_meter)
         
         let sc1 = NSLayoutConstraint(item: beach_1_meter, attribute: .left, relatedBy: .equal, toItem: self.view, attribute: .left, multiplier: 1, constant: 30)
         let sc2 = NSLayoutConstraint(item: beach_1_meter, attribute: .top, relatedBy: .equal, toItem: beach_1_cosmosView, attribute: .bottom, multiplier: 1, constant: 10)

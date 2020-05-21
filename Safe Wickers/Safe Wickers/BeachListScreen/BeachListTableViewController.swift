@@ -119,8 +119,8 @@ class BeachListTableViewController: UITableViewController{
             
             
             // when test other functuon stop search image
-//            let imageNmae = ""
-            let imageNmae = searchIamgeOnline(beach: "\(beachName!) Victoria")
+            let imageNmae = ""
+//            let imageNmae = searchIamgeOnline(beach: "\(beachName!) Victoria")
             
 //            let des = item.placemark.locality ?? ""
             let weatherData = getCurrentWeatherDate(beach: item)
@@ -451,8 +451,16 @@ class BeachListTableViewController: UITableViewController{
     func fliterList(){
         // safe or unsafe
         fliteredList = beachList.filter({(beach: Beach) -> Bool in
-            return beach.risk?.contains("s") ?? false
+            return beach.risk?.contains("l") ?? false
         })
+        if fliteredList.count == 0 {
+            let responseAlert = UIAlertController(title: NSLocalizedString("filter_Error_title", comment: "filter_Error_title"), message: NSLocalizedString("filter_Error_messgae", comment: "filter_Error_messgae"), preferredStyle: .alert)
+            self.present(responseAlert, animated: true, completion: nil)
+            // miss after 1 second
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+                self.presentedViewController?.dismiss(animated: false, completion: nil)
+            }
+        }
          self.tableView.reloadData()
     }
     
@@ -461,6 +469,14 @@ class BeachListTableViewController: UITableViewController{
         fliteredList = beachList.filter({(beach: Beach) -> Bool in
             return beach.ifGuard ?? false
         })
+        if fliteredList.count == 0 {
+            let responseAlert = UIAlertController(title: NSLocalizedString("filter_Error_title", comment: "filter_Error_title"), message: NSLocalizedString("filter_Error_messgae", comment: "filter_Error_messgae"), preferredStyle: .alert)
+            self.present(responseAlert, animated: true, completion: nil)
+            // miss after 1 second
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+                self.presentedViewController?.dismiss(animated: false, completion: nil)
+            }
+        }
         self.tableView.reloadData()
     }
     
@@ -469,6 +485,14 @@ class BeachListTableViewController: UITableViewController{
         fliteredList = beachList.filter({(beach: Beach) -> Bool in
             return beach.ifPort ?? false
         })
+        if fliteredList.count == 0 {
+            let responseAlert = UIAlertController(title: NSLocalizedString("filter_Error_title", comment: "filter_Error_title"), message: NSLocalizedString("filter_Error_messgae", comment: "filter_Error_messgae"), preferredStyle: .alert)
+            self.present(responseAlert, animated: true, completion: nil)
+            // miss after 1 second
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+                self.presentedViewController?.dismiss(animated: false, completion: nil)
+            }
+        }
         self.tableView.reloadData()
     }
     

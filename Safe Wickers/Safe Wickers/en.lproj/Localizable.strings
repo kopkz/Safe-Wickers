@@ -32,7 +32,7 @@
 "List_sortingByName" = "Sorting by name";
 "List_sortingByDistance" = "Sorting by distance";
 "List_sortingAllBeaches" = "Show all beaches";
-"List_sortingSafeBeaches" = "Show safe beaches";
+"List_sortingSafeBeaches" = "Show low risk beaches";
 "List_SortinglifeGuard" = "Only lifeGuard Patroled beaches";
 "List_SortingPort" = "Only port nearby beaches";
 "Search_Warn_locationMissing" = "Lovation Missing";
@@ -106,3 +106,7 @@
 "compare_meter_label_low" = "Low";
 "compare_meter_label_mid" = "Mid";
 "compare_meter_label_high" = "High";
+"detail_Error_title" = "Network Error";
+"detail_Error_meassage" = "Cnnot connect to database, try again later.";
+"filter_Error_title" = "No beach meets requirment";
+"filter_Error_messgae" = "There are no beach founed, please try other filter option.";

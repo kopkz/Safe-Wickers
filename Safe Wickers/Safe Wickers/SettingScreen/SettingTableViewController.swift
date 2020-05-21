@@ -123,7 +123,7 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
                 if let cell = self.tableView.cellForRow(at: indexPath) as? SettingTableViewCell {
                     
                     
-                    if self.pickValue != "" {
+//                    if self.pickValue != "" {
                         cell.settingValueLabel.text = self.pickValue
                         switch self.pickValue{
                         case "English":
@@ -133,15 +133,19 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
                         case "हिन्दी":
                             AppSettings.shared.language = .Hindi
                         default:
-                            return
+                            AppSettings.shared.language = .English
                         }
-                        }
+//                        }
                     let defaults = UserDefaults.standard
                     defaults.set(AppSettings.shared.language.code, forKey: "appLanguage")
                     self.tableView.reloadData()
-//                    if (self.currentLang != AppSettings.shared.language) {
-//                        self.resetRootViewController()
-//                    }
+                    self.title = NSLocalizedString("tabBar_setting", comment: "tabBar_setting")
+                    
+                    self.tabBarController?.tabBar.items![0].title = NSLocalizedString("tabBar_find", comment: "tabBar_find")
+                    self.tabBarController?.tabBar.items![1].title = NSLocalizedString("tabBar_favourite", comment: "tabBar_favourite")
+                    self.tabBarController?.tabBar.items![2].title = NSLocalizedString("tabBar_compare", comment: "tabBar_compare")
+                    self.tabBarController?.tabBar.items![3].title = NSLocalizedString("tabBar_sign", comment: "tabBar_sign")
+                    self.pickValue = ""
                     }}))
             
             self.present(alert,animated: true, completion: nil )
@@ -153,6 +157,7 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
         
     }
     
+    
     func resetRootViewController() {
         if let appdelegate = UIApplication.shared.delegate {
             let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
@@ -162,6 +167,17 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
             }
         }
     }
+    
+//    func resetCurrentViewController() {
+//        if let appdelegate = UIApplication.shared.delegate {
+//            let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+//            if let currentController = storyBoard.instantiateViewController(withIdentifier: "settingVC") as? UITableViewController{
+//                appdelegate.window??.rootViewController = currentController
+//
+//            }
+//        }
+//    }
+    
     
     //set up picker view
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

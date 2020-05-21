@@ -32,7 +32,7 @@
 "List_sortingByName" = "नाम से क्रमित";
 "List_sortingByDistance" = "दूरी से क्रमित ";
 "List_sortingAllBeaches" = "सभी समुद्र तटों को दिखाएं";
-"List_sortingSafeBeaches" = "सुरक्षित समुद्र तटदिखाएं";
+"List_sortingSafeBeaches" = "कम जोखिम बीच दिखाएँ";
 "List_SortinglifeGuard" = "केवल लाइफगार्ड गश्ती समुद्र तटों को दिखाएं ";
 "List_SortingPort" = "केवल बंदरगाह पास के समुद्र तटों";
 "Search_Warn_locationMissing" = " स्थान गायब";
@@ -106,3 +106,7 @@
 "compare_meter_label_low" = "कम";
 "compare_meter_label_mid" = "में";
 "compare_meter_label_high" = "उच्च";
+"detail_Error_title" = "नेटवर्क त्रुटि";
+"detail_Error_meassage" = "डाटाबेस से सीनोट कनेक्ट करें, बाद फिर कोशिश करें.";
+"filter_Error_title" = "कोई बीच आवश्यक नहीं है";
+"filter_Error_messgae" = "कोई प्रदेश फूल नहीं है, कृपया अन्य फ़िल्टर विकल्प को कोशिश करें.";

@@ -32,7 +32,7 @@
 "List_sortingByName" = "根据名字排序";
 "List_sortingByDistance" = "根据距离排序";
 "List_sortingAllBeaches" = "显示所有海滩";
-"List_sortingSafeBeaches" = "只显示安全海滩";
+"List_sortingSafeBeaches" = "只显示低风险海滩";
 "List_SortinglifeGuard" = "只显示配备救生员的海滩";
 "List_SortingPort" = "只显示港口附近海滩";
 "Search_Warn_locationMissing" = "位置信息缺失";
@@ -106,3 +106,7 @@
 "compare_meter_label_low" = "低";
 "compare_meter_label_mid" = "中";
 "compare_meter_label_high" = "高";
+"detail_Error_title" = "网络错误";
+"detail_Error_meassage" = "无法连接数据库，请稍后再试。";
+"filter_Error_title" = "没有海滩符合要求";
+"filter_Error_messgae" = "没有发现海滩，请尝试其他筛选方式。";
