@@ -68,6 +68,7 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         //locationTextField.placeholder = "Search or Use current location"
         addNavBarImage()
      
@@ -91,6 +92,14 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
         searchButton.layer.borderWidth = 1
         searchButton.layer.cornerRadius = 5
         setuptranslation_searchpage1()
+        
+        
+        //test
+//        if (currentLang != AppSettings.shared.language) {
+//            self.tabBarController?.selectedIndex = 4
+//        }
+
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
