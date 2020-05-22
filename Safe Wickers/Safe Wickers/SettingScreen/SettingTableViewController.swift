@@ -48,13 +48,13 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-
-        if (currentLang != AppSettings.shared.language) {
-            resetRootViewController()
-        }
-    }
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//
+//        if (currentLang != AppSettings.shared.language) {
+//            resetRootViewController()
+//        }
+//    }
 
     // MARK: - Table view data source
 
@@ -145,8 +145,13 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
                     self.tabBarController?.tabBar.items![1].title = NSLocalizedString("tabBar_favourite", comment: "tabBar_favourite")
                     self.tabBarController?.tabBar.items![2].title = NSLocalizedString("tabBar_compare", comment: "tabBar_compare")
                     self.tabBarController?.tabBar.items![3].title = NSLocalizedString("tabBar_sign", comment: "tabBar_sign")
+                    if (self.currentLang != AppSettings.shared.language) {
+                        self.resetRootViewController()
+                    }
                     self.pickValue = ""
+                    
                     }}))
+            
             
             self.present(alert,animated: true, completion: nil )
         } else {

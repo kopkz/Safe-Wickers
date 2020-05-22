@@ -95,9 +95,9 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
         
         
         //test
-//        if (currentLang != AppSettings.shared.language) {
-//            self.tabBarController?.selectedIndex = 4
-//        }
+        if (currentLang != AppSettings.shared.language) {
+            self.tabBarController?.selectedIndex = 4
+        }
 
         
     }
