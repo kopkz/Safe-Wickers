@@ -737,8 +737,8 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
         beach_1_detiallButton.setTitle(NSLocalizedString("Compare_detal1Button", comment: "Compare_detal1Button"), for: .normal)
         beach_2_detailButton.setTitle(NSLocalizedString("Compare_detal2Button", comment: "Compare_detal2Button"), for: .normal)
         selectBeachLabel.text = NSLocalizedString("Compare_slectLabel", comment: "Compare_slectLabel")
-        beach_1_textField.text = NSLocalizedString("CompareTextField1", comment: "CompareTextField1")
-        beach_2_textField.text = NSLocalizedString("CompareTextField2", comment: "CompareTextField2")
+        beach_1_textField.placeholder = NSLocalizedString("CompareTextField1", comment: "CompareTextField1")
+        beach_2_textField.placeholder = NSLocalizedString("CompareTextField2", comment: "CompareTextField2")
         lifeguardLabel.text = NSLocalizedString("Compare_lifeguard", comment: "Compare_lifeguard")
         portLabel.text = NSLocalizedString("Compare_port", comment: "Compare_port")
     }

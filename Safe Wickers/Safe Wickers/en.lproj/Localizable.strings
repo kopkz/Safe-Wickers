@@ -33,9 +33,9 @@
 "List_sortingByDistance" = "Sorting by distance";
 "List_sortingAllBeaches" = "Show all beaches";
 "List_sortingSafeBeaches" = "Show low risk beaches";
-"List_SortinglifeGuard" = "Only lifeGuard Patroled beaches";
+"List_SortinglifeGuard" = "Only lifeguard Patroled beaches";
 "List_SortingPort" = "Only port nearby beaches";
-"Search_Warn_locationMissing" = "Lovation Missing";
+"Search_Warn_locationMissing" = "Location Missing";
 "Search_Warn_locationMissingMessage" = "Location missing, try to search a location or use current location.";
 "Search_Warn_ActivityMissing" = "Activity Missing";
 "Search_Warn_ActivityMissingMessage" = "Activity missing, try to chose an activity.";
