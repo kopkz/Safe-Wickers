@@ -455,11 +455,9 @@ class BeachListTableViewController: UITableViewController{
         })
         if fliteredList.count == 0 {
             let responseAlert = UIAlertController(title: NSLocalizedString("filter_Error_title", comment: "filter_Error_title"), message: NSLocalizedString("filter_Error_messgae", comment: "filter_Error_messgae"), preferredStyle: .alert)
+            responseAlert.addAction(UIAlertAction(title: NSLocalizedString("Se_Dismiss", comment: "Se_Dismiss"), style: .default, handler: nil))
             self.present(responseAlert, animated: true, completion: nil)
-            // miss after 1 second
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-                self.presentedViewController?.dismiss(animated: false, completion: nil)
-            }
+            
         }
          self.tableView.reloadData()
     }
@@ -471,11 +469,9 @@ class BeachListTableViewController: UITableViewController{
         })
         if fliteredList.count == 0 {
             let responseAlert = UIAlertController(title: NSLocalizedString("filter_Error_title", comment: "filter_Error_title"), message: NSLocalizedString("filter_Error_messgae", comment: "filter_Error_messgae"), preferredStyle: .alert)
+            responseAlert.addAction(UIAlertAction(title: NSLocalizedString("Se_Dismiss", comment: "Se_Dismiss"), style: .default, handler: nil))
             self.present(responseAlert, animated: true, completion: nil)
-            // miss after 1 second
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-                self.presentedViewController?.dismiss(animated: false, completion: nil)
-            }
+            
         }
         self.tableView.reloadData()
     }
@@ -487,11 +483,9 @@ class BeachListTableViewController: UITableViewController{
         })
         if fliteredList.count == 0 {
             let responseAlert = UIAlertController(title: NSLocalizedString("filter_Error_title", comment: "filter_Error_title"), message: NSLocalizedString("filter_Error_messgae", comment: "filter_Error_messgae"), preferredStyle: .alert)
+            responseAlert.addAction(UIAlertAction(title: NSLocalizedString("Se_Dismiss", comment: "Se_Dismiss"), style: .default, handler: nil))
             self.present(responseAlert, animated: true, completion: nil)
-            // miss after 1 second
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-                self.presentedViewController?.dismiss(animated: false, completion: nil)
-            }
+            
         }
         self.tableView.reloadData()
     }

@@ -13,6 +13,7 @@ class TabBarControllerViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         let defaults = UserDefaults.standard
         
         let languageCode = defaults.object(forKey: "appLanguage") as? String ?? "en"

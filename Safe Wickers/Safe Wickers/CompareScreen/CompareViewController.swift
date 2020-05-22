@@ -744,4 +744,3 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
     }
 }
 
-///jhdkwkejhdkwhedhwlk

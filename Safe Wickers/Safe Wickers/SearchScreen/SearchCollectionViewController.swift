@@ -17,6 +17,8 @@ private let reuseIdentifier = "activityCell"
 private var sectionInsets = UIEdgeInsets()
 private let itemsPerRow: CGFloat = 3
 
+private let currentLang = AppSettings.shared.language
+
 
 class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout, CLLocationManagerDelegate
 {
@@ -66,8 +68,6 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     
-    
         //locationTextField.placeholder = "Search or Use current location"
         addNavBarImage()
      
@@ -94,8 +94,11 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
     }
     
     override func viewWillAppear(_ animated: Bool) {
-    
         super.viewWillAppear(animated)
+//        if (currentLang != AppSettings.shared.language) {
+//            resetRootViewController()
+//        }
+
         locationManager.startUpdatingLocation()
     }
     
@@ -109,6 +112,17 @@ class SearchCollectionViewController: UIViewController, UISearchBarDelegate,UICo
         currentLocation = location.coordinate
     }
 
+    // if language change, refresh
+    func resetRootViewController() {
+        if let appdelegate = UIApplication.shared.delegate {
+            let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+            if let mainController = storyBoard.instantiateViewController(withIdentifier: "rootViewController") as? UITabBarController{
+                appdelegate.window??.rootViewController = mainController
+                
+            }
+        }
+    }
+    
   // show search bar
     @objc func showSearchBar(){
         

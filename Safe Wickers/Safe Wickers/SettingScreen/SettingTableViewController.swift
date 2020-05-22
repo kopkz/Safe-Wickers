@@ -48,13 +48,13 @@ class SettingTableViewController: UITableViewController, UIPickerViewDelegate, U
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        if (currentLang != AppSettings.shared.language) {
-            resetRootViewController()
-        }
-    }
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//
+//        if (currentLang != AppSettings.shared.language) {
+//            resetRootViewController()
+//        }
+//    }
 
     // MARK: - Table view data source
 
