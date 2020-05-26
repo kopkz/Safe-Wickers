@@ -68,7 +68,7 @@
 "Compare_warn_OK2" = "OK";
 "Compare_warn_empty" = "Empty Favourite List";
 "Compare_warn_empty_message" = "Please add some favourite beaches first.";
-"Compare_slectLabel" = "Select beached to Compare";
+"Compare_slectLabel" = "Select beach to Compare";
 "CompareTextField1" = "Beach 1";
 "CompareTextField2" = "Beach 2";
 "tabBar_find" = "Search";
@@ -109,4 +109,4 @@
 "detail_Error_title" = "Network Error";
 "detail_Error_meassage" = "Cannot connect to database, try again later.";
 "filter_Error_title" = "No beach meets requirment";
-"filter_Error_messgae" = "There is no beach founded, please try other filter option.";
+"filter_Error_messgae" = "Please try other filter option.";

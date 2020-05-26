@@ -146,6 +146,10 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
         locationManager.distanceFilter = kCLLocationAccuracyKilometer
         locationManager.delegate = self
         
+        //make rating non adjustable
+        beach_1_cosmosView.settings.updateOnTouch = false
+        beach_2_cosmosView.settings.updateOnTouch = false
+        
         //add action to beach text field
         beach_1_textField.addTarget(self, action: #selector(showBeach1Picker), for: .allTouchEvents)
         beach_2_textField.addTarget(self, action: #selector(showBeach2Picker), for: .allTouchEvents)
@@ -158,7 +162,6 @@ class CompareViewController: UIViewController, DatabaseListener, UIPickerViewDel
         //add risk meter
         beach_1_meter = RiskMeter(frame: CGRect(x: 20, y: 150, width: 80, height: 80))
         beach_1_meter.translatesAutoresizingMaskIntoConstraints = false
-        
         beach_2_meter = RiskMeter(frame: CGRect(x: 20, y: 150, width: 80, height: 80))
         beach_2_meter.translatesAutoresizingMaskIntoConstraints = false
         
