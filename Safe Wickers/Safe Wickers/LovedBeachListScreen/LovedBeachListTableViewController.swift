@@ -357,7 +357,7 @@ class LovedBeachListTableViewController: UITableViewController, DatabaseListener
     func getRating(beachName: String){
         var avRating = 0.0
         //Defined a constant that holds the URL for our web service
-        let URL_GET_RATING = "http://172.20.10.3/safe_wickers/v1/getRating.php"
+        let URL_GET_RATING = "http://safewickers.000webhostapp.com/v1/getRating.php"
         //creating parameters for the get request
         let parameters : Parameters = ["beach_name" : beachName]
         //Sending http get request
