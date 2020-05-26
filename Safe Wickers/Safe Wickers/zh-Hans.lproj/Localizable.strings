@@ -109,4 +109,6 @@
 "detail_Error_title" = "网络错误";
 "detail_Error_meassage" = "无法连接数据库，请稍后再试。";
 "filter_Error_title" = "没有海滩符合要求";
-"filter_Error_messgae" = "没有发现海滩，请尝试其他筛选方式。";
+"filter_Error_messgae" = "请尝试其他筛选方式。";
+"detail_love_title" = "成功将海滩添加到最爱列表。";
+"detail_unlove_title" = "成功将海滩从最爱列表移除。";

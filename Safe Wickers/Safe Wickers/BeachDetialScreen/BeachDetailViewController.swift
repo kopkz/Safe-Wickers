@@ -10,6 +10,7 @@ import UIKit
 import SDWebImage
 import Cosmos
 import Alamofire
+import MapKit
 
 
 class BeachDetailViewController: UIViewController {
@@ -123,6 +124,7 @@ class BeachDetailViewController: UIViewController {
         
         
         loveUnloveButton.isLove = beach!.ifLoved!
+        loveUnloveButton.unpdateImage()
         loveUnloveButton.addTarget(self, action: #selector(loveUloveBeach), for: .touchUpInside)
         setuptranslation_beachDetail()
     }
@@ -169,7 +171,7 @@ class BeachDetailViewController: UIViewController {
             } else {
                 let responseAlert = UIAlertController(title: NSLocalizedString("detail_Error_title", comment: "detail_Error_title"), message: NSLocalizedString("detail_Error_meassage", comment: "detail_Error_meassage"), preferredStyle: .alert)
                 self.present(responseAlert, animated: true, completion: nil)
-                // miss after 1 second
+                // miss after 2 second
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
                     self.presentedViewController?.dismiss(animated: false, completion: nil)
                 }
@@ -220,15 +222,21 @@ class BeachDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "detailToMapSeque" {
+            let destination = segue.destination as! MapViewController
+            destination.focusLocation = CLLocation(latitude: self.beach!.latitude!, longitude: self.beach!.longitude!)
+            let list: [Beach] = [self.beach!]
+            destination.beachList = list
+        }
     }
-    */
+    
     
     //love or unlove beach
     
@@ -258,6 +266,14 @@ class BeachDetailViewController: UIViewController {
             return
         }
         let _ = databaseController!.addLovedBeach(beachName: beach.beachName!, lat: beach.latitude!, long: beach.longitude!, imageName: beach.imageName!, ifGuard: beach.ifGuard!, ifPort: beach.ifPort!)
+        self.beach!.ifLoved = true
+        
+        let responseAlert = UIAlertController(title: NSLocalizedString("detail_love_title", comment: "detail_love_title"), message:nil, preferredStyle: .alert)
+        self.present(responseAlert, animated: true, completion: nil)
+        // miss after 2 second
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            self.presentedViewController?.dismiss(animated: false, completion: nil)
+        }
     }
     
     // remove beach from loved beach database
@@ -273,6 +289,13 @@ class BeachDetailViewController: UIViewController {
         }
         
         let _ = databaseController!.deleteLovedBeach(lovedBeach: unloved)
+        self.beach!.ifLoved = false
+        let responseAlert = UIAlertController(title: NSLocalizedString("detail_unlove_title", comment: "detail_unlove_title"), message:nil, preferredStyle: .alert)
+        self.present(responseAlert, animated: true, completion: nil)
+        // miss after 2 second
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            self.presentedViewController?.dismiss(animated: false, completion: nil)
+        }
     }
 }
 

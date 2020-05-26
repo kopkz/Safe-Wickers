@@ -203,7 +203,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2d-QT-Sfe" customClass="CosmosView" customModule="Cosmos">
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m2d-QT-Sfe" customClass="CosmosView" customModule="Cosmos">
                                             <rect key="frame" x="284" y="275.5" width="120" height="20"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
@@ -311,7 +311,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CrW-Wg-QXa">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -361,7 +361,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUX-Fn-0WP" customClass="CosmosView" customModule="Cosmos">
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oUX-Fn-0WP" customClass="CosmosView" customModule="Cosmos">
                                             <rect key="frame" x="284" y="246.5" width="120" height="20"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
@@ -543,13 +543,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDT-bz-mrt">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDT-bz-mrt">
                                                 <rect key="frame" x="50" y="205" width="36" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sliderBackground" translatesAutoresizingMaskIntoConstraints="NO" id="CmE-W8-kT5">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="sliderBackground" translatesAutoresizingMaskIntoConstraints="NO" id="CmE-W8-kT5">
                                                 <rect key="frame" x="286" y="195" width="120" height="10"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="10" id="CD2-g3-1mN"/>
@@ -562,7 +562,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="9" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="tYp-v3-bOo" customClass="CustomSlider" customModule="Safe_Wickers" customModuleProvider="target">
+                                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="9" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="tYp-v3-bOo" customClass="CustomSlider" customModule="Safe_Wickers" customModuleProvider="target">
                                                 <rect key="frame" x="284" y="195" width="124" height="11"/>
                                                 <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -577,14 +577,14 @@
                                                     <constraint firstAttribute="width" secondItem="ni0-DX-xcI" secondAttribute="height" multiplier="1:1" id="ZiX-zJ-veJ"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sliderBackground" translatesAutoresizingMaskIntoConstraints="NO" id="opo-fC-Oa3">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="sliderBackground" translatesAutoresizingMaskIntoConstraints="NO" id="opo-fC-Oa3">
                                                 <rect key="frame" x="8" y="145" width="120" height="10"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="7vI-my-Bw6"/>
                                                     <constraint firstAttribute="height" constant="10" id="c8g-KW-FWx"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sliderBackground" translatesAutoresizingMaskIntoConstraints="NO" id="0QA-YQ-kLL">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="sliderBackground" translatesAutoresizingMaskIntoConstraints="NO" id="0QA-YQ-kLL">
                                                 <rect key="frame" x="8" y="195" width="120" height="10"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="OjH-ce-0fK"/>
@@ -597,23 +597,23 @@
                                                     <constraint firstAttribute="width" secondItem="cFC-uE-vb9" secondAttribute="height" multiplier="1:1" id="OUb-rq-D98"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqQ-mT-Yx7">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqQ-mT-Yx7">
                                                 <rect key="frame" x="328" y="155" width="36" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UW9-ih-PiW">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UW9-ih-PiW">
                                                 <rect key="frame" x="328" y="255" width="36" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ih-tY-abQ" customClass="CosmosView" customModule="Cosmos">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ih-tY-abQ" customClass="CosmosView" customModule="Cosmos">
                                                 <rect key="frame" x="8" y="25" width="120" height="20"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="9" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="K3Y-xh-jjZ" customClass="CustomSlider" customModule="Safe_Wickers" customModuleProvider="target">
+                                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="9" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="K3Y-xh-jjZ" customClass="CustomSlider" customModule="Safe_Wickers" customModuleProvider="target">
                                                 <rect key="frame" x="6" y="145" width="124" height="11"/>
                                                 <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -628,27 +628,27 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9 m/s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQy-IJ-GUe">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="9 m/s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQy-IJ-GUe">
                                                 <rect key="frame" x="50" y="155" width="36" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sliderBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zgg-aC-hcy">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="sliderBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zgg-aC-hcy">
                                                 <rect key="frame" x="286" y="145" width="120" height="10"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="jYq-JF-Ous"/>
                                                     <constraint firstAttribute="height" constant="10" id="oVO-uk-L3a"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sliderBackground" translatesAutoresizingMaskIntoConstraints="NO" id="GAb-NK-H61">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="sliderBackground" translatesAutoresizingMaskIntoConstraints="NO" id="GAb-NK-H61">
                                                 <rect key="frame" x="8" y="245" width="120" height="10"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="208-MF-p8L"/>
                                                     <constraint firstAttribute="height" constant="10" id="KfS-UV-kzV"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xaz-YO-xGH">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xaz-YO-xGH">
                                                 <rect key="frame" x="50" y="255" width="36" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -669,7 +669,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no" translatesAutoresizingMaskIntoConstraints="NO" id="cyZ-Sz-B5K">
                                                 <rect key="frame" x="331" y="295.5" width="30" height="30"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Db-1U-DpA">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Db-1U-DpA">
                                                 <rect key="frame" x="328" y="205" width="36" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -681,7 +681,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="9" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="g4c-da-htL" customClass="CustomSlider" customModule="Safe_Wickers" customModuleProvider="target">
+                                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="9" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="g4c-da-htL" customClass="CustomSlider" customModule="Safe_Wickers" customModuleProvider="target">
                                                 <rect key="frame" x="6" y="195" width="124" height="11"/>
                                                 <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -690,7 +690,7 @@
                                                     <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="sliderThumb"/>
                                                 </userDefinedRuntimeAttributes>
                                             </slider>
-                                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="9" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="nJX-ui-oCd" customClass="CustomSlider" customModule="Safe_Wickers" customModuleProvider="target">
+                                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="9" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="nJX-ui-oCd" customClass="CustomSlider" customModule="Safe_Wickers" customModuleProvider="target">
                                                 <rect key="frame" x="6" y="245" width="124" height="11"/>
                                                 <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -699,18 +699,18 @@
                                                     <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="sliderThumb"/>
                                                 </userDefinedRuntimeAttributes>
                                             </slider>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sliderBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Rca-GW-CDl">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="sliderBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Rca-GW-CDl">
                                                 <rect key="frame" x="286" y="245" width="120" height="10"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="10" id="dRM-ug-1bX"/>
                                                     <constraint firstAttribute="width" constant="120" id="jO2-Bh-KEK"/>
                                                 </constraints>
                                             </imageView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l28-HY-Fij" customClass="CosmosView" customModule="Cosmos">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l28-HY-Fij" customClass="CosmosView" customModule="Cosmos">
                                                 <rect key="frame" x="286" y="25" width="120" height="20"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="9" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="z0t-Hu-BCd" customClass="CustomSlider" customModule="Safe_Wickers" customModuleProvider="target">
+                                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="9" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="z0t-Hu-BCd" customClass="CustomSlider" customModule="Safe_Wickers" customModuleProvider="target">
                                                 <rect key="frame" x="284" y="145" width="124" height="11"/>
                                                 <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -719,7 +719,7 @@
                                                     <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="sliderThumb"/>
                                                 </userDefinedRuntimeAttributes>
                                             </slider>
-                                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="9" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qDQ-Ah-Oqc" customClass="CustomSlider" customModule="Safe_Wickers" customModuleProvider="target">
+                                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="9" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qDQ-Ah-Oqc" customClass="CustomSlider" customModule="Safe_Wickers" customModuleProvider="target">
                                                 <rect key="frame" x="284" y="245" width="124" height="11"/>
                                                 <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -956,16 +956,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NGg-Mx-snh">
-                                <rect key="frame" x="0.0" y="88" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="cGb-aD-W1V"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDZ-Z3-t7E" customClass="LoveButton" customModule="Safe_Wickers" customModuleProvider="target">
-                                <rect key="frame" x="384" y="88" width="30" height="30"/>
+                                <rect key="frame" x="384" y="44" width="30" height="30"/>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hB9-Y0-iXA">
-                                <rect key="frame" x="0.0" y="288" width="414" height="525"/>
+                                <rect key="frame" x="0.0" y="244" width="414" height="618"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaR-Ht-fzG" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
@@ -1001,10 +1001,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yes" translatesAutoresizingMaskIntoConstraints="NO" id="8uH-Kp-eBB">
-                                                <rect key="frame" x="364" y="102.5" width="30" height="30"/>
+                                                <rect key="frame" x="378" y="109.5" width="16" height="16"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yes" translatesAutoresizingMaskIntoConstraints="NO" id="lqq-XQ-Sf6">
-                                                <rect key="frame" x="364" y="143" width="30" height="30"/>
+                                                <rect key="frame" x="378" y="150" width="16" height="16"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z8-Do-MeY">
                                                 <rect key="frame" x="352" y="188" width="42" height="21"/>
@@ -1170,6 +1170,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zib-dJ-3Tb"/>
                     </view>
+                    <navigationItem key="navigationItem" id="it0-xU-zrA">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-map-marker-90" id="heY-0Z-yxV">
+                            <connections>
+                                <segue destination="hrO-az-q6V" kind="show" identifier="detailToMapSeque" id="ITW-l2-81d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="PortLabel" destination="4eY-Op-kI2" id="A2c-59-rEb"/>
                         <outlet property="beachImageView" destination="NGg-Mx-snh" id="0Lu-05-Zwl"/>
@@ -1456,7 +1463,7 @@
         <image name="yes" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eGi-2J-pwZ"/>
-        <segue reference="hoc-Jh-n7d"/>
+        <segue reference="bH5-PM-ZzD"/>
+        <segue reference="ITW-l2-81d"/>
     </inferredMetricsTieBreakers>
 </document>

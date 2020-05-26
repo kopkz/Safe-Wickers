@@ -36,6 +36,13 @@ class LoveButton: UIButton {
         activateButton(bool: !isLove)
     }
     
+    func unpdateImage() {
+        let colour = isLove ? UIColor.red : .white
+        let image = isLove ? UIImage(named: "icons8-like-96-2") : UIImage(named: "icons8-unlike-96")
+        setImage(image, for: .normal)
+        self.tintColor = colour
+    }
+    
     func activateButton(bool: Bool) {
         
         isLove = bool

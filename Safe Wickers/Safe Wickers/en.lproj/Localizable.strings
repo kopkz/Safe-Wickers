@@ -110,3 +110,5 @@
 "detail_Error_meassage" = "Cannot connect to database, try again later.";
 "filter_Error_title" = "No beach meets requirment";
 "filter_Error_messgae" = "Please try other filter option.";
+"detail_love_title" = "Add beach to favourite list successfully.";
+"detail_unlove_title" = "Remove beach from favourite list successfully.";

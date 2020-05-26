@@ -599,6 +599,7 @@ class BeachListTableViewController: UITableViewController{
             beachCell.delegate = self
             beachCell.setBeach(beach: beach)
             beachCell.loveUnloveButton.isLove = beach.ifLoved!
+            beachCell.loveUnloveButton.unpdateImage()
 //            beachCell.loveUnloveButton.imageView?.image = beach.ifLoved! ? UIImage(named: "icons8-like-96-2") : UIImage(named: "icons8-unlike-96")
         
             //beach.beachName
@@ -648,6 +649,7 @@ class BeachListTableViewController: UITableViewController{
             performSegue(withIdentifier: "listToBeachDetail", sender: self)
         }
     }
+    
     
 
     /*
@@ -815,13 +817,20 @@ extension BeachListTableViewController: DatabaseListener{
             return
         }
         let _ = databaseController!.addLovedBeach(beachName: beach.beachName!, lat: beach.latitude!, long: beach.longitude!, imageName: beach.imageName!, ifGuard: beach.ifGuard!, ifPort: beach.ifPort!)
+        beach.ifLoved = true
+        let responseAlert = UIAlertController(title: NSLocalizedString("detail_love_title", comment: "detail_love_title"), message:nil, preferredStyle: .alert)
+        self.present(responseAlert, animated: true, completion: nil)
+        // miss after 2 second
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            self.presentedViewController?.dismiss(animated: false, completion: nil)
+        }
     }
     
-    func cancelLovedBeach(beachName: String) {
+    func cancelLovedBeach(beach: Beach) {
         var unlovedBeach: LovedBeach?
-        for beach in lovedBeachs {
-            if beach.beachName == beachName{
-                unlovedBeach = beach
+        for bea in lovedBeachs {
+            if bea.beachName == beach.beachName{
+                unlovedBeach = bea
             }
         }
         guard let unloved = unlovedBeach else {
@@ -829,6 +838,13 @@ extension BeachListTableViewController: DatabaseListener{
         }
         
         let _ = databaseController!.deleteLovedBeach(lovedBeach: unloved)
+        beach.ifLoved = false
+        let responseAlert = UIAlertController(title: NSLocalizedString("detail_unlove_title", comment: "detail_unlove_title"), message:nil, preferredStyle: .alert)
+        self.present(responseAlert, animated: true, completion: nil)
+        // miss after 2 second
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            self.presentedViewController?.dismiss(animated: false, completion: nil)
+        }
     }
     
     
@@ -838,10 +854,15 @@ extension BeachListTableViewController: LoveBeachDelagate {
   
     func loveUnloveBeach(beach: Beach) {
         if beach.ifLoved! {
-            cancelLovedBeach(beachName: beach.beachName!)
+            cancelLovedBeach(beach: beach)
         }else {
             addLovedBeach(beach: beach)
         }
-        tableView.reloadData()
+//        tableView.reloadData()
+        UIView.setAnimationsEnabled(false)
+        self.tableView.beginUpdates()
+        self.tableView.reloadSections(IndexSet(integer: 1) as IndexSet, with:
+            UITableView.RowAnimation.none)
+        self.tableView.endUpdates()
     }
 }
